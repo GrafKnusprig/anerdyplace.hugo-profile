@@ -1,0 +1,3 @@
+[submodule "ANerdyPlace/themes/hugo-profile"]
+	path = ANerdyPlace/themes/hugo-profile
+	url = https://github.com/gurusabarish/hugo-profile.git
