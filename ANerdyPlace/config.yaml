@@ -107,7 +107,7 @@ params:
     enable: true
     intro: "Hi, my name is"
     title: "Philipp"
-    subtitle: "I make stuff"
+    subtitle: "I make stuff."
     content: "Software developer, maker, passionate artist, musician. My philosophy is that there is artistic beauty in everything you do."
     image: /images/profile-pic-1.jpg
     # button:
