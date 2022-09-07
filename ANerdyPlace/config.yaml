@@ -127,19 +127,19 @@ params:
     title: "About Me"
     image: "/images/profile-pic-2.jpg"
     content: |-
-      I am a software developer with a passion for web development. I have a background in computer science and mathematics, and I have a strong interest in the intersection of technology and art. I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. 
+      I am a software developer with a passion for art and music development. I have a background in computer science, and I have a strong interest in the intersection of technology and art. I am currently working as a software developer at [DAP Systems](https://dap-systems.de/) in Passau, BY Germany. 
 
-      I am currently working on a project that will be used to help people find the best way to get around the city.
+      In my free time I like to work on small projects, including 3D printing, fiddling with Arduinos, streaming and videography, making art and music.
     skills:
       enable: true
       title: "Here are a few technologies I've been working with recently:"
       items:
-        - "HTML"
-        - "CSS"
+        - "Blender"
+        - "HTML / CSS"
         - "JavaScript"
         - "C#"
         - "Node.js"
-        - "Express"
+        - "Open SCAD"
 
   # Experience
   experience:
@@ -154,7 +154,7 @@ params:
           # enable: true
           # name: "view the project"
           # url: "https://example.com"
-        content: "I am currently working as a software developer at [DAP GmbH : DAP Systems.](https://dap-systems.de/) in Passau, BY Germany."
+        content: "I am currently working as a software developer at [DAP Systems.](https://dap-systems.de/) in Passau, BY Germany."
 
       - job: "Media Computer Scientist"
         company: "University of Passau"
@@ -228,18 +228,18 @@ params:
           url: "https://www.uni-passau.de/en/"
         date: "2009 - 2013"
         # GPA: "3.9 out of 5.0"
-        content: |-
-          I Publiced two papers in the ACM SIGCHI Conference on Artificial Intelligence.
-          - [Fast and Accurate Object Detection with a Single Convolutional Neural Network](https://example.com)
-          - Face mask detection using a single convolutional neural network.
+        # content: |-
+          # I Publiced two papers in the ACM SIGCHI Conference on Artificial Intelligence.
+          # - [Fast and Accurate Object Detection with a Single Convolutional Neural Network](https://example.com)
+          # - Face mask detection using a single convolutional neural network.
 
-          Extracurricular Activities
-            - Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique.
-        featuredLink:
-          enable: true
-          name: "My academic record"
-          url: "https://example.com"
+          # Extracurricular Activities
+            # - Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            # - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique.
+        # featuredLink:
+          # enable: true
+          # name: "My academic record"
+          # url: "https://example.com"
       - title: "High School"
         school:
           name: "Maristengymnasium Fürstenzell"
@@ -330,10 +330,10 @@ params:
     btnName: Mail me
 
   footer:
-    # recentPosts: false
-    socialNetworks:
-      github: https://github.com
-      linkedin: https://linkedin.com
-      twitter: https://twitter.com
-      instagram: https://instagram.com
-      facebook: https://facebook.com
+    recentPosts: false
+    # socialNetworks:
+      # github: https://github.com
+      # linkedin: https://linkedin.com
+      # twitter: https://twitter.com
+      # instagram: https://instagram.com
+      # facebook: https://facebook.com
