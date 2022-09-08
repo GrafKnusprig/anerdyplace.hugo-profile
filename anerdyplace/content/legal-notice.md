@@ -17,7 +17,7 @@ _Represented by:_\
 **Philipp Unger**
 
 _Contact:_\
-**E-mail: philipp.info@proton.me**
+**E-mail: anerdyplace@proton.me**
 
 _Responsible for the content according to § 55 Abs. 2 RStV:_\
 **Philipp Unger\
