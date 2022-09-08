@@ -1,6 +1,6 @@
 [build]
 publish = "anerdyplace/public"
-command = "cd nerdyplace && hugo --gc --minify --themesDir themes"
+command = "cd anerdyplace && hugo --gc --minify --themesDir themes"
 
 [context.production.environment]
 HUGO_VERSION = "0.92.0"
