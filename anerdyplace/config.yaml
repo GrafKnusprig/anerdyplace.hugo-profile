@@ -1,4 +1,4 @@
-baseURL: "https://nerdyplace.netlify.app/"
+baseURL: "https://anerdyplace.netlify.app/"
 languageCode: "en-us"
 title: "A Nerdy Place"
 theme: hugo-profile
