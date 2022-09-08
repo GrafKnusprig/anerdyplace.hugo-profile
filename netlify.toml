@@ -1,6 +1,6 @@
 [build]
-publish = "ANerdyPlace/public"
-command = "cd ANerdyPlace && hugo --gc --minify --themesDir themes"
+publish = "nerdyplace/public"
+command = "cd nerdyplace && hugo --gc --minify --themesDir themes"
 
 [context.production.environment]
 HUGO_VERSION = "0.92.0"
@@ -9,7 +9,7 @@ HUGO_ENABLEGITINFO = "true"
 HUGO_THEME = "hugo-profile"
 
 [context.split1]
-command = "cd ANerdyPlace && hugo --gc --minify --enableGitInfo --themesDir themes"
+command = "cd nerdyplace && hugo --gc --minify --enableGitInfo --themesDir themes"
 
 [context.split1.environment]
 HUGO_VERSION = "0.92.0"
@@ -17,14 +17,14 @@ HUGO_ENV = "production"
 HUGO_THEME = "hugo-profile"
 
 [context.deploy-preview]
-command = "cd ANerdyPlace && hugo --gc --minify --buildFuture --themesDir themes -b $DEPLOY_PRIME_URL"
+command = "cd nerdyplace && hugo --gc --minify --buildFuture --themesDir themes -b $DEPLOY_PRIME_URL"
 
 [context.deploy-preview.environment]
 HUGO_VERSION = "0.92.0"
 HUGO_THEME = "hugo-profile"
 
 [context.branch-deploy]
-command = "cd ANerdyPlace && hugo --gc --minify --themesDir themes -b $DEPLOY_PRIME_URL"
+command = "cd nerdyplace && hugo --gc --minify --themesDir themes -b $DEPLOY_PRIME_URL"
 
 [context.branch-deploy.environment]
 HUGO_VERSION = "0.92.0"
