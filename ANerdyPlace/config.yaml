@@ -119,6 +119,8 @@ params:
       fontAwesomeIcons:
         - icon: fab fa-github
           url: https://github.com/GrafKnusprig
+        - icon: fab fa-soundcloud
+          url: https://soundcloud.com/mufuki
         - icon: fab fa-facebook
           url: https://www.facebook.com/philippram/
         # - icon: fab fa-twitter
