@@ -1,9 +1,10 @@
 ---
 title: "Arduino Micro Isp"
+author: Philipp
 date: 2020-02-24
 draft: false
 socialShare: false
-tags: [arduino, isp]
+tags: [arduino, isp, programming]
 thumbnail: /images/blogs/arduino/arduino-micro-isp/thumb.webp
 ---
 

@@ -5,7 +5,7 @@ date: 2020-02-13
 draft: false
 socialShare: false
 toc: false
-tags: [dfplayer]
+tags: [dfplayer, pinout]
 thumbnail: /images/blogs/dfplayer-mini/thumb.webp
 ---
 

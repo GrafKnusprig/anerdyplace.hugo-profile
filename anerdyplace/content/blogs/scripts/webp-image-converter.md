@@ -4,7 +4,7 @@ author: Philipp
 date: 2022-09-13T14:29:06+02:00
 draft: false
 toc: true
-tags: [batch, webp, script]
+tags: [batch, webp, script, programming]
 socialShare: false
 thumbnail: /images/blogs/scripts/batch-thumb.webp
 ---
