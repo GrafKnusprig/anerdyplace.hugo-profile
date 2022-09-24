@@ -2,7 +2,7 @@
 title: "EbSynth"
 author: Philipp
 date: 2022-09-24
-draft: false
+draft: true
 socialShare: false
 toc: true
 tags: [ebsynth, video, ffmpeg, art]
