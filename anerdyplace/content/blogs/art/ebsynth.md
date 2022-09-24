@@ -6,7 +6,8 @@ draft: false
 socialShare: false
 toc: true
 tags: [ebsynth, video, ffmpeg, art]
-thumbnail:
+thumbnail: /images/blogs/art/ebsynth/thumb.webp
+image: /images/blogs/art/ebsynth/thumb.webp
 ---
 
 ## Intro
