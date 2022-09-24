@@ -14,7 +14,7 @@ A PWM signal is generated at output PB3 without timer prescaler. The register OC
 
 
 ## Sourcecode
-FastPWM.c
+[*FastPWM.c*](/files/arduino/FastPWM.c)
 ```c
 {{% include "static/files/arduino/FastPWM.c"%}}
 ```
