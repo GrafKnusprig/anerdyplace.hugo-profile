@@ -6,7 +6,7 @@ draft: false
 toc: true
 tags: [batch, webp, script, programming]
 socialShare: false
-thumbnail: /images/blogs/scripts/batch-thumb.webp
+thumbnail: /images/blogs/generic-thumbs/batch.webp
 ---
 
 ## Introduction

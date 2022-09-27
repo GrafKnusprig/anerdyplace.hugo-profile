@@ -5,7 +5,7 @@ date: 2022-09-14T22:15:01+02:00
 draft: false
 socialShare: false
 tags: [hugo, search, javascript, programming]
-thumbnail: /images/blogs/programming/hugo-full-text-search/thumb.webp
+thumbnail: /images/blogs/generic-thumbs/hugo.webp
 ---
 
 ## Showcase
