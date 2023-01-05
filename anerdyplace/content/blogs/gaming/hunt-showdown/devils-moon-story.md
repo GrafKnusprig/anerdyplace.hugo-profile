@@ -295,7 +295,6 @@ Kevin wrapped his arms around them, and they wrapped their arms around him in re
 <hr>
 
 ## Chapter 12
-
 *Journal of Elise Austin<br>Brown leather wrapped in black cord 5"x 7"<br>Date Unknown*
 
 It's all strange, fascinating, and sick. A system, imperfect, that keeps itself running based on a status quo that even the most wicked vowed not to break. And then one man enters, he works his way up the metaphorical ladder and nestles himself into a position at the top, just to tip it all over. 
@@ -305,4 +304,44 @@ I can scarcely say who did it first. Who started the inferno, the hellfire, the 
 I've yet to witness all this myself, but I know that whoever caused the fires are destroying the work of future archaeologists, researchers, and academics. They're turning history to a black void. An abyss into which many will lose their minds delving into. 
 
 And all because of one man who wormed his way in. For now, it doesn't stop me and my work. 
+
+<hr>
+
+## Chapter 13
+*A letter from a stack found at Port Reeker, all identical.<br>Damaged but intact with envelope, no return or recipient address, 8x 11 in.*
+
+Hello,
+
+You do not know me, we haven't met yet, but I am told we will. I hope we speak the same language. I am told you have experience with monsters and more terrible things.
+
+The same things that happened where you are, they have been happening here for a while. Even though there are oceans between us. Things that can't be explained. If my friends are to be believed it is worse here in Louisiana than anywhere else. And it's spreading, there are rumors, and spreading.
+
+The American Hunters Association want to keep this to themselves. But they're losing control, and if someone else doesn't step in, we're all goners.
+
+I know you have no reason to care. I know you have no reason to help. But if even a small part of you wants to come to New Orleans, please follow it. We are a small group, but we are growing, and I promise we'll do anything we can to repay your kindness.
+
+When you call for me, I will answer. When you are ready, I will be waiting.
+
+May her light keep you,
+
+Linus 
+
+<hr>
+
+## Chapter 14 
+*Poster, "TO THE AHA: THE CORRESPONDENCE OF EL WOOD FINCH"<br>Letter pressed, 12x18 in.*
+
+To all Hunters,
+
+It is with great sadness that the Louisiana branch of the American Hunters Association can no longer sustain itself. Though it may outlive me, not for long. There are those that would see the Sculptor thrive in our home. Our administration cannot respond to correspondence at this time, we must take action against those terrorizing our group.
+
+It is no secret that our influence has been waning: others are paying bounties, providing arms, and have their own beliefs. This chaos has allowed the problem to fester. And now these damned Pacts are holding more sway. There is one consolation: they too will soon burn out.
+
+Representatives from both eastern and western branches have been called to lend their strength against those who seek to undermine our mission. I fear it will not be enough.
+
+Though hidden, our arm of the AHA has always been a pillar of New Orleans, Louisiana, and the south itself. I hope some of you will join me in continuing that fight.
+
+In Service,
+
+Dr. Elwood Finch<br>Director, American Hunters Association
 
