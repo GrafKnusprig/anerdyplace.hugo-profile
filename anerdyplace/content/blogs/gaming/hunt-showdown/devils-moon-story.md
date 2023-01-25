@@ -5,7 +5,7 @@ date: 2023-01-04T21:00:00+02:00
 draft: false
 socialShare: false
 toc: true
-tags: [gaming, hunt, showdown]
+tags: [gaming, hunt, showdown, devils, moon]
 thumbnail: /images/blogs/gaming/hunt-showdown/devils-moon-story/thumb.webp
 ---
 
@@ -344,4 +344,21 @@ Though hidden, our arm of the AHA has always been a pillar of New Orleans, Louis
 In Service,
 
 Dr. Elwood Finch<br>Director, American Hunters Association
+
+<hr>
+
+## Chapter 15 🔊
+*Found Page<br>Author Unknown<br>Torn on the left edge, 5x8 in.*
+
+For auld lang syne, my dear,<br>for auld lang syne,<br>we'll take a cup of kindness yet<br>for auld lang syne.
+
+When Hell had come like hell we fought,<br>regardless of the crime.<br>We take the sin with money got<br>for auld lang syne.
+
+We stood as brothers side by side,<br>as fires died with time.<br>The devil gone; the heralds sing.<br>For auld lang syne.
+
+And when the fight has come again<br>your gun will become mine!<br>For dead men shall not shoot again.<br>For auld lang syne
+
+Should old acquaintance be forgot,<br>and never brought to mind<br>Should old acquaintance be forgot<br>and auld lang syne?
+
+{{< audio "/audio/hunt-showdown/devils-moon-story/chapter15.ogg" "audio/ogg">}}
 
