@@ -87,3 +87,5 @@ That is it. Your turbo is now free. To get it out, rotate it 180° top to bottom
 ![image of the turbo](/images/blogs/bmw-e87-turbo-removal/image13.webp "The turbo")
 
 To be continued...
+
+I'm going to close this, because it's been a while and my car is doing fine so far with the replaced turbo charger. :)
