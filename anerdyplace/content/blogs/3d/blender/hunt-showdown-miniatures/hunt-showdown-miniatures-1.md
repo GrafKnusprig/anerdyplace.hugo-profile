@@ -16,7 +16,7 @@ image: /blogs/3d/blender/hunt-showdown-miniatures/thumb-1.webp
 
 ## Blood Bonds
 
-I started with the Blood Bonds. It is the currency in the game, which you can also buy for real money and serves in the game itself only cosmetic purposes.
+I started with the Blood Bonds. It's the game's currency for cosmetic purchases. You can buy them for real money or get them in game.
 
 ![image of blood bonds](/blogs/3d/blender/hunt-showdown-miniatures/blood-bonds.webp "")
 
@@ -26,7 +26,7 @@ I posted the thing on reddit and got very positive feedback, so I continued.
 
 ## Hunt Dollars
 
-The next thing I did with the hunt dollar. This is the currency in the game.
+The next thing I did with the hunt dollar. This is the main currency in the game.
 
 ![image of hunt dollars](/blogs/3d/blender/hunt-showdown-miniatures/hunt-dollars.webp "")
 
