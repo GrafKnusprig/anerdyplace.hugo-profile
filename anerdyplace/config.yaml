@@ -129,6 +129,8 @@ params:
           url: https://soundcloud.com/mufuki
         - icon: fab fa-youtube
           url: https://www.youtube.com/channel/UCJ29i8qd-09tz47yZP7lxrA
+        - icon: fas fa-laugh
+          url: https://www.thingiverse.com/search?q=grafknusprig
         # - icon: fab fa-twitter
           # url: https://example.com
       # customIcons:

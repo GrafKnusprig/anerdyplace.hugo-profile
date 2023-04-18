@@ -35,7 +35,7 @@
             <img class="img-fluid" src="{{ .Params.image }}" alt="{{ .Title }}">
           </div>
           {{ end }}
-          <article class="page-content  p-2">
+          <article class="page-content  p-2" id="page-content">
           {{ .Content | emojify }}
           </article>
         </div>
@@ -43,7 +43,7 @@
       <div class="col-sm-12 col-md-12 col-lg-3">
         <div class="sticky-sidebar">
           {{ if .Params.toc | default true}}
-          <aside class="toc">
+          <aside class="toc" id="toc">
               <h5>
                 Table Of Contents
               </h5>
@@ -97,26 +97,102 @@
       </div>
     </div>
   </div>
-  <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
-    <i class="fas fa-angle-up"></i>
-  </button>
+  <div class="p-2 px-3" id="rightSideButtonStack">
+    <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
+      <i class="fas fa-angle-up"></i>
+    </button>
+    <button class="p-2 px-3" onclick="tocFunction()" id="tocScroll">
+      <i class="fas fa-angle-double-down"></i>
+    </button>
+    <button class="p-2 px-3" onclick="bottomFunction()" id="bottomScroll">
+      <i class="fas fa-angle-down"></i>
+    </button>
+  </div>
 </section>
 
 <script>
-  var topScroll = document.getElementById("topScroll");
+  var topScroll = document.getElementById('topScroll');
   window.onscroll = function() {scrollFunction()};
 
   function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      topScroll.style.display = "block";
-    } else {
-      topScroll.style.display = "none";
+    showTop();
+    showToc();
+    showBottom();
+  }
+
+  function showTop() {
+    if(topScroll && topScroll != null && topScroll != 'undefined') {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        topScroll.style.display = 'block';
+      } else {
+        topScroll.style.display = 'none';
+      }
     }
   }
 
   function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
+  }
+
+  // scroll to bottom functions
+  var pageContent = document.getElementById('page-content');
+  var bottomScroll = document.getElementById('bottomScroll');
+
+  function showBottom() {
+    if(bottomScroll && bottomScroll != null && bottomScroll != 'undefined' &&
+       pageContent && pageContent != null && pageContent != 'undefined') {
+      if(bottomInViewport(pageContent)) {
+        bottomScroll.style.display = 'block';
+      } else {
+        bottomScroll.style.display = 'none';
+      }
+    }
+  }
+
+  function bottomFunction() {
+    if(pageContent && pageContent != null && pageContent != 'undefined') {
+      pageContent.scrollIntoView(false);
+      bottomScroll.style.display = 'none';
+    }
+  }
+
+  function bottomInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+      rect.bottom >= (window.innerHeight + 1|| document.documentElement.clientHeight + 1) //+1 to hide scroll button when at bottm
+    );
+  }
+
+  // scroll to toc functions
+  var tocScroll = document.getElementById('tocScroll');
+  var toc = document.getElementById('toc');
+
+  function showToc() {
+    if(toc && toc != null && toc != 'undefined' &&
+       tocScroll && tocScroll != null && tocScroll != 'undefined') {
+      if(isInViewport(toc)) {
+        tocScroll.style.display = 'none';
+      } else {
+        tocScroll.style.display = 'block';
+      }
+    }
+  }
+
+  function tocFunction() {
+    if(toc && toc != null && toc != 'undefined') {
+      toc.scrollIntoView(true);
+    }
+  }
+
+  function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
   }
 </script>
 
