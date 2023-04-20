@@ -16,6 +16,8 @@ image: /blogs/3d/blender/hunt-showdown-miniatures/thumb-1.webp
 
 ## Blood Bonds
 
+[Get the Blood Bonds on thingiverse](https://www.thingiverse.com/thing:5923137)
+
 I started with the Blood Bonds. It's the game's currency for cosmetic purchases. You can buy them for real money or get them in game.
 
 ![image of blood bonds](/blogs/3d/blender/hunt-showdown-miniatures/blood-bonds.webp "")
@@ -26,6 +28,8 @@ I posted the thing on reddit and got very positive feedback, so I continued.
 
 ## Hunt Dollars
 
+[Get the Hunt Dollars on thingiverse](https://www.thingiverse.com/thing:5929844)
+
 The next thing I did with the hunt dollar. This is the main currency in the game.
 
 ![image of hunt dollars](/blogs/3d/blender/hunt-showdown-miniatures/hunt-dollars.webp "")
@@ -35,6 +39,8 @@ I was able to use the same base as the Blood Bond, but adjusted it a bit. I drew
 This was also very well received.
 
 ## Hey Effigy
+
+[Get Hey Effigy on thingiverse](https://www.thingiverse.com/thing:5933672)
 
 So the next thing I did was the Weapon Charms. 
 First, my favorite charm, Hey Effigy.
@@ -57,6 +63,8 @@ And as a fine bonus, it printed quite well. :)
 ![image of hey effigy](/blogs/3d/blender/hunt-showdown-miniatures/hey-effigy-print.webp "")
 
 ## Arrow Head
+
+[Get the Arrow Head on thingiverse](https://www.thingiverse.com/thing:5935231)
 
 Next came the charm Arrow Head. As the name suggests, an arrowhead.
 The tip itself was very simple to make. A cone and enie tarpaulin. A few tweaks here and there and done. The real challenge was the cord at the top.

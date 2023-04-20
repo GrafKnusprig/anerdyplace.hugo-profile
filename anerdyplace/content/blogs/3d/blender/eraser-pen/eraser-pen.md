@@ -2,12 +2,12 @@
 title: "Eraser Pen"
 author: Philipp
 date: 2023-04-19T10:22:54+02:00
-draft: true
+draft: false
 socialShare: false
 toc: false
 tags: [blender, eraser, pen, modelling]
-thumbnail: /images/blogs/generic-thumbs/default.webp
-image: /images/blogs/generic-thumbs/default.webp
+thumbnail: /blogs/3d/blender/eraser-pen/thumb.webp
+image: /blogs/3d/blender/eraser-pen/thumb.webp
 ---
 
 # That one time...
@@ -16,8 +16,6 @@ image: /images/blogs/generic-thumbs/default.webp
 
 The battery of my battery powered eraser died and I hadn't any spare at hand.
 So I thought: Why don't I have some manual holder for the eraser refills?
-
-![image of the eraser refills](pathtoimage)
 
 I stopped drawing, opened up blender and started modelling.
 I measured the refills and player around with some cylindric shapes until I came up with a design I found good enough for a first testprint.
@@ -30,7 +28,7 @@ It was way better. But still not the best.
 I refined the design and added a litte storage room in the handle, as well as a plug for the end.
 The plug has also the functionality to 'poke through' the refill mines, when they're completely rubbed flush with the holder.
 
-![image of the eraser holder](pathtoimage)
+{{< video "/blogs/3d/blender/eraser-pen/render.webm" "video/webm" "autoplay">}}
 
-You can get the Eraser Holder on my thingiverse:
-[Eraser Holder](http://test.com)
+You can get the Eraser Pen on my thingiverse:
+[click here](https://www.thingiverse.com/thing:5878587)

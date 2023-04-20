@@ -12,7 +12,7 @@ image: /images/blogs/generic-thumbs/hugo.webp
 
 # The stock...
 
-...pace scroller of the hugo-profile theme is nice, but it can only scroll back to the top and the theme has some major flaws, when it comes to mobile devices.
+...page scroller of the hugo-profile theme is nice, but it can only scroll back to the top and the theme has some major flaws, when it comes to mobile devices.
 
 For example, it has always bothered me that the TOC is displayed at the bottom of the page. Of course, you don't have as much space as on the desktop. But displaying it at the top doesn't look very nice either.
 
@@ -168,3 +168,5 @@ I also added another one that scrolls to the end of the post.
 Because why not, while I'm at it.
 
 It's now much more convenient on mobile devices and a much better user experience.
+
+:)

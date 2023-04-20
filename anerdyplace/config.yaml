@@ -57,7 +57,7 @@ Menus:
     #   weight: 2
 
 params:
-  title: "A Nerdy Place (work in progress)"
+  title: "A Nerdy Place"
   description: My personal profile and blogging site.
   # staticPath: ""  # The path to serve the static files from
   favicon: "/icon.png"
@@ -111,11 +111,11 @@ params:
   # Hero
   hero:
     enable: true
-    intro: "Hi, my name is"
+    intro: "Hi, I'm"
     title: "Philipp"
-    subtitle: "and I make stuff."
-    content: "Software developer - maker - artist - musician.<br>There is artistic beauty in everything you do."
-    image: /images/profile-pic-1.webp
+    subtitle: "Unger"
+    content: "Software developer - maker - artist"
+    image: /images/profile-pic-4.jpg
     # button:
       # enable: true
       # name: "Resume"
@@ -141,24 +141,41 @@ params:
   about:
     enable: true
     title: "About Me"
-    #image: "/images/profile-pic-2.webp"
+    # image: "/images/profile-pic-1.webp"
     content: |-
-      I am a software developer with a passion for art and music.<br>
-      I have a background in computer science and I find great pleasure in implementing technical things in an artistic way.
-      I am currently working as a software developer at [DAP Systems](https://dap-systems.de/) in Passau, BY Germany.<br>
+      When you ask someone to tell you something about themselves, it's never easy.
+
+      I have always been interested in all kinds of things all my life. My interests are constantly changing and I always want to learn new things.
+      If I have to describe myself in a few words, I would say I am a craftsman and an artist.
+
+      After finishing school I studied Computer Science and now I have several years of professional experience as a software developer.
+      But I am not the type for only one thing and so I have a lot of hobbies. I have always been interested in designing and customizing everything all my life. I like to paint and draw, design things for friends like logos, websites, paint jobs, etc. I also have an affinity for photography, film and music and always try to get better.
+      I'm also very interested in doing everything with open source software if possible, which I'm a big proponent of. And the most of the things I code, produce or design, I realease as Creative Commons.
+      The PC has always been a constant companion in all my projects and I always try to make my life easier with it. I design a lot and often write tools and small programs that help me with my work.
+      <br><br><br>
+      On this website I try to blog about my projects. But I have so much to catch up on and most of the time I just don't think about it and forget it.
+      But then I think to myself again: Even a little bit of something is still better than nothing.
+
+      We'll see what the future brings and if I can pull this off.
+      Keep your fingers crossed for me ;)
+      <br><br><br><br><br>
 
     skills:
       enable: true
-      title: "In my free time I like to work on small projects, where I use technologies like:"
+      title: "I just put some things I work with here :)"
       items:
-        - "[3D printing](https://ultimaker.com/software/ultimaker-cura)"
-        - "[OpenSCAD](https://openscad.org/)"
-        - "[Blender](https://www.blender.org/)"
-        - "[C# / .Net](https://docs.microsoft.com/en-us/dotnet/csharp/)"
-        - "[Node.js](https://nodejs.org/en/)"
-        - "[JavaScript](https://www.w3schools.com/js/)"
-        - "[ffmpeg](https://ffmpeg.org/)"
         - "[AdobeSuite](https://www.adobe.com/creativecloud.html)"
+        - "[Blender](https://www.blender.org/)"
+        - "[FDM 3D printing](https://ultimaker.com/software/ultimaker-cura)"
+        - "[C# / .Net](https://docs.microsoft.com/en-us/dotnet/csharp/)"
+        - "[ffmpeg](https://ffmpeg.org/)"
+        - "[GitHub](https://github.com/)"
+        - "[HUGO](https://gohugo.io/)"
+        - "[JavaScript](https://www.w3schools.com/js/)"
+        - "[MPC Beats](https://www.akaipro.com/mpc-beats)"
+        - "[Node.js](https://nodejs.org/en/)"
+        - "[OpenSCAD](https://openscad.org/)"
+        - "[VisualStudio](https://visualstudio.microsoft.com)"
 
   # Experience
   experience:
@@ -191,7 +208,7 @@ params:
         # info:
           # enable: true
           # content: I worked as a software developer for the univideo website and more.
-        content: I worked as a web developer for the [univideo website](https://univideo.uni-passau.de/) and more.
+        content: I worked as a web developer for the [univideo website](https://univideo.uni-passau.de/) and more. Doing mainly HTML, CSS and JS.
 
   # Education
   education:
@@ -262,6 +279,16 @@ params:
         links:
           - icon: fab fa-github
             url: https://github.com/GrafKnusprig/HuntShowdownLoadoutRandomizer
+      # - title: "Tin Whistles"
+      #   content: "A passion of mine is to build and play my own tin whistles."
+      #   image: /blogs/3d/tin-whistle/thumb-1.webp
+      #   featured:
+      #     name: Read Blog Post
+      #     link: /blogs/3d/tin-whistle/tin-whistle-1
+      #   badges:
+      #     - "blender"
+      #     - "OpenSCAD"
+      #     - "3D printing"
 
   #Contact
   contact:

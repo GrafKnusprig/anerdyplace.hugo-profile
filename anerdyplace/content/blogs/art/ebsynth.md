@@ -38,7 +38,7 @@ In the following, I show you how to use EbSynth to create a piece of moving art 
 
 ## Extract frames from video using [ffmpeg](https://ffmpeg.org/)
 
-[[Get ffmpeg](https://ffmpeg.org/)]
+[Get ffmpeg](https://ffmpeg.org/)
 
 For my video, I chose a framerate of 15 fps. It gives the whole video a feeling of a handdrawn stop motion animation.
 To split the video into keyframes, I use a simple ffmpeg command.
