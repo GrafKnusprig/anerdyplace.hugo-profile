@@ -4,7 +4,7 @@ author: Philipp
 date: 2023-05-01T12:04:45+02:00
 draft: false
 socialShare: false
-toc: false
+toc: true
 tags: [etch, salt water, metal, knife]
 thumbnail: /blogs/art/salt-water-etching/thumb.webp
 image: /blogs/art/salt-water-etching/thumb.webp
