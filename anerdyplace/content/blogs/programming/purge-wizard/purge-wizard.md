@@ -5,7 +5,7 @@ date: 2023-07-25T13:19:20+02:00
 draft: false
 socialShare: false
 toc: false
-tags: [c#, batch, purgewizard, delete files]
+tags: [csharp, batch, purgewizard, delete files]
 thumbnail: /blogs/programming/purge-wizard/thumb.webp
 image: /blogs/programming/purge-wizard/thumb.webp
 ---
