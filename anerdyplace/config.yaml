@@ -244,8 +244,7 @@ params:
     # title: "Custom Name"
     # index: true
     items:
-      - title: "Master of Computer Science"
-        subtitle: "AI Engineering"
+      - title: "Master of Computer Science - AI Engineering"
         school:
           name: "University of Passau"
           url: "https://www.uni-passau.de/en/"
