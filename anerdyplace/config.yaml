@@ -150,43 +150,67 @@ params:
   about:
     enable: true
     title: 'About Me'
+    skillstitle: 'Stuff I use regularly'
     # image: "/images/profile-pic-1.webp"
     content: |-
-      When you ask someone to tell you something about themselves, it's never easy.
+      When you ask someone to tell you about themselves, it's never easy.
 
-      I have always been interested in all kinds of things all my life. My interests are constantly changing and I always want to learn new things.
-      If I have to describe myself in a few words, I would say I am a craftsman and an artist.
+      I've been interested in all sorts of things all my life and my interests are constantly changing. I live to evolve and discover new joys in life.
+      If I had to describe myself in one word, it would be that I am an artist.
 
-      After finishing school I studied Computer Science and now I have several years of professional experience as a software developer.
-      But I am not the type for only one thing and so I have a lot of hobbies. I have always been interested in designing and customizing everything all my life. I like to paint and draw, design things for friends like logos, websites, paint jobs, etc. I also have an affinity for photography, film and music and always try to get better.
-      I'm also very interested in doing everything with open source software if possible, which I'm a big proponent of. And the most of the things I code, produce or design, I realease as Creative Commons.
-      The PC has always been a constant companion in all my projects and I always try to make my life easier with it. I design a lot and often write tools and small programs that help me with my work.
-      <br><br><br>
-      On this website I try to blog about my projects. But I have so much to catch up on and most of the time I just don't think about it and forget it.
-      But then I think to myself again: Even a little bit of something is still better than nothing.
+      After school, I studied computer science and now have over 10 years of professional experience as a full stack software engineer.
 
-      We'll see what the future brings and if I can pull this off.
-      Keep your fingers crossed for me ;)
+      Since one skill alone does not satisfy me, I have many hobbies.
+      I enjoy personalizing everything in my life, adapting things and processes to my needs.
+      Here I can live out my creativity to the full.
+
+      My passions also include art and music. I often do small favors for my friends. Whether it's 3D models, logos, programs, websites, videos or photoshoots... the list is truly endless.
+
+      Whenever possible, I make my designs and programs open source. I'm a big advocate of that.
+
+      <br>
+
+      On this website I want to give an overview of my projects. Unfortunately, I can't keep up with posting everything I do here. But I'll try to post something from time to time. 
+
+      ---
+
+
+      <b>FAQ:</b>
+      Why the nickname raven? - Well, I like ravens. ;)
+      </p>
       <br><br><br><br><br>
 
     skills:
       enable: true
-      title: 'I just put some things I work with here :)'
+      title: ''
       items:
         - '[AdobeSuite](https://www.adobe.com/creativecloud.html)'
+        - '[Arduino](https://www.arduino.cc/)'
+        - '[Audacity](https://www.audacityteam.org/)'
         - '[Blender](https://www.blender.org/)'
-        - '[C# / .Net](https://docs.microsoft.com/en-us/dotnet/csharp/)'
-        - '[FDM 3D printing](https://ultimaker.com/software/ultimaker-cura)'
-        - '[ffmpeg](https://ffmpeg.org/)'
+        - '[C#](https://docs.microsoft.com/en-us/dotnet/csharp/)'
+        - '[ChatGPT](https://chat.openai.com/)'
+        - '[FFmpeg](https://ffmpeg.org/)'
         - '[FreeCAD](https://www.freecad.org/)'
         - '[GitHub](https://github.com/)'
+        - '[GitLab](https://about.gitlab.com/)'
         - '[HUGO](https://gohugo.io/)'
+        - '[Java](https://www.java.com/)'
         - '[JavaScript](https://www.w3schools.com/js/)'
         - '[JetBrains](https://www.jetbrains.com/)'
+        - '[MiKTeX](https://miktex.org/)'
         - '[MPC Beats](https://www.akaipro.com/mpc-beats)'
         - '[Node.js](https://nodejs.org/en/)'
         - '[OpenSCAD](https://openscad.org/)'
+        - '[OBS-Studio](https://obsproject.com/)'
+        - '[PyTorch](https://pytorch.org/)'
+        - '[Python](https://www.python.org/)'
+        - '[Raspberry Pi](https://www.raspberrypi.org/)'
+        - '[Scratch](https://scratch.mit.edu/)'
+        - '[Shotcut](https://shotcut.org/)'
+        - '[UltiMaker Cura](https://ultimaker.com/software/ultimaker-cura)'
         - '[VisualStudio](https://visualstudio.microsoft.com)'
+        - '[VoiceMeeter](https://vb-audio.com/Voicemeeter/)'
 
   # Experience
   experience:
@@ -205,7 +229,7 @@ params:
         info:
           enable: true
           content: I am currently working in InnRaum³ as part of the INTERREG project. There I take on tasks such as course management for various courses such as 3D printing, Arduino, AI development and I also set up the makerspace and maintain the machines.
-      - job: 'Robotics trainer (honorary)'
+      - job: 'Robotics Trainer (honorary)'
         company: Maristengymnasium Fürstenzell
         companyUrl: 'https://mgf.de/'
         date: 2023 - current
