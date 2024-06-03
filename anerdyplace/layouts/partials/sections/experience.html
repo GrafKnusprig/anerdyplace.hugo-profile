@@ -46,14 +46,13 @@
                   class="card"
                   style="border: 1px; padding: 10px; margin: 10px"
                 >
-                  {{ .info.content | markdownify }} {{ if .featuredLink.enable
-                  }}
-                  <div class="py-1">
-                    <a href="{{ .featuredLink.url }}" class="btn">
-                      {{ .featuredLink.name | default "Featured" }}
-                    </a>
-                  </div>
-                  {{ end }}
+                  {{ .info.content | markdownify }}
+                </div>
+                {{ end }} {{ if .featuredLink.enable }}
+                <div class="py-1">
+                  <a href="{{ .featuredLink.url }}" class="btn">
+                    {{ .featuredLink.name | default "Featured" }}
+                  </a>
                 </div>
                 {{ end }}
               </div>
