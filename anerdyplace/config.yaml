@@ -1,6 +1,6 @@
-baseURL: 'https://anerdyplace.org/'
+baseURL: 'https://philippraven.com/'
 languageCode: 'en-us'
-title: 'A Nerdy Place'
+title: 'philipp raven'
 theme: hugo-profile
 
 Paginate: 12
@@ -63,7 +63,7 @@ Menus:
     #   weight: 2
 
 params:
-  title: 'A Nerdy Place'
+  title: 'philipp raven'
   description: My personal profile and blogging site.
   # staticPath: ""  # The path to serve the static files from
   favicon: '/icon.png'
@@ -122,7 +122,7 @@ params:
     title: 'Philipp'
     # subtitle: "Unger"
     content: 'ai engineer - artist - creator'
-    image: /images/profile-pic-4.jpg
+    image: /images/profile-pic-3.webp
     # button:
     # enable: true
     # name: "Resume"
