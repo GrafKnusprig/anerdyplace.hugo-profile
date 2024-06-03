@@ -1,6 +1,6 @@
-baseURL: "https://anerdyplace.org/"
-languageCode: "en-us"
-title: "A Nerdy Place"
+baseURL: 'https://anerdyplace.org/'
+languageCode: 'en-us'
+title: 'A Nerdy Place'
 theme: hugo-profile
 
 Paginate: 12
@@ -19,19 +19,19 @@ Menus:
       title: Blog posts
       url: /blogs
       weight: 1
-      
+
     # - identifier: tags
-      # name: Tags
-      # title: Tags
-      # url: /tags
-      # weight: 2
-      
+    # name: Tags
+    # title: Tags
+    # url: /tags
+    # weight: 2
+
     - identifier: search
       name: Search
       title: Search
       url: /search
       weight: 2
-    
+
     # - identifier: songs
     #   name: Songs
     #   title: Songs
@@ -39,10 +39,10 @@ Menus:
     #   weight: 3
 
     # - identifier: gallery
-      # name: Gallery
-      # title: Blog posts
-      # url: /gallery
-      # weight: 2
+    # name: Gallery
+    # title: Blog posts
+    # url: /gallery
+    # weight: 2
 
     #Dropdown menu
     # - identifier: dropdown
@@ -63,10 +63,10 @@ Menus:
     #   weight: 2
 
 params:
-  title: "A Nerdy Place"
+  title: 'A Nerdy Place'
   description: My personal profile and blogging site.
   # staticPath: ""  # The path to serve the static files from
-  favicon: "/icon.png"
+  favicon: '/icon.png'
 
   # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
   # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
@@ -119,15 +119,15 @@ params:
   hero:
     enable: true
     intro: "Hi, I'm"
-    title: "Philipp"
+    title: 'Philipp'
     # subtitle: "Unger"
-    content: "ai engineer - artist - creator"
+    content: 'ai engineer - artist - creator'
     image: /images/profile-pic-4.jpg
     # button:
-      # enable: true
-      # name: "Resume"
-      # url: "#"
-      # download: true 
+    # enable: true
+    # name: "Resume"
+    # url: "#"
+    # download: true
     socialLinks:
       fontAwesomeIcons:
         - icon: fab fa-github
@@ -141,15 +141,15 @@ params:
         - icon: fas fa-cube
           url: https://www.thingiverse.com/search?q=grafknusprig
         # - icon: fab fa-twitter
-          # url: https://example.com
+        # url: https://example.com
       # customIcons:
-        # - icon: /fav.png
-          # url: "https://example.com"
+      # - icon: /fav.png
+      # url: "https://example.com"
 
   # About
   about:
     enable: true
-    title: "About Me"
+    title: 'About Me'
     # image: "/images/profile-pic-1.webp"
     content: |-
       When you ask someone to tell you something about themselves, it's never easy.
@@ -171,71 +171,71 @@ params:
 
     skills:
       enable: true
-      title: "I just put some things I work with here :)"
+      title: 'I just put some things I work with here :)'
       items:
-        - "[AdobeSuite](https://www.adobe.com/creativecloud.html)"
-        - "[Blender](https://www.blender.org/)"
-        - "[C# / .Net](https://docs.microsoft.com/en-us/dotnet/csharp/)"
-        - "[FDM 3D printing](https://ultimaker.com/software/ultimaker-cura)"
-        - "[ffmpeg](https://ffmpeg.org/)"
-        - "[FreeCAD](https://www.freecad.org/)"
-        - "[GitHub](https://github.com/)"
-        - "[HUGO](https://gohugo.io/)"
-        - "[JavaScript](https://www.w3schools.com/js/)"
-        - "[JetBrains](https://www.jetbrains.com/)"
-        - "[MPC Beats](https://www.akaipro.com/mpc-beats)"
-        - "[Node.js](https://nodejs.org/en/)"
-        - "[OpenSCAD](https://openscad.org/)"
-        - "[VisualStudio](https://visualstudio.microsoft.com)"
+        - '[AdobeSuite](https://www.adobe.com/creativecloud.html)'
+        - '[Blender](https://www.blender.org/)'
+        - '[C# / .Net](https://docs.microsoft.com/en-us/dotnet/csharp/)'
+        - '[FDM 3D printing](https://ultimaker.com/software/ultimaker-cura)'
+        - '[ffmpeg](https://ffmpeg.org/)'
+        - '[FreeCAD](https://www.freecad.org/)'
+        - '[GitHub](https://github.com/)'
+        - '[HUGO](https://gohugo.io/)'
+        - '[JavaScript](https://www.w3schools.com/js/)'
+        - '[JetBrains](https://www.jetbrains.com/)'
+        - '[MPC Beats](https://www.akaipro.com/mpc-beats)'
+        - '[Node.js](https://nodejs.org/en/)'
+        - '[OpenSCAD](https://openscad.org/)'
+        - '[VisualStudio](https://visualstudio.microsoft.com)'
 
   # Experience
   experience:
     enable: true
-    title: "Professional Experience"
+    title: 'Experience'
     items:
-      - job: "Data Scientist"
-        company: "University of Passau - Chair of Software Engineering II "
-        companyUrl: "https://www.fim.uni-passau.de/en/chair-for-software-engineering-ii/"
+      - job: 'Data Scientist'
+        company: 'University of Passau - Chair of Software Engineering II '
+        companyUrl: 'https://www.fim.uni-passau.de/en/chair-for-software-engineering-ii/'
         date: 2024 - current
         content: I work as a research assistant at the Chair of Software Engineering 2 under Prof. Gordon Fraser.
         featuredLink:
           enable: true
-          name: "InnRaum³"
-          url: "https://www.innraum.eu/"
+          name: 'InnRaum³'
+          url: 'https://www.innraum.eu/'
         info:
           enable: true
           content: I am currently working in InnRaum³ as part of the INTERREG project. There I take on tasks such as course management for various courses such as 3D printing, Arduino, AI development and I also set up the makerspace and maintain the machines.
-      - job: "Robotics trainer (honorary)"
+      - job: 'Robotics trainer (honorary)'
         company: Maristengymnasium Fürstenzell
-        companyUrl: "https://mgf.de/"
+        companyUrl: 'https://mgf.de/'
         date: 2023 - current
         content: I work voluntarily as a trainer for the robotics course. Here, I teach children in grades 5-11 how to program autonomous robots using Scratch and Python.
-      - job: "Software Developer"
-        company: "DAP Systems"
-        companyUrl: "https://dap-systems.de/"
-        date: "2014 - 2023"
+      - job: 'Software Developer'
+        company: 'DAP Systems'
+        companyUrl: 'https://dap-systems.de/'
+        date: '2014 - 2023'
         # featuredlink:
-          # enable: true
-          # name: "view the project"
-          # url: "https://example.com"
+        # enable: true
+        # name: "view the project"
+        # url: "https://example.com"
         content: |-
           I worked as a software developer at [DAP Systems.](https://dap-systems.de/) in Passau, BY Germany.
           - Fullstack developer for WebReporting, ImageSurfer, RadioXpert-Web [2019 - 2023]
           - Backend developer for RadioXpert, Evogenius Reporting, TVScope [2014 - 2019]
-          
+
           I have experience in ASP.NET, Angular, C#, CSS, EXT JS, HTML, JavaScript, Less, .Net Framework / Core, Node.js, PHP, SQL, TypeScript and more.
 
-      - job: "Media Computer Scientist"
-        company: "University of Passau"
-        companyUrl: "https://www.uni-passau.de/en/"
-        date: "2013 - 2014"
+      - job: 'Media Computer Scientist'
+        company: 'University of Passau - InteLeC-Zentrum'
+        companyUrl: 'https://www.uni-passau.de/en/'
+        date: '2013 - 2014'
         # featuredLink:
-          # enable: true
-          # name: "Univideo Website"
-          # url: "https://univideo.uni-passau.de/"
+        # enable: true
+        # name: "Univideo Website"
+        # url: "https://univideo.uni-passau.de/"
         # info:
-          # enable: true
-          # content: I worked as a software developer for the univideo website and more.
+        # enable: true
+        # content: I worked as a software developer for the univideo website and more.
         content: I worked as a web developer for the [univideo website](https://univideo.uni-passau.de/) and more. Doing mainly HTML, CSS and JS.
 
   # Education
@@ -244,17 +244,17 @@ params:
     # title: "Custom Name"
     # index: true
     items:
-      - title: "Master of Computer Science - AI Engineering"
+      - title: 'Master AI Engineering (M.Sc.)'
         school:
-          name: "University of Passau"
-          url: "https://www.uni-passau.de/en/"
-        date: "2023 - current"
+          name: 'University of Passau'
+          url: 'https://www.uni-passau.de/en/'
+        date: '2023 - current'
         content: My focus is on the development of deep learning networks. My main seminar is in “Software Engineering for Kids” where I am working on automatic hint generation using LLMs for tutorial systems.
-      - title: "Bachelor of Computer Science"
+      - title: 'Bachelor of Computer Science (B.Sc.)'
         school:
-          name: "University of Passau"
-          url: "https://www.uni-passau.de/en/"
-        date: "2009 - 2013"
+          name: 'University of Passau'
+          url: 'https://www.uni-passau.de/en/'
+        date: '2009 - 2013'
         # GPA: "3.9 out of 5.0"
         content: |-
           Minor:  **Business Administration**
@@ -264,52 +264,52 @@ params:
               
               [FORWISS](https://www.forwiss.uni-passau.de/en/), University of Passau, [Chair of Mathematics with focus on Digital Image Processing](https://www.fim.uni-passau.de/en/digital-image-processing/)
         # featuredLink:
-          # enable: true
-          # name: "My academic record"
-          # url: "https://example.com"
-      - title: "High School"
+        # enable: true
+        # name: "My academic record"
+        # url: "https://example.com"
+      - title: 'High School'
         school:
-          name: "Maristengymnasium Fürstenzell"
-          url: "http://www.mgfuerstenzell.de/"
+          name: 'Maristengymnasium Fürstenzell'
+          url: 'http://www.mgfuerstenzell.de/'
         content: |-
-            - Advanced courses:
-              - physics
-              - art
-            - Senior project: Digital and craft implementation of a 3D optical illusion
+          - Advanced courses:
+            - physics
+            - art
+          - Senior project: Digital and craft implementation of a 3D optical illusion
 
   # Achievements
   # achievements:
-    # enable: true
-    # # title: "Custom Name"
-    # items:
-      # - title: Google kickstart runner
-        # content: I solved all problems with optimal solution.
-        # url: https://example.com
-      # - title: Facebook Hackathon Winner
-        # content: Developed a product using Artificial Intelligence.
-      # - title: Hugo Profile
-        # content: Developed a theme and getting 1K+ downloads per month.
-        # url: "https://github.com/gurusabarish/hugo-profile"
-      # - title: Microsoft Imagine Runner
-        # content: We are developed a product which can help others.
-      # - title: Google Summer of Code
-        # content: Contributed to a open source project.
-        # url: https://example.com
+  # enable: true
+  # # title: "Custom Name"
+  # items:
+  # - title: Google kickstart runner
+  # content: I solved all problems with optimal solution.
+  # url: https://example.com
+  # - title: Facebook Hackathon Winner
+  # content: Developed a product using Artificial Intelligence.
+  # - title: Hugo Profile
+  # content: Developed a theme and getting 1K+ downloads per month.
+  # url: "https://github.com/gurusabarish/hugo-profile"
+  # - title: Microsoft Imagine Runner
+  # content: We are developed a product which can help others.
+  # - title: Google Summer of Code
+  # content: Contributed to a open source project.
+  # url: https://example.com
 
   # projects
   projects:
     enable: true
     # title: "custom name"
     items:
-      - title: "Hunt: Showdown - Loadout Randomizer"
-        content: "Hunt: Showdown - Loadout Randomizer is a local browser application that generates random loadouts for the game Hunt: Showdown. It is perfectly suited to be used as a browser plugin in OBS-Studio and similar applications and was made exactly for this purpose."
+      - title: 'Hunt: Showdown - Loadout Randomizer'
+        content: 'Hunt: Showdown - Loadout Randomizer is a local browser application that generates random loadouts for the game Hunt: Showdown. It is perfectly suited to be used as a browser plugin in OBS-Studio and similar applications and was made exactly for this purpose.'
         image: /images/projects/hunt-randomizer-1.webp
         featured:
           name: Start Randomizer
           link: https://grafknusprig.github.io/HuntShowdownLoadoutRandomizer/Randomizer.html
         badges:
-          - "html"
-          - "javascript"
+          - 'html'
+          - 'javascript'
         links:
           - icon: fab fa-github
             url: https://github.com/GrafKnusprig/HuntShowdownLoadoutRandomizer
@@ -327,7 +327,7 @@ params:
   #Contact
   contact:
     enable: true
-    title: "Contact me"
+    title: 'Contact me'
     content: If you want to contact me, you can always send me an email.
     email: philipp.info@proton.me
     btnName: Mail me
@@ -335,11 +335,11 @@ params:
   footer:
     recentPosts: true
     # socialNetworks:
-      # github: https://github.com
-      # linkedin: https://linkedin.com
-      # twitter: https://twitter.com
-      # instagram: https://instagram.com
-      # facebook: https://facebook.com
+    # github: https://github.com
+    # linkedin: https://linkedin.com
+    # twitter: https://twitter.com
+    # instagram: https://instagram.com
+    # facebook: https://facebook.com
 
 outputs:
   home:
