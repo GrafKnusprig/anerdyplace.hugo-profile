@@ -6,8 +6,7 @@ draft: false
 socialShare: false
 toc: false
 tags: [csharp, batch, purgewizard, delete files]
-thumbnail: /blogs/programming/purge-wizard/thumb.webp
-image: /blogs/programming/purge-wizard/thumb.webp
+supressthumbnail: true
 ---
 
 # A friend of mine ...

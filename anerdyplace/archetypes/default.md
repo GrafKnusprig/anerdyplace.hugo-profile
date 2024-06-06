@@ -6,7 +6,7 @@ draft: true
 socialShare: false
 toc: false
 tags: [tag]
+supressthumbnail: false
 thumbnail: /images/blogs/generic-thumbs/default.webp
-image: /images/blogs/generic-thumbs/default.webp
 ---
 

@@ -6,8 +6,7 @@ draft: false
 socialShare: false
 toc: false
 tags: [repair, fix, watch, casio]
-thumbnail: /images/blogs/generic-thumbs/default.webp
-image: /images/blogs/generic-thumbs/default.webp
+thumbnail: cas*
 ---
 
 # Fixing Watch Hands

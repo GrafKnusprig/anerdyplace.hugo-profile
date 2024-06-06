@@ -6,8 +6,6 @@ draft: false
 socialShare: false
 toc: false
 tags: [blender, eraser, pen, modelling]
-thumbnail: /blogs/3d/blender/eraser-pen/thumb.webp
-image: /blogs/3d/blender/eraser-pen/thumb.webp
 ---
 
 # That one time...

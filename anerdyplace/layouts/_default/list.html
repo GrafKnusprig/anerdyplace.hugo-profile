@@ -14,24 +14,50 @@
         {{ range .Paginator.Pages }}
         <div class="col-lg-4 col-md-6 my-3">
             <div class="card h-100">
-				<div class="card-body bg-transparent p-4 shadow-sm">
-					<a href="{{ .RelPermalink }}" class="primary-font card-title">
-						<h5 class="card-title bg-transparent" title="{{ .Title }}">{{ .Title | truncate 25 }}</h5>
-					</a>
-					{{ if .Params.Thumbnail }}
-					<a href="{{ .RelPermalink }}">
-						<img src="{{ .Params.Thumbnail }}" alt="{{ .Params.Title }}" class="rounded img-fluid">
-					</a>
-					{{ else }}
-					<div class="card-text secondary-font">
-						<p>{{ .Summary | truncate 300}}</p>
-					</div>
-					{{ end }}
-				</div>
-				<div class="mt-auto post-footer bg-transparent">
-					<span class="float-start bg-transparent">{{ .Date.Format "January 2, 2006" }}</span>
-					<a href="{{ .RelPermalink }}" class="float-end btn btn-outline-info btn-sm">Read</a>
-				</div>
+                <div class="card-body bg-transparent p-4 shadow-sm">
+                    <!-- Load params -->
+                    {{ $supressthumbnail := .Params.supressthumbnail }}
+                    {{ $thumbnail := .Params.thumbnail }}
+                    {{ $width := .Site.Params.thumbnailWidth }}
+                    {{ $height := .Site.Params.thumbnailHeight }}
+
+                    <!-- Only generate thumbnail if it's really used -->
+                    {{ if not $supressthumbnail }}
+                        <!-- Resize thumbnail -->
+                        {{ if $thumbnail }}
+                            {{ with .Resources.GetMatch $thumbnail }}
+                                {{ $thumbnail = .RelPermalink }}
+                            {{ end }}
+                        {{ else }}
+                            <!-- Get thumbnail from resources  -->
+                            {{ with .Resources.ByType "image" }}
+                                {{ if . }}
+                                    {{ $image := (index . 0) }}
+                                    {{ $thumbnail = $image.RelPermalink }}
+                                {{ end }}
+                            {{ end }}
+                            {{ with .Resources.GetMatch "*thumb*" }}
+                                {{ $thumbnail = .RelPermalink }}
+                            {{ end }}
+                        {{ end }}
+                    {{ end }} 
+                    {{ if and $thumbnail (not $supressthumbnail)}}
+                        <a href="{{ .RelPermalink }}">
+                            <img src="{{ $thumbnail }}" alt="{{ .Title }}" class="rounded img-fluid" style="max-width: {{ $width }}px; max-height: {{ $height }}px">
+                        </a>
+                    {{ else }}
+                        <div class="card-text secondary-font">
+                            <p>{{ .Summary | truncate 300 }}</p>
+                        </div>
+                    {{ end }}
+                    <a href="{{ .RelPermalink }}" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="{{ .Title }}">{{ .Title | truncate 25 }}</h5>
+                    </a>
+                </div>
+                <div class="mt-auto post-footer bg-transparent">
+                    <span class="float-start bg-transparent">{{ .Date.Format "January 2, 2006" }}</span>
+                    <a href="{{ .RelPermalink }}" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
             </div>
         </div>
         {{ end }}

@@ -6,8 +6,7 @@ draft: false
 socialShare: false
 toc: false
 tags: [monitor stand, acer, 3d, printing, blender]
-thumbnail: /images/blogs/generic-thumbs/default.webp
-image: /images/blogs/generic-thumbs/default.webp
+thumbnail: image1*
 ---
 
 # I wanted a vertical monitor
@@ -32,7 +31,7 @@ It performs boolean operations much faster, better, and cleaner than if you star
 
 The result is quite impressive.
 
-![Monitor Stand Renders](/blogs/3d/blender/monitor-stand/monitor_stand_renders.webp)
+![Monitor Stand Renders](/blogs/3d/blender/monitor-stand/image1.webp)
 
 You can get the file on thingiverse: [Monitor Stand](https://www.thingiverse.com/thing:6649609)
 
@@ -44,5 +43,5 @@ part printed in Galaxy Black, it's quite nice to look at and looks almost origin
 As a little bonus, the tilt angle can also still be adjusted thanks to the original stand. (Just not too far forward or it will fall out)
 But you could also screw the stand to the monitor housing. For those of you who like it really hard core.
 
-![Monitor Stand Front](/blogs/3d/blender/monitor-stand/monitor_front.webp)
-![Monitor Stand Back](/blogs/3d/blender/monitor-stand/monitor_back.webp)
+![Monitor Stand Front](/blogs/3d/blender/monitor-stand/image3.webp)
+![Monitor Stand Back](/blogs/3d/blender/monitor-stand/image2.webp)
