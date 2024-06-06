@@ -21,7 +21,7 @@ I thought there wasn't much to lose with this old watch, so I decided to quickly
 
 For that, I designed and 3D printed the necessary tools in FreeCAD. That saved me a few euros.
 
-![Watch Tools](/blogs/repairs/watch/watch-tools.webp)
+![Watch Tools](/blogs/repairs/watch-hands-fix/watch-tools.webp)
 
 The tools include 2 levers to lift the watch hands and a press tool to put them back on.
 To give it the necessary spice, I designed the press tubes as 1/4" bit inserts.
@@ -35,6 +35,6 @@ Unfortunately, I didn't take any pictures throughout the whole process :D So you
 
 Here's a picture of the repaired watch.
 
-![Casio AW-5](/blogs/repairs/watch/casio-aw-5.webp)
+![Casio AW-5](/blogs/repairs/watch-hands-fix/casio-aw-5.webp)
 
 Yes I know, I could have chosen a better time, but believe me, the hands are now perfectly aligned. ;)
