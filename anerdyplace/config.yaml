@@ -17,7 +17,7 @@ Menus:
     - identifier: blog
       name: Blog
       title: Blog posts
-      url: /blogs
+      url: /blog
       weight: 1
 
     # - identifier: tags
@@ -346,10 +346,10 @@ params:
             url: https://github.com/GrafKnusprig/HuntShowdownLoadoutRandomizer
       # - title: "Tin Whistles"
       #   content: "A passion of mine is to build and play my own tin whistles."
-      #   image: /blogs/3d/tin-whistle/thumb-1.webp
+      #   image: /blog/3d/tin-whistle/thumb-1.webp
       #   featured:
       #     name: Read Blog Post
-      #     link: /blogs/3d/tin-whistle/tin-whistle-1
+      #     link: /blog/3d/tin-whistle/tin-whistle-1
       #   badges:
       #     - "blender"
       #     - "OpenSCAD"

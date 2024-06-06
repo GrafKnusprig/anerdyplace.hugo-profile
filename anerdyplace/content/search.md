@@ -1,6 +1,6 @@
 ---
 title: "Search"
-summary: "Search blogs for keywords"
+summary: "Search blog for keywords"
 toc: false
 socialShare: false
 date: false

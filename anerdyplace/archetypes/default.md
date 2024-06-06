@@ -7,6 +7,6 @@ socialShare: false
 toc: false
 tags: [tag]
 supressThumbnail: false
-thumbnail: /images/blogs/generic-thumbs/default.webp
+thumbnail: /images/blog/generic-thumbs/default.webp
 ---
 
