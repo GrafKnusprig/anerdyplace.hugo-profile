@@ -7,14 +7,14 @@
             <div class="card h-100">
                 <div class="card-body bg-transparent p-4 shadow-sm">
                     <!-- Load params -->
-                    {{ $supressthumbnail := .Params.supressthumbnail }}
+                    {{ $supressThumbnail := .Params.supressThumbnail }}
                     {{ $thumbnail := .Params.thumbnail }}
                     {{ $width := .Site.Params.thumbnailWidth }}
                     {{ $height := .Site.Params.thumbnailHeight }}
                     {{ $fit := printf "%dx%d" $width $height }}
 
                     <!-- Only generate thumbnail if it's really used -->
-                    {{ if not $supressthumbnail }}
+                    {{ if not $supressThumbnail }}
                         <!-- Resize thumbnail -->
                         {{ if $thumbnail }}
                             {{ with .Resources.GetMatch $thumbnail }}
@@ -35,13 +35,14 @@
                             {{ end }}
                         {{ end }}
                     {{ end }} 
-                    {{ if and $thumbnail (not $supressthumbnail)}}
+                    {{ if and $thumbnail (not $supressThumbnail)}}
                         <a href="{{ .RelPermalink }}">
                             <img src="{{ $thumbnail }}" alt="{{ .Title }}" class="rounded img-fluid">
                         </a>
                     {{ else }}
+                        {{ $truncateLength := .Site.Params.truncateLength }}
                         <div class="card-text secondary-font">
-                            <p>{{ .Summary | truncate 300 }}</p>
+                            <p>{{ .Summary | truncate $truncateLength }}</p>
                         </div>
                     {{ end }}
 

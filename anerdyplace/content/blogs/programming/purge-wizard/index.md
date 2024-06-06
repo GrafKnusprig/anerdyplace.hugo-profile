@@ -6,7 +6,6 @@ draft: false
 socialShare: false
 toc: false
 tags: [csharp, batch, purgewizard, delete files]
-supressthumbnail: true
 ---
 
 # A friend of mine ...
