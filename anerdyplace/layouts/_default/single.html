@@ -58,7 +58,7 @@
             <h5>Tags</h5>
             <ul class="tags-ul list-unstyled list-inline">
               {{range .Params.tags}}
-              <li class="list-inline-item"><a href="{{`tags` | absURL}}/{{.| urlize}}" target="_blank">{{.}}</a></li>
+              <li class="list-inline-item"><a href="{{`tags` | absURL}}/{{.| urlize}}" target="_self">{{.}}</a></li>
               {{end}}
             </ul>
           </aside>
@@ -83,7 +83,7 @@
                   <a target="_blank" href="mailto:?subject={{ .Title }}&amp;body=Check out this site {{ .Site.Params.hostName }}{{ .Permalink | absURL }}">
                     <i class="fa fa-envelope"></i>
                   </a>
-                </li>
+                </li> 
               </ul>
             </div>
           </aside>
