@@ -6,8 +6,8 @@ draft: false
 socialShare: false
 toc: true
 tags: [ebsynth, video, ffmpeg, art]
-thumbnail: /images/blog/art/ebsynth/thumb.webp
-image: /images/blog/art/ebsynth/thumb.webp
+thumbnail: thumb.webp
+image: thumb.webp
 ---
 
 ## Intro
@@ -52,7 +52,7 @@ ffmpeg -r 15 -i "[video].mp4" "frames\frame-%03d.png"
 ```
 
 Now you have a lot of images to work with:
-![image of keyframes](/images/blog/art/ebsynth/frames.webp)
+![image of keyframes](frames.webp)
 
 ## Choosing and editing the keyframe
 
@@ -68,16 +68,16 @@ Since EbSynth can synth forward and backward, it's no problem if your keyframe i
 In this example, I chose the first frame for my keyfarme, because you can clearly see the full character. The backgroud is less important here.
 I edited the image to get a washed out, old paper like look:
 
-![image of keyframe](/images/blog/art/ebsynth/keyframe.webp)
+![image of keyframe](keyframe.webp)
 
 ## Running EbSynth
 
-![image of output frames](/images/blog/art/ebsynth/ebsynth.webp)
+![image of output frames](ebsynth.webp)
 
 In EbSynth's gui, you just choose your keyframe and the first of your video frames.
 After the synthing prozess, you have a folder full of synthed frames:
 
-![image of output frames](/images/blog/art/ebsynth/output-frames.webp)
+![image of output frames](output-frames.webp)
 
 ## Converting frames back into a video
 
@@ -94,5 +94,5 @@ ffmpeg -r 15 -f image2 -s 1920x1080 -i %03d.png -vcodec libx264 -crf 25 -pix_fmt
 
 Here is the original video compared to the final result:
 
-{{< video "/videos/blog/art/ebsynth/exampleVideo1.webm" "video/webm" "autoplay">}}
-{{< video "/videos/blog/art/ebsynth/exampleVideo2.webm" "video/webm" "autoplay">}}
+{{< video "exampleVideo1.webm" "video/webm" "autoplay">}}
+{{< video "exampleVideo2.webm" "video/webm" "autoplay">}}

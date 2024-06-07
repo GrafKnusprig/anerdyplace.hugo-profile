@@ -6,7 +6,7 @@ draft: false
 socialShare: false
 toc: true
 tags: [gaming, hunt, showdown, serpent, moon]
-thumbnail: /images/blog/gaming/hunt-showdown/serpent-moon-story/thumb.webp
+thumbnail: thumb.webp
 ---
 
 ## Chapter 1
@@ -17,7 +17,7 @@ Those who knew of the corruption were recruited to end the tragedy. Hunters from
 
 1/2
 
-{{< audio "/audio/hunt-showdown/serpent-moon-story/Chapter1.1.ogg" "audio/ogg">}}
+{{< audio "Chapter1.1.ogg" "audio/ogg">}}
 
 Kevin Linus watched from the window of his home by the pond and the willow. Outside, Mr. Chary waited beside the circle he had drawn in the dirt on so many Moonlit nights before. He would not have to wait long. We are all slaves to habit, and desire, in the end.
 
@@ -31,4 +31,4 @@ And then he woke up.
 
 2/2
 
-{{< audio "/audio/hunt-showdown/serpent-moon-story/Chapter1.2.ogg" "audio/ogg">}}
+{{< audio "Chapter1.2.ogg" "audio/ogg">}}

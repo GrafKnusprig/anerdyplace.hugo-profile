@@ -6,8 +6,7 @@ draft: false
 socialShare: false
 toc: true
 tags: [3d, openscad, tin whistle, fipple, sweetone]
-thumbnail: /blog/3d/tin-whistle/thumb-1.webp
-image: /blog/3d/tin-whistle/thumb-1.webp
+thumbnail: pvc-flutes.webp
 ---
 
 # Some time ago...
@@ -17,7 +16,7 @@ image: /blog/3d/tin-whistle/thumb-1.webp
 
 It all started with simple flutes made from PVC pipes and wood.
 
-![image of pcv whistles and flutes](/blog/3d/tin-whistle/pvc-flutes.webp "")
+![image of pcv whistles and flutes](pvc-flutes.webp "")
 
 I made a bunch of them. There were many more, but I gave them away to friends.
 
@@ -27,7 +26,7 @@ The flutes are even easier. You just have to drill a blow hole in the top and cl
 
 I used an online calculator (https://music.bracker.uk/Music/Whistle-Calculator.html) to calculate the hole position. Since the calculations for this are very complex, I have saved myself this effort for now. But sometime I still want to integrate it into the scad file.
 
-![image of pcv head](/blog/3d/tin-whistle/pvc-head.webp "")
+![image of pcv head](pvc-head.webp "")
 
 The sound is amazingly good and reminiscent of woodwind instruments.
 
@@ -38,7 +37,7 @@ You work your way up all 6 holes. One at a time.
 
 Over time I moved on to building them out of aluminum.
 
-![image of alu whistles](/blog/3d/tin-whistle/aluwhistles.webp "A low D and some high D whistles")
+![image of alu whistles](aluwhistles.webp "A low D and some high D whistles")
 
 They sound very similar to PVC flutes, but if you change the mouthpiece a little they can also sound like trumpets. Kind of tinny.
 
@@ -55,10 +54,10 @@ The terminology of a fipple is very complex indeed. So a added a lot of paramete
 
 It took me about 8 iterations until I had the design right. Now it prints perfectly and works right of the printer without any sanding or filing.
 
-![image of fipple stl](/blog/3d/tin-whistle/fipple.webp "The 8th iteration of the 3D printed fipple")
+![image of fipple stl](fipple.webp "The 8th iteration of the 3D printed fipple")
 
 As for now, the blade sits right in the middle of the windway outlet. In addition, the air duct also tapers from the top to the bottom. This leads to a better playing experience, since less air is needed to play the whistle.
 
 The size of the opening plays a crucial role in how loud the whistle is. In parallel to my normal mouthpiece, I have also been working on one that is very quiet. It's still a work in progress, but the point of it is to have a quiet practice whistle that you can play late at night or in an apartment.
 
-![image of fipples](/blog/3d/tin-whistle/3d-printed-fipples-clarke-style.webp "The 8th iteration of the 3D printed fipple")
+![image of fipples](3d-printed-fipples-clarke-style.webp "The 8th iteration of the 3D printed fipple")

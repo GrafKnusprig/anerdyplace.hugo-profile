@@ -17,15 +17,16 @@ Therefore I need an easy way to include the files as code preview in my blog pos
 I use a shortcode which makes use of HUGOs [readFile](https://gohugo.io/functions/readfile/) and [saveHtml](https://gohugo.io/functions/safehtml/) function.
 
 include.html
+
 ```html
-{{% include "/layouts/shortcodes/include.html" %}}
+{{% include "/layouts/shortcodes/include.html"%}}
 ```
 
 and you use it like this:
 
 ```markdown
     ```html
-    {{%/* include "/layouts/shortcodes/include.html" */%}}
+    {{% include "/layouts/shortcodes/include.html"%}}
     ```
 ```
 
@@ -34,9 +35,9 @@ For this to work, the file has to be in the static folder of your hugo project.
 Then you can provide the file like this:
 
 ```markdown
-[include.html](/files/programming/hugo-embed-files/include.html)
+[include.html](include.txt)
 ```
 
 which results in:
 
-[include.html](/files/programming/hugo-embed-files/include.html)
+[include.html](include.txt)

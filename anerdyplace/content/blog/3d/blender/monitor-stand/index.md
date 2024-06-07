@@ -31,7 +31,7 @@ It performs boolean operations much faster, better, and cleaner than if you star
 
 The result is quite impressive.
 
-![Monitor Stand Renders](/blog/3d/blender/monitor-stand/image1.webp)
+![Monitor Stand Renders](image1.webp)
 
 You can get the file on thingiverse: [Monitor Stand](https://www.thingiverse.com/thing:6649609)
 
@@ -43,5 +43,5 @@ part printed in Galaxy Black, it's quite nice to look at and looks almost origin
 As a little bonus, the tilt angle can also still be adjusted thanks to the original stand. (Just not too far forward or it will fall out)
 But you could also screw the stand to the monitor housing. For those of you who like it really hard core.
 
-![Monitor Stand Front](/blog/3d/blender/monitor-stand/image3.webp)
-![Monitor Stand Back](/blog/3d/blender/monitor-stand/image2.webp)
+![Monitor Stand Front](image3.webp)
+![Monitor Stand Back](image2.webp)

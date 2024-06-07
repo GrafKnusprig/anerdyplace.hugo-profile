@@ -29,4 +29,4 @@ The plug has also the functionality to 'poke through' the refill mines, when the
 {{< video "/blog/3d/blender/eraser-pen/render.webm" "video/webm" "autoplay">}}
 
 You can get the Eraser Pen on my thingiverse:
-[click here](https://www.thingiverse.com/thing:5878587)
+[https://www.thingiverse.com/thing:5878587](https://www.thingiverse.com/thing:5878587)

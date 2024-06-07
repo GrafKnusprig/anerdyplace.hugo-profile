@@ -6,11 +6,12 @@ draft: false
 socialShare: false
 toc: false
 tags: [dfplayer, pinout]
-thumbnail: /images/blog/dfplayer-mini/thumb.webp
+thumbnail: thumb.webp
+image: thumb.webp
 ---
 
 # Pinout and pin assignment for DFPlayer Mini
 
-![pinout](/images/blog/dfplayer-mini/pinout.webp)
+![pinout](pinout.webp)
 
-![pin assignment](/images/blog/dfplayer-mini/pin-assignment.webp)
+![pin assignment](pin-assignment.webp)

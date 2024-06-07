@@ -6,7 +6,7 @@ draft: false
 socialShare: false
 toc: true
 tags: [gaming, hunt, showdown, devils, moon]
-thumbnail: /images/blog/gaming/hunt-showdown/devils-moon-story/thumb.webp
+thumbnail: thumb.webp
 ---
 
 ## Chapter 1 
@@ -70,7 +70,7 @@ man will-
 
 [Transmission cuts off here]
 
-{{< audio "/audio/hunt-showdown/devils-moon-story/chapter3.ogg" "audio/ogg">}}
+{{< audio "chapter3.ogg" "audio/ogg">}}
 
 <hr>
 
@@ -157,7 +157,7 @@ So, I was right. I saw one of the boy's followers [Unintelligible] he was speaki
 
 [Transmission cuts off here] 
 
-{{< audio "/audio/hunt-showdown/devils-moon-story/chapter6.ogg" "audio/ogg">}}
+{{< audio "chapter6.ogg" "audio/ogg">}}
 
 <hr>
 
@@ -263,7 +263,7 @@ And the devils in me<br>
 
 [Transmission cuts off here]
 
-{{< audio "/audio/hunt-showdown/devils-moon-story/chapter10.ogg" "audio/ogg">}}
+{{< audio "chapter10.ogg" "audio/ogg">}}
 
 <hr>
 
@@ -360,5 +360,5 @@ And when the fight has come again<br>your gun will become mine!<br>For dead men 
 
 Should old acquaintance be forgot,<br>and never brought to mind<br>Should old acquaintance be forgot<br>and auld lang syne?
 
-{{< audio "/audio/hunt-showdown/devils-moon-story/chapter15.ogg" "audio/ogg">}}
+{{< audio "chapter15.ogg" "audio/ogg">}}
 

@@ -19,30 +19,9 @@ One textfile, which contains the path to the folder, where you want do do your d
 
 That way you can delete similar named files from different locations. Which was the main requirement.
 
-``` cmd
-@echo off
-set /p baseFolder=< baseFolderPath.txt
-echo You try to delete:
-for /f "delims=" %%f in (filesToDelete.txt) do echo "%baseFolder%\%%f"
-goto :choice
-
-:choice
-set /P c=Are you sure you want to continue[y/n]?
-if /I "%c%" EQU "y" goto :delete
-if /I "%c%" EQU "n" goto :stop
-
-:delete
-for /f "delims=" %%f in (filesToDelete.txt) do del "%baseFolder%\%%f"
-echo Done.
-echo Press any key to exit...
-pause >nul
-exit
-
-:stop
-echo You cancelled the operation.
-echo Press any key to exit...
-pause >nul
-exit
+[*purge.cmd*](purge.cmd)
+```cmd
+{{% include "purge.cmd"%}}
 ```
 
 # It was a good start,
@@ -53,7 +32,7 @@ A function was needed, that you can also delete files by using name patterns and
 
 As a batch script is not the most intuitive to use for non programmers, I thought to myself, that I want to write a litte .net application. With an easy to use UI and bulletproof to wrong user inputs.
 
-![purgewizard screenshot](/blog/programming/purge-wizard/purgewizard.webp)
+![purgewizard screenshot](purgewizard.webp)
 
 You can even import the old txt based file lists via the import function. This also works with patterns.
 

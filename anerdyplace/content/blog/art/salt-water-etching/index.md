@@ -6,8 +6,8 @@ draft: false
 socialShare: false
 toc: true
 tags: [etch, salt water, metal, knife]
-thumbnail: /blog/art/salt-water-etching/thumb.webp
-image: /blog/art/salt-water-etching/thumb.webp
+thumbnail: thumb.webp
+image: thumb.webp
 ---
 
 ## I had an idea
@@ -41,7 +41,7 @@ However, if you want to use a more complex or digital design, there is a very co
 You can use a laser printer to print a design on thermal transfer paper in mirror image and then iron it onto the metal.
 The cool thing is, every catalog and brochure is actually made of this paper. And you always have something like that on hand.
 
-![image of paper](/blog/art/salt-water-etching/print-on-paper.webp)
+![image of paper](print-on-paper.webp)
 
 It can be a little tricky, but with a little practice you'll get the hang of it quickly.
 You have to print on a very high setting, so that the color is as dense as possible.
@@ -54,7 +54,7 @@ Wash the paper off the metal under running water and with a little soap. You hav
 
 Now you can see why it's better to use a thin catalog paper and not a thick one.
 
-![image of metal](/blog/art/salt-water-etching/print-on-metal.webp)
+![image of metal](print-on-metal.webp)
 
 ## The etching itself
 
@@ -67,7 +67,7 @@ Then you have to see how much current you let flow. I don't remember exactly, bu
 It does not take long. After a few minutes you have a result. It can easily happen that you miss the point and you etch too deep.
 Also, you must not etch with too much current, otherwise the paint or print can flake off very easily.
 
-![image of etching](/blog/art/salt-water-etching/etching.webp)
+![image of etching](etching.webp)
 
 I strongly recommend doing this outside, as the etching can produce chlorine gas and other harmful fumes.
 
@@ -81,9 +81,9 @@ The laser print and varnish residues can be removed very easily with a little ac
 The last step is to polish the metal. Simply use a polish of your choice.
 I used Autosol metal polish. 
 
-![image of etched metal](/blog/art/salt-water-etching/finished-etch.webp)
+![image of etched metal](finished-etch.webp)
 
 
-![image of etched knife](/blog/art/salt-water-etching/knife.webp)
+![image of etched knife](knife.webp)
 
 Have fun ;)

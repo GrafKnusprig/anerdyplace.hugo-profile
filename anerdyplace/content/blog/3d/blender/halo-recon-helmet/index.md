@@ -6,8 +6,8 @@ draft: false
 socialShare: false
 toc: true
 tags: [3D, print, halo, cosplay, recon, helmet, arduino]
-thumbnail: /blog/3d/blender/halo-recon-helmet/thumb.webp
-image: /blog/3d/blender/halo-recon-helmet/thumb.webp
+thumbnail: thumb.webp
+image: thumb.webp
 ---
 
 # That one time I modelled my own head ...
@@ -20,18 +20,18 @@ with me getting into cosplay. Cosplay was always the thing I did know existed, b
 
 I've gone all out and built a whole plate armor for my girlfriend. She cosplayed Erza from fairy tail.
 
-![image of erza armor](/blog/3d/blender/halo-recon-helmet/erza-armor.webp)
+![image of erza armor](erza-armor.webp)
 
 I made it all from EVA foam, Arylic paint and Latex. With the simplest tools: A cutter knife and a dremel.
 
 I also made Erzas winged sword. Totally LARP conform. With a fiber glass rod in the middle, enough cusion and a soft tip.
 That way we could take it inside and run around the convention without getting any problems at all.
 
-![image of erzas sword](/blog/3d/blender/halo-recon-helmet/erza-sword-plain.webp)
+![image of erzas sword](erza-sword-plain.webp)
 
 I did go as Mystogan. My girlfriend made the clothing and I made all his staffs.
 
-![image of mystogan](/blog/3d/blender/halo-recon-helmet/mystogan.webp)
+![image of mystogan](mystogan.webp)
 
 It was fun and I got tons of compliments for my builds, which pushed me good and was great for my ego. :D
 
@@ -47,7 +47,7 @@ and now I had the excuse to buy one. I wanted to build my own mjolnir and I want
 
 I decided to do the Recon Armor, since I didn't want to look the same as everyone else and I always liked the looks of it in Halo multiplayer.
 
-![image of recon](/blog/3d/blender/halo-recon-helmet/halo-reach-recon.webp)
+![image of recon](halo-reach-recon.webp)
 
 The Ender 3 Pro was on sale for 160€, so I gave it a shot.
 It arrived 2 days after and the assembly was easy and intuitive. I totally can recommend this printer, since it's awesome.
@@ -80,13 +80,13 @@ So I had to come up with an idea. It was so simple as it was complicated :D
 
 I would just model my own head in blender and then fit the helmet virtually.
 
-![image of my head in blender](/blog/3d/blender/halo-recon-helmet/helmet-on-head2.webp)
+![image of my head in blender](helmet-on-head2.webp)
 
 I started by measuring my own head with some measuring tape and took a note of all the values.
 
 I blender I used an add-on to get a generic head model.
 
-![image of my head in blender](/blog/3d/blender/halo-recon-helmet/helmet-on-head.webp)
+![image of my head in blender](helmet-on-head.webp)
 
 From there on I tweaked it to my size.
 For an even more accurate model I took some pictures of my head and imported them into blender, too.
@@ -148,14 +148,14 @@ was when I tried to put on the helmet for the first time.
 
 Long story short: It was a perfect fit at first try and it looks amazing.
 
-![image of helmet](/blog/3d/blender/halo-recon-helmet/helmet.webp)
+![image of helmet](helmet.webp)
 
 ## The last thing I did
 
 was to add the LED lights to the helmet.
 I used an Arduino Pro Micro, a 9V battery and some adressable LEDs.
 
-![image of helmet](/blog/3d/blender/halo-recon-helmet/helmet-with-led.webp)
+![image of helmet](helmet-with-led.webp)
 
 With a switch in the back, you can choose from bright white light, dimmed yellow light, grenn blinking (mainly for cosplay conventions to get some attention) and a police car red blue blinking pattern.
 
@@ -163,7 +163,7 @@ The last one was a bit of work since I had to watch some police car footage to f
 
 >I think I could write a complete post about this topic alone. And maybe I will :)
 
-{{< video "/blog/3d/blender/halo-recon-helmet/led-video.mp4" "video/mp4" "autoplay">}}
+{{< video "led-video.mp4" "video/mp4" "autoplay">}}
 
 ---
 <br><br><br>
