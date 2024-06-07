@@ -5,7 +5,7 @@ date: 2020-02-24
 draft: false
 socialShare: false
 tags: [arduino, isp, programming]
-thumbnail: /images/blog/arduino/arduino-micro-isp/thumb.webp
+thumbnail: thumb.webp
 ---
 
 ## Description

@@ -1,10 +1,10 @@
 ---
-title: "Bmw E87 Turbo Removal"
+title: "Bmw E87 Turbo Swap"
 author: Philipp
 date: 2022-09-08T22:43:29+02:00
 draft: false
 socialShare: false
-thumbnail: /images/blog/bmw-e87-turbo-removal/thumb.webp
+thumbnail: thumb.webp
 tags: [bmw, turbo]
 ---
 
@@ -31,7 +31,7 @@ The troubleshooting began:
 The reading of the actuator signal was the trickiest part.
 A test wire was inserted into pin 4 of the turbocharger connector and measured against ground using an oscilloscope.
 
-![image of connector plug](/images/blog/bmw-e87-turbo-removal/image14.webp "The booster signal")
+![image of connector plug](image14.webp "The booster signal")
 
 The signal matched the given values from the diganosis manual.
 
@@ -42,20 +42,20 @@ The best way to do this is to jack up the car or drive onto a ramp or lifting pl
 
 - Loosen the hose clamps of the turbo oil outlet.
 
-![image of oil hose](/images/blog/bmw-e87-turbo-removal/image1.webp "Oil outlet hose clamps")
+![image of oil hose](image1.webp "Oil outlet hose clamps")
 
 - Remove the bottom screw of the turbo.
 
-![image of bottom screw](/images/blog/bmw-e87-turbo-removal/image2.webp "The bottom screw")
+![image of bottom screw](image2.webp "The bottom screw")
 
 - Fully open the clamp between the turbo and the catalytic converter.
   This tends to be tight and can be loosened with a long screwdriver either from below, or from above through the air filter chamber.
 
-![image of the clamp](/images/blog/bmw-e87-turbo-removal/image3.webp "The clamp screw")
+![image of the clamp](image3.webp "The clamp screw")
 
 - Don't forget to unplug the cable.
 
-![image of the connector plug](/images/blog/bmw-e87-turbo-removal/image4.webp "The connector plug")
+![image of the connector plug](image4.webp "The connector plug")
 
 From there on it continues above.
 It's annoying, but more or less self-explanatory.
@@ -64,7 +64,7 @@ It's annoying, but more or less self-explanatory.
 - To remove the air filter cover, you have to remove the dome cross-brace.
 - Next is the egr cooler, this can be a little tricky.
 
-![image of the egr cooler](/images/blog/bmw-e87-turbo-removal/image5.webp "The egr cooler")
+![image of the egr cooler](image5.webp "The egr cooler")
 
 - 1: there are two torx screws to loosen
 - 2: a long allen screw
@@ -75,7 +75,7 @@ It's annoying, but more or less self-explanatory.
 - 7, 8: two screws from the air channel
 - At last you have to disconnect the hose at the bottom left. Attention! You need something to seal the hose after removing the egr cooler, because a lot of coolant will come out.
 
-![image of the egr cooler](/images/blog/bmw-e87-turbo-removal/image10.webp "The egr cooler")
+![image of the egr cooler](image10.webp "The egr cooler")
 
 - Next step is to remove the compressor outlet channel. It's secured with an allen and a torx screw.
 - Before we totaly loosen the turbo, remove the oil intake hose between the engine and the turbo.
@@ -84,7 +84,7 @@ It's annoying, but more or less self-explanatory.
 
 That is it. Your turbo is now free. To get it out, rotate it 180° top to bottom and reverse dive it out.
 
-![image of the turbo](/images/blog/bmw-e87-turbo-removal/image13.webp "The turbo")
+![image of the turbo](image13.webp "The turbo")
 
 To be continued...
 

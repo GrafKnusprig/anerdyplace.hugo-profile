@@ -30,9 +30,9 @@ Lossy, lossless and transparency are all supported in animated WebP images, whic
 Get cwebp from **https://developers.google.com/speed/webp/docs/cwebp**.
 
 ## Batch file
-[*convert_to_webp.cmd*](/files/scripts/convert_to_webp.cmd)
+[*convert_to_webp.cmd*](convert_to_webp.cmd)
 ```c
-{{% include "static/files/scripts/convert_to_webp.cmd"%}}
+{{% include "convert_to_webp.cmd"%}}
 ```
 
 **%1** gives us the first file from the stack. The command **shift** iterates through the stack. If **%1** is empty, we go to **eof** and end the script.

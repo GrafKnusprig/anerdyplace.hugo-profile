@@ -52,10 +52,10 @@ outputs:
 ```
 
 ## 3. search.js
-add [*search.js*](/js/search.js) to ./static/js/
+add [*search.js*](search.js) to ./static/js/
 
 ```javascript
-{{% include "static/js/search.js" %}}
+{{% include "search.js" %}}
 ```
 
 ## 4. search.html
