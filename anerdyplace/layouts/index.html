@@ -1,8 +1,6 @@
 {{ define "head" }}
 <meta name="description" content={{ .Site.Params.description }}>
-<meta property="og:image" content="{{ .Site.Params.staticPath }}{{ .Site.Params.defaultImage }}" />
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="{{ .Site.Params.staticPath }}{{ .Site.Params.defaultImage }}" />
+<meta property="og:image" content="{{ .Site.baseURL }}{{ .Site.Params.defaultImage }}" />
 <link rel="stylesheet" href="{{ .Site.Params.staticPath }}/css/index.css" media="all">
 <link rel="stylesheet" href="{{ .Site.Params.staticPath }}/css/projects.css" media="all">
 
