@@ -58,7 +58,7 @@
 
                     {{ if and $thumbnail (not $supressThumbnail) }}
                         <a href="{{ .RelPermalink }}">
-                            <img src="{{ $thumbnail }}" alt="{{ .Title }}" class="rounded img-fluid">
+                            <img src="{{ $thumbnail }}" alt="{{ .Title }}" class="rounded img-fluid" style="max-height: {{ $height }}px;">
                         </a>
                     {{ else }}
                         {{ $truncateLength := .Site.Params.truncateLength }}

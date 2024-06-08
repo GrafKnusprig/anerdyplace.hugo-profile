@@ -1,43 +1,55 @@
 <div class="container py-3" id="recent-posts">
     {{ if .Site.Params.footer.recentPosts | default true }}
-    <div class="h3 text-center text-secondary py-3">Recent posts</div>
+    <div class="h3 text-center text-secondary py-3">Recent gallery uploads</div>
     <div class="row justify-content-center">
         {{ range ( where .Site.RegularPages "Type" "gallery" | first 3 ) }}
         <div class="col-lg-4 col-md-6 pt-2">
             <div class="card h-100">
                 <div class="card-body bg-transparent p-4 shadow-sm">
-                    <!-- Load params -->
-                    {{ $supressThumbnail := .Params.supressThumbnail }}
-                    {{ $thumbnail := .Params.thumbnail }}
-                    {{ $width := .Site.Params.thumbnailWidth }}
-                    {{ $height := .Site.Params.thumbnailHeight }}
-                    {{ $fit := printf "%dx%d" $width $height }}
+                  <!-- Load params -->
+                  {{ $supressThumbnail := .Params.supressThumbnail }}
+                  {{ $thumbnail := .Params.thumbnail }}
+                  {{ $width := .Site.Params.thumbnailWidth }}
+                  {{ $height := .Site.Params.thumbnailHeight }}
+                  {{ $fit := printf "%dx%d" $width $height }}
 
-                    <!-- Only generate thumbnail if it's really used -->
-                    {{ if not $supressThumbnail }}
-                        <!-- Resize thumbnail -->
-                        {{ if $thumbnail }}
-                            {{ with .Resources.GetMatch $thumbnail }}
-                                {{ $resizedImage := .Fit $fit }}
-                                {{ $thumbnail = $resizedImage.RelPermalink }}
-                            {{ end }}
-                        {{ else }}
-                            <!-- Get thumbnail from resources  -->
-                            {{ with .Resources.ByType "image" }}
-                                {{ if . }}
-                                    {{ $image := (index . 0).Fit $fit }}
-                                    {{ $thumbnail = $image.RelPermalink }}
-                                {{ end }}
-                            {{ end }}
-                            {{ with .Resources.GetMatch "*thumb*" }}
-                                {{ $resizedImage := .Fit $fit }}
-                                {{ $thumbnail = $resizedImage.RelPermalink }}
-                            {{ end }}
-                        {{ end }}
-                    {{ end }} 
+                  <!-- Only generate thumbnail if it's really used -->
+                  {{ if not $supressThumbnail }}
+                      <!-- Resize thumbnail -->
+                      {{ if $thumbnail }}
+                          {{ with .Resources.GetMatch $thumbnail }}
+                              {{ $resizedImage := .Fit $fit }}
+                              {{ $thumbnail = $resizedImage.RelPermalink }}
+                          {{ end }}
+                      {{ else }}
+                          <!-- Get thumbnail from resources  -->
+                          {{ $resourceImage := "" }}
+                          {{ with .Resources.ByType "image" }}
+                              {{ if . }}
+                                  {{ $image := (index . 0).Fit $fit }}
+                                  {{ $resourceImage = $image.RelPermalink }}
+                              {{ end }}
+                          {{ end }}
+                          {{ if $resourceImage }}
+                              {{ $thumbnail = $resourceImage }}
+                          {{ else }}
+                              <!-- Get thumbnail from front matter -->
+                              {{ $frontMatterImage := "" }}
+                              {{ range .Params.images }}
+                                  {{ if not $frontMatterImage }}
+                                      {{ $frontMatterImage = .src }}
+                                  {{ end }}
+                              {{ end }}
+                              {{ if $frontMatterImage }}
+                                  {{ $thumbnail = $frontMatterImage }}
+                              {{ end }}
+                          {{ end }}
+                      {{ end }}
+                    {{ end }}
+
                     {{ if and $thumbnail (not $supressThumbnail)}}
                         <a href="{{ .RelPermalink }}">
-                            <img src="{{ $thumbnail }}" alt="{{ .Title }}" class="rounded img-fluid">
+                            <img src="{{ $thumbnail }}" alt="{{ .Title }}" class="rounded img-fluid" style="max-height: {{ $height }}px;">
                         </a>
                     {{ else }}
                         {{ $truncateLength := .Site.Params.truncateLength }}
