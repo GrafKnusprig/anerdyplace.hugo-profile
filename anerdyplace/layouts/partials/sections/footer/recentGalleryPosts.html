@@ -37,7 +37,7 @@
                               {{ $frontMatterImage := "" }}
                               {{ range .Params.images }}
                                   {{ if not $frontMatterImage }}
-                                      {{ $frontMatterImage = .src }}
+                                      {{ $frontMatterImage = . }}
                                   {{ end }}
                               {{ end }}
                               {{ if $frontMatterImage }}

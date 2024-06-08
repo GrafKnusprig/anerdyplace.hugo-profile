@@ -21,7 +21,6 @@
                     {{ $width := .Site.Params.thumbnailWidth }}
                     {{ $height := .Site.Params.thumbnailHeight }}
                     {{ $fit := printf "%dx%d" $width $height }}
-
                     <!-- Only generate thumbnail if it's really used -->
                     {{ if not $supressThumbnail }}
                         <!-- Resize thumbnail -->

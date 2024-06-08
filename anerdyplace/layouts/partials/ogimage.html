@@ -1,0 +1,30 @@
+{{ "<!-- ENTERING ogimage.html (open graph) -->" | safeHTML }}
+{{- $baseurl := .Site.BaseURL -}}
+{{- $done := false -}}
+{{- if .IsPage -}}
+    {{- $image := .Page.Params.thumbnail -}}
+    {{- if $image -}}
+        {{- with .Page.Resources.GetMatch $image -}}
+            <meta property="og:image" content="{{ if in .RelPermalink "http" }}{{ .RelPermalink }}{{ else }}{{ $baseurl }}{{ .RelPermalink }}{{ end }}" />
+            {{- $done = true -}}
+        {{- else -}}
+            <meta property="og:image" content="{{ $baseurl }}{{ $image }}" />
+        {{- end -}}
+    {{- else -}}
+        {{- with .Page.Resources.ByType "image" -}}
+            {{- if . -}}
+                {{- range first 6 . -}}
+                    <meta property="og:image" content="{{ if in . "http" }}{{ . }}{{ else }}{{ $baseurl }}{{ . }}{{ end }}" />
+                    {{- $done = true -}}
+                {{- end -}}
+            {{- else -}}
+                <meta property="og:image" content="{{ $baseurl }}feature.webp" />
+            {{- end -}}
+        {{- end -}}
+        {{- if not $done -}}
+            <meta property="og:image" content="{{ $baseurl }}feature.webp" />
+        {{- end -}}
+    {{- end -}}
+{{- else -}}
+    <meta property="og:image" content="{{ $baseurl }}feature.webp" />
+{{- end -}}

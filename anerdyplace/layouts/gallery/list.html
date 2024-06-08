@@ -21,7 +21,6 @@
                     {{ $width := .Site.Params.thumbnailWidth }}
                     {{ $height := .Site.Params.thumbnailHeight }}
                     {{ $fit := printf "%dx%d" $width $height }}
-
                     <!-- Only generate thumbnail if it's really used -->
                     {{ if not $supressThumbnail }}
                         <!-- Resize thumbnail -->
@@ -46,7 +45,7 @@
                                 {{ $frontMatterImage := "" }}
                                 {{ range .Params.images }}
                                     {{ if not $frontMatterImage }}
-                                        {{ $frontMatterImage = .src }}
+                                        {{ $frontMatterImage = . }}
                                     {{ end }}
                                 {{ end }}
                                 {{ if $frontMatterImage }}

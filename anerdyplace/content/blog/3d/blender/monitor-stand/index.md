@@ -6,7 +6,6 @@ draft: false
 socialShare: false
 toc: false
 tags: [monitor stand, acer, 3d, printing, blender]
-thumbnail: image1*
 ---
 
 # I wanted a vertical monitor
