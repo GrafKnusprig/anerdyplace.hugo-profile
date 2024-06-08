@@ -344,16 +344,20 @@ params:
         links:
           - icon: fab fa-github
             url: https://github.com/GrafKnusprig/HuntShowdownLoadoutRandomizer
-      # - title: "Tin Whistles"
-      #   content: "A passion of mine is to build and play my own tin whistles."
-      #   image: /blog/3d/tin-whistle/thumb-1.webp
-      #   featured:
-      #     name: Read Blog Post
-      #     link: /blog/3d/tin-whistle/tin-whistle-1
-      #   badges:
-      #     - "blender"
-      #     - "OpenSCAD"
-      #     - "3D printing"
+      - title: 'BirdCLEF 2024'
+        content: 'Bird species identification from audio, focused on under-studied species in the Western Ghats, a major biodiversity hotspot in India.'
+        image: /images/projects/birdclef-2024.webp
+        featured:
+          name: Read Blog Post
+          link: /blog/projects/birdclef-2024
+        badges:
+          - "kaggle"
+          - "competition"
+          - "machine learning"
+          - "pytorch"
+        links:
+          - icon: fab fa-kaggle
+            url: https://www.kaggle.com/competitions/birdclef-2024
 
   #Contact
   contact:

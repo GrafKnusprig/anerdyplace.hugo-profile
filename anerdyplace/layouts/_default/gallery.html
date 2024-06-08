@@ -1,0 +1,109 @@
+{{ define "head" }}
+<meta name="description" content="{{ .Title }} of {{ .Site.Title }}">
+<style>
+  .gallery {
+    margin: 0 auto;
+  }
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .modal-content {
+    background-color: black;
+    border: none;
+    width: auto;
+    height: auto;
+  }
+  .modal-body {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .modal-dialog {
+    max-width: 90%;
+    width: auto;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+  }
+  .modal-body img {
+    max-width: 100%;
+    max-height: 100vh;
+    width: auto;
+    height: auto;
+    cursor: pointer;
+  }
+</style>
+<!-- <link rel="stylesheet" href="{{ .Site.Params.staticPath }}/css/list.css" media="all"> -->
+{{ end }}
+
+{{ define "title" }}
+{{.Title }} | {{ .Site.Title }}
+{{ end }}
+
+{{ define "main" }}
+<div class="container pt-5" id="list-page">
+    <h2 class="text-center pb-2">{{.Title}}</h2>
+    <h6 class="text-center">{{ .Params.description | emojify }}</h6>
+    <div class="row p-4">
+        {{ .Content | emojify }}
+    </div>
+    <div class="gallery" id="masonry-gallery">
+        {{ range $index, $image := .Params.images }}
+        <div class="gallery-item col-md-4">
+            <a href="#" data-toggle="modal" data-target="#imageModal{{ $index }}">
+                <img src="{{ $image.src }}" alt="{{ $image.Name }}">
+            </a>
+        </div>
+        {{ end }}
+    </div>
+</div>
+
+{{ range $index, $image := .Params.images }}
+<div class="modal fade" id="imageModal{{ $index }}" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel{{ $index }}" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <img src="{{ $image.src }}" class="img-fluid" alt="{{ $image.Name }}">
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var elem = document.querySelector('#masonry-gallery');
+      var imgElements = elem.querySelectorAll('img');
+      var totalImages = imgElements.length;
+      var imagesLoadedCount = 0;
+  
+      function checkAllImagesLoaded() {
+        imagesLoadedCount++;
+        if (imagesLoadedCount === totalImages) {
+          new Masonry(elem, {
+            itemSelector: '.gallery-item',
+            columnWidth: '.gallery-item',
+            percentPosition: true,
+          });
+        }
+      }
+  
+      imgElements.forEach(function(img) {
+        if (img.complete) {
+          checkAllImagesLoaded();
+        } else {
+          img.addEventListener('load', checkAllImagesLoaded);
+          img.addEventListener('error', checkAllImagesLoaded);
+        }
+      });
+    });
+  </script>
+{{ end }}
