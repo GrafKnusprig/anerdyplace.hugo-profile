@@ -1,6 +1,6 @@
-{{ $resource := $.Page.Resources.GetMatch (.Get 0) }}
-{{ if $resource }}
-  {{ $resource.Content | safeHTML }}
-{{ else }}
-  {{ .Get 0 | readFile | safeHTML }}
-{{ end }}
+{{- $resource := $.Page.Resources.GetMatch (.Get 0) -}}
+{{- if $resource -}}
+    {{- $resource.Content | safeHTML -}}
+{{- else -}}
+    {{- .Get 0 | readFile | safeHTML -}}
+{{- end -}}
