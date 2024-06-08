@@ -4,6 +4,7 @@ author: Philipp
 date: 2024-06-08T12:49:08+02:00
 draft: false
 layout: "gallery"
+tags: [gallery, passau, flooding, black and white]
 images:
     - src: image_10.webp
     - src: image_11.webp
