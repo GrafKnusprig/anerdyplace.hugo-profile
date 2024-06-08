@@ -14,7 +14,7 @@
         {{- with .Page.Resources.ByType "image" -}}
             {{- if . -}}
                 {{- range first 6 . -}}
-                    <meta property="og:image" content="{{ if in . "http" }}{{ . }}{{ else }}{{ $baseurl }}{{ . }}{{ end }}" />
+                    <meta property="og:image" content="{{ if in .RelPermalink "http" }}{{ .RelPermalink }}{{ else }}{{ $baseurl }}{{ .RelPermalink }}{{ end }}" />
                     {{- $done = true -}}
                 {{- end -}}
             {{- else -}}
