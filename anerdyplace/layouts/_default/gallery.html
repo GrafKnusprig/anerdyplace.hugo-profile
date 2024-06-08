@@ -36,7 +36,6 @@
     cursor: pointer;
   }
 </style>
-<!-- <link rel="stylesheet" href="{{ .Site.Params.staticPath }}/css/list.css" media="all"> -->
 {{ end }}
 
 {{ define "title" }}
@@ -51,22 +50,43 @@
         {{ .Content | emojify }}
     </div>
     <div class="gallery" id="masonry-gallery">
-        {{ range $index, $image := .Params.images }}
+        {{ $images := .Resources.ByType "image" }}
+        {{ range $index, $image := $images }}
         <div class="gallery-item col-md-4">
             <a href="#" data-toggle="modal" data-target="#imageModal{{ $index }}">
-                <img src="{{ $image.src }}" alt="{{ $image.Name }}">
+                <img src="{{ $image.RelPermalink }}" alt="{{ $image.Name }}">
+            </a>
+        </div>
+        {{ end }}
+        
+        {{ range $index, $image := .Params.images }}
+        <div class="gallery-item col-md-4">
+            <a href="#" data-toggle="modal" data-target="#paramImageModal{{ $index }}">
+                <img src="{{ $image.src }}" alt="{{ $image.src | replaceRE "^.*/([^/]+)$" "$1" }}">
             </a>
         </div>
         {{ end }}
     </div>
 </div>
 
-{{ range $index, $image := .Params.images }}
+{{ range $index, $image := $images }}
 <div class="modal fade" id="imageModal{{ $index }}" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel{{ $index }}" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-body">
-                <img src="{{ $image.src }}" class="img-fluid" alt="{{ $image.Name }}">
+                <img src="{{ $image.RelPermalink }}" class="img-fluid" alt="{{ $image.Name }}">
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}
+
+{{ range $index, $image := .Params.images }}
+<div class="modal fade" id="paramImageModal{{ $index }}" tabindex="-1" role="dialog" aria-labelledby="paramImageModalLabel{{ $index }}" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <img src="{{ $image.src }}" class="img-fluid" alt="{{ $image.src | replaceRE "^.*/([^/]+)$" "$1" }}">
             </div>
         </div>
     </div>
@@ -84,7 +104,7 @@
       var imgElements = elem.querySelectorAll('img');
       var totalImages = imgElements.length;
       var imagesLoadedCount = 0;
-  
+
       function checkAllImagesLoaded() {
         imagesLoadedCount++;
         if (imagesLoadedCount === totalImages) {
@@ -95,7 +115,7 @@
           });
         }
       }
-  
+
       imgElements.forEach(function(img) {
         if (img.complete) {
           checkAllImagesLoaded();

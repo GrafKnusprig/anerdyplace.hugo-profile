@@ -38,11 +38,11 @@ Menus:
     #   url: /songs
     #   weight: 3
 
-    # - identifier: gallery
-    #   name: Gallery
-    #   title: Gallery
-    #   url: /gallery
-    #   weight: 2
+    - identifier: gallery
+      name: Gallery
+      title: Gallery
+      url: /gallery
+      weight: 2
 
     #Dropdown menu
     # - identifier: dropdown
@@ -68,7 +68,7 @@ params:
   # staticPath: ""  # The path to serve the static files from
   favicon: '/icon.png'
   thumbnailWidth: 350
-  thumbnailHeight: 150
+  thumbnailHeight: 350
   truncateLength: 250
 
   # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between

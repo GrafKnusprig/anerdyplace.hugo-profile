@@ -1,6 +1,10 @@
 <footer>
     <!-- Recent blog posts -->
+    {{- if eq .Section "gallery" -}}
+    {{- partial "sections/footer/recentGalleryPosts.html" . -}}
+    {{- else -}}
     {{- partial "sections/footer/recentBlogPosts.html" . -}}
+    {{- end -}}
 
     <!-- Social Icons -->
     {{- partial "sections/footer/socialNetwork.html" . -}}
