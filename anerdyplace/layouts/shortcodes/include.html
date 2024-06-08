@@ -1,1 +1,6 @@
-{{ $worked := false }}{{ with $.Page.Resources.Get (.Get 0)}}{{ .RelPermalink | readFile | safeHTML }}{{ $worked = true }}{{ end }}{{ if not $worked}}{{ with .Get 0 }}{{ . | readFile | safeHTML }}{{ end }}{{ end }}
+{{ $resource := $.Page.Resources.GetMatch (.Get 0) }}
+{{ if $resource }}
+  {{ $resource.Content | safeHTML }}
+{{ else }}
+  {{ .Get 0 | readFile | safeHTML }}
+{{ end }}
