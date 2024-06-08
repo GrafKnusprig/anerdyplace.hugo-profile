@@ -1,3 +1,40 @@
+{{ $image := .Params.image }}
+{{ if not $image }}
+    <!-- Get thumbnail from resources  -->
+    {{ $resourceImage := "" }}
+    {{ with .Page.Resources.ByType "image" }}
+        {{ if . }}
+            {{ $_image := (index . 0) }}
+            {{ $resourceImage = $_image.RelPermalink }}
+        {{ end }}
+    {{ end }}
+    {{ if $resourceImage }}
+        {{ $image = $resourceImage }}
+    {{ end }}
+
+    {{ if eq $image "" }}
+        <!-- Get thumbnail from front matter -->
+        {{ $frontMatterImage := "" }}
+        {{ range .Page.Params.images }}
+            {{ if not $frontMatterImage }}
+                {{ $frontMatterImage = .src }}
+            {{ end }}
+        {{ end }}
+        {{ if $frontMatterImage }}
+            {{ $image = $frontMatterImage }}
+        {{ end }}
+    {{ end }}
+
+    {{ if eq $image "" }}
+        {{ $image = .Site.Params.defaultImage }}
+    {{ end }}
+{{ end }}
+
+<meta property="og:image" content="{{ .Site.BaseURL }}{{ $image }}" />
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{{ .Site.BaseURL }}{{ $image }}" />
+
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
