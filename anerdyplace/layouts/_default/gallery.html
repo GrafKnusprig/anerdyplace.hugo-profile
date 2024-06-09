@@ -1,5 +1,5 @@
 {{ define "head" }}
-<meta name="description" content="{{ .Title }} of {{ .Site.Title }}">
+<meta name="description" content="{{ .Title }} of {{ .Site.Title }}" />
 <style>
   .gallery {
     margin: 0 auto;
@@ -37,60 +37,73 @@
     height: auto;
   }
 </style>
-{{ end }}
-
-{{ define "title" }}
-{{.Title }} | {{ .Site.Title }}
-{{ end }}
-
-{{ define "main" }}
+{{ end }} {{ define "title" }} {{.Title }} | {{ .Site.Title }} {{ end }} {{
+define "main" }}
 <div class="container pt-5" id="list-page">
-    <h2 class="text-center pb-2">{{.Title}}</h2>
-    <h6 class="text-center">{{ .Params.description | emojify }}</h6>
-    <div class="row p-4">
-        {{ .Content | emojify }}
+  <h2 class="text-center pb-2">{{.Title}}</h2>
+  <h6 class="text-center">{{ .Params.description | emojify }}</h6>
+  <div class="row p-4">{{ .Content | emojify }}</div>
+  <div class="gallery" id="masonry-gallery">
+    {{ $images := .Resources.ByType "image" }} {{ range $index, $image :=
+    $images }}
+    <div class="gallery-item col-md-4">
+      <a href="#" data-toggle="modal" data-target="#imageModal{{ $index }}">
+        <img src="{{ $image.RelPermalink }}" alt="{{ $image.Name }}" />
+      </a>
     </div>
-    <div class="gallery" id="masonry-gallery">
-        {{ $images := .Resources.ByType "image" }}
-        {{ range $index, $image := $images }}
-        <div class="gallery-item col-md-4">
-            <a href="#" data-toggle="modal" data-target="#imageModal{{ $index }}">
-                <img src="{{ $image.RelPermalink }}" alt="{{ $image.Name }}">
-            </a>
-        </div>
-        {{ end }}
-        
-        {{ range $index, $image := .Params.images }}
-        <div class="gallery-item col-md-4">
-            <a href="#" data-toggle="modal" data-target="#paramImageModal{{ $index }}">
-                <img src="{{ $image }}" alt="{{ $image | replaceRE "^.*/([^/]+)$" "$1" }}">
-            </a>
-        </div>
-        {{ end }}
+    {{ end }} {{ range $index, $image := .Params.images }}
+    <div class="gallery-item col-md-4">
+      <a
+        href="#"
+        data-toggle="modal"
+        data-target="#paramImageModal{{ $index }}"
+      >
+        <img src="{{ $image }}" alt="{{ $image | replaceRE "^.*/([^/]+)$" "$1"
+        }}">
+      </a>
     </div>
+    {{ end }}
+  </div>
 </div>
 
 {{ range $index, $image := $images }}
-<div class="modal fade" id="imageModal{{ $index }}" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel{{ $index }}" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-body">
-                <img src="{{ $image.RelPermalink }}" class="img-fluid" alt="{{ $image.Name }}">
-            </div>
-        </div>
+<div
+  class="modal fade"
+  id="imageModal{{ $index }}"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="imageModalLabel{{ $index }}"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <img
+          src="{{ $image.RelPermalink }}"
+          class="img-fluid"
+          alt="{{ $image.Name }}"
+        />
+      </div>
     </div>
+  </div>
 </div>
-{{ end }}
-
-{{ range $index, $image := .Params.images }}
-<div class="modal fade" id="paramImageModal{{ $index }}" tabindex="-1" role="dialog" aria-labelledby="paramImageModalLabel{{ $index }}" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-body">
-                <img src="{{ $image }}" class="img-fluid" alt="{{ $image | replaceRE "^.*/([^/]+)$" "$1" }}">
-            </div>
-        </div>
+{{ end }} {{ range $index, $image := .Params.images }}
+<div
+  class="modal fade"
+  id="paramImageModal{{ $index }}"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="paramImageModalLabel{{ $index }}"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <img src="{{ $image }}" class="img-fluid" alt="{{ $image | replaceRE
+        "^.*/([^/]+)$" "$1" }}">
+      </div>
     </div>
+  </div>
 </div>
 {{ end }}
 
@@ -98,52 +111,33 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
-<script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      var elem = document.querySelector('#masonry-gallery');
-      var imgElements = elem.querySelectorAll('img');
-      var totalImages = imgElements.length;
-      var imagesLoadedCount = 0;
+  document.addEventListener('DOMContentLoaded', function () {
+    var elem = document.querySelector('#masonry-gallery');
+    var imgElements = elem.querySelectorAll('img');
+    var totalImages = imgElements.length;
+    var imagesLoadedCount = 0;
 
-      function checkAllImagesLoaded() {
-        imagesLoadedCount++;
-        if (imagesLoadedCount === totalImages) {
-          new Masonry(elem, {
-            itemSelector: '.gallery-item',
-            columnWidth: '.gallery-item',
-            percentPosition: true,
-          });
-        }
-      }
-
-      imgElements.forEach(function(img) {
-        if (img.complete) {
-          checkAllImagesLoaded();
-        } else {
-          img.addEventListener('load', checkAllImagesLoaded);
-          img.addEventListener('error', checkAllImagesLoaded);
-        }
-      });
-       // Add double-tap zoom functionality
-       $('.modal-body img').each(function() {
-            var hammer = new Hammer(this);
-            var scale = 1;
-
-            hammer.get('doubletap').set({ taps: 2 });
-
-            hammer.on('doubletap', function(ev) {
-                scale = scale === 1 ? 2 : 1; // Toggle between 1 and 2
-                ev.target.style.transform = 'scale(' + scale + ')';
-            });
-
-            hammer.on('pan', function(ev) {
-                if (scale > 1) {
-                    ev.target.style.transform = 'scale(' + scale + ') translate(' + ev.deltaX + 'px, ' + ev.deltaY + 'px)';
-                }
-            });
+    function checkAllImagesLoaded() {
+      imagesLoadedCount++;
+      if (imagesLoadedCount === totalImages) {
+        new Masonry(elem, {
+          itemSelector: '.gallery-item',
+          columnWidth: '.gallery-item',
+          percentPosition: true,
         });
+      }
+    }
+
+    imgElements.forEach(function (img) {
+      if (img.complete) {
+        checkAllImagesLoaded();
+      } else {
+        img.addEventListener('load', checkAllImagesLoaded);
+        img.addEventListener('error', checkAllImagesLoaded);
+      }
     });
-  </script>
+  });
+</script>
 {{ end }}
