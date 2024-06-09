@@ -1,6 +1,6 @@
-baseURL: 'https://philippraven.com/'
-languageCode: 'en-us'
-title: 'philipp raven'
+baseURL: "https://philippraven.com/"
+languageCode: "en-us"
+title: "philipp raven"
 theme: hugo-profile
 
 Paginate: 12
@@ -14,18 +14,17 @@ markup:
 
 Menus:
   main:
-
     - identifier: about
       name: About
       title: About
-      url: '#'
+      url: "#"
       weight: 1
 
     - identifier: home
       parent: about
       name: Home
       title: Home
-      url: '/#'
+      url: "/#"
       weight: 1
 
     - identifier: about-me
@@ -39,30 +38,29 @@ Menus:
       parent: about
       name: Experience
       title: Experience
-      url: '/#experience'
+      url: "/#experience"
       weight: 3
 
     - identifier: education
       parent: about
       name: Education
       title: Education
-      url: '/#education'
+      url: "/#education"
       weight: 4
 
     - identifier: projects
       parent: about
       name: Projects
       title: Projects
-      url: '/#projects'
+      url: "/#projects"
       weight: 5
 
     - identifier: contact
       parent: about
       name: Contact me
       title: Contact me
-      url: '/#contact'
+      url: "/#contact"
       weight: 6
-
 
     - identifier: blog
       name: Blog
@@ -95,10 +93,10 @@ Menus:
     #   weight: 3
 
 params:
-  title: 'philipp raven'
-  description: 'ai engineer - artist - creator'
+  title: "philipp raven"
+  description: "ai engineer - artist - creator"
   # staticPath: ''
-  favicon: '/icon.png'
+  favicon: "/icon.png"
   thumbnailWidth: 350
   thumbnailHeight: 250
   truncateLength: 250
@@ -154,9 +152,9 @@ params:
   hero:
     enable: true
     intro: "Hi, I'm"
-    title: 'Philipp'
+    title: "Philipp"
     # subtitle: "Unger"
-    content: 'ai engineer - artist - creator'
+    content: "ai engineer - artist - creator"
     image: /images/profile-pic-3.webp
     # button:
     # enable: true
@@ -184,8 +182,8 @@ params:
   # About
   about:
     enable: true
-    title: 'About Me'
-    skillstitle: 'Stuff I use regularly'
+    title: "About Me"
+    skillstitle: "Stuff I use regularly"
     # image: "/images/profile-pic-1.webp"
     content: |-
       When you ask someone to tell you about themselves, it's never easy.
@@ -217,49 +215,49 @@ params:
 
     skills:
       enable: true
-      title: ''
+      title: ""
       items:
-        - '[AdobeSuite](https://www.adobe.com/creativecloud.html)'
-        - '[Arduino](https://www.arduino.cc/)'
-        - '[Audacity](https://www.audacityteam.org/)'
-        - '[Blender](https://www.blender.org/)'
-        - '[C#](https://docs.microsoft.com/en-us/dotnet/csharp/)'
-        - '[ChatGPT](https://chat.openai.com/)'
-        - '[FFmpeg](https://ffmpeg.org/)'
-        - '[FreeCAD](https://www.freecad.org/)'
-        - '[GitHub](https://github.com/)'
-        - '[GitLab](https://about.gitlab.com/)'
-        - '[HUGO](https://gohugo.io/)'
-        - '[Java](https://www.java.com/)'
-        - '[JavaScript](https://www.w3schools.com/js/)'
-        - '[JetBrains](https://www.jetbrains.com/)'
-        - '[MiKTeX](https://miktex.org/)'
-        - '[MPC Beats](https://www.akaipro.com/mpc-beats)'
-        - '[Node.js](https://nodejs.org/en/)'
-        - '[OpenSCAD](https://openscad.org/)'
-        - '[OBS-Studio](https://obsproject.com/)'
-        - '[PyTorch](https://pytorch.org/)'
-        - '[Python](https://www.python.org/)'
-        - '[Raspberry Pi](https://www.raspberrypi.org/)'
-        - '[Scratch](https://scratch.mit.edu/)'
-        - '[Shotcut](https://shotcut.org/)'
-        - '[UltiMaker Cura](https://ultimaker.com/software/ultimaker-cura)'
-        - '[VisualStudio](https://visualstudio.microsoft.com)'
-        - '[VoiceMeeter](https://vb-audio.com/Voicemeeter/)'
+        - "[AdobeSuite](https://www.adobe.com/creativecloud.html)"
+        - "[Arduino](https://www.arduino.cc/)"
+        - "[Audacity](https://www.audacityteam.org/)"
+        - "[Blender](https://www.blender.org/)"
+        - "[C#](https://docs.microsoft.com/en-us/dotnet/csharp/)"
+        - "[ChatGPT](https://chat.openai.com/)"
+        - "[FFmpeg](https://ffmpeg.org/)"
+        - "[FreeCAD](https://www.freecad.org/)"
+        - "[GitHub](https://github.com/)"
+        - "[GitLab](https://about.gitlab.com/)"
+        - "[HUGO](https://gohugo.io/)"
+        - "[Java](https://www.java.com/)"
+        - "[JavaScript](https://www.w3schools.com/js/)"
+        - "[JetBrains](https://www.jetbrains.com/)"
+        - "[MiKTeX](https://miktex.org/)"
+        - "[MPC Beats](https://www.akaipro.com/mpc-beats)"
+        - "[Node.js](https://nodejs.org/en/)"
+        - "[OpenSCAD](https://openscad.org/)"
+        - "[OBS-Studio](https://obsproject.com/)"
+        - "[PyTorch](https://pytorch.org/)"
+        - "[Python](https://www.python.org/)"
+        - "[Raspberry Pi](https://www.raspberrypi.org/)"
+        - "[Scratch](https://scratch.mit.edu/)"
+        - "[Shotcut](https://shotcut.org/)"
+        - "[UltiMaker Cura](https://ultimaker.com/software/ultimaker-cura)"
+        - "[VisualStudio](https://visualstudio.microsoft.com)"
+        - "[VoiceMeeter](https://vb-audio.com/Voicemeeter/)"
 
   # Experience
   experience:
     enable: true
-    title: 'Experience'
+    title: "Experience"
     items:
-      - job: 'Data Scientist'
-        company: 'University of Passau - Chair of Software Engineering II '
-        companyUrl: 'https://www.fim.uni-passau.de/en/chair-for-software-engineering-ii/'
+      - job: "Data Scientist"
+        company: "University of Passau - Chair of Software Engineering II "
+        companyUrl: "https://www.fim.uni-passau.de/en/chair-for-software-engineering-ii/"
         date: 2024 - current
         featuredLink:
           enable: true
-          name: 'InnRaum³'
-          url: 'https://www.innraum.eu/'
+          name: "InnRaum³"
+          url: "https://www.innraum.eu/"
         # info:
         #   enable: true
         #   content: I am currently working at the InnRaum³ as part of the INTERREG project. There I am responsible for running various courses for school pupils, students, trainees and employees. My work includes design from 3D model to print, AI development, setting up the makerspace and recruiting new members, safety training and machine maintenance.
@@ -268,15 +266,15 @@ params:
 
           I am currently working at the InnRaum³ as part of the INTERREG project. There I am responsible for running various courses for school pupils, students, trainees and employees. My work includes design from 3D model to print, AI development, setting up the makerspace and recruiting new members, safety training and machine maintenance.
 
-      - job: 'Robotics Trainer (honorary)'
+      - job: "Robotics Trainer (honorary)"
         company: Maristengymnasium Fürstenzell
-        companyUrl: 'https://mgf.de/'
+        companyUrl: "https://mgf.de/"
         date: 2023 - current
         content: I honorarily work as a trainer for the robotics course at the Maristengymnasium Füstenzell. Here, I teach children in grades 5-11 how to program autonomous robots using Scratch and Python.
-      - job: 'Software Developer'
-        company: 'DAP Systems'
-        companyUrl: 'https://dap-systems.de/'
-        date: '2014 - 2023'
+      - job: "Software Developer"
+        company: "DAP Systems"
+        companyUrl: "https://dap-systems.de/"
+        date: "2014 - 2023"
         # featuredlink:
         # enable: true
         # name: "view the project"
@@ -288,10 +286,10 @@ params:
 
           I have experience in ASP.NET, Angular, C#, CSS, EXT JS, HTML, JavaScript, Less, .Net Framework / Core, Node.js, PHP, SQL, TypeScript and more.
 
-      - job: 'Media Computer Scientist'
-        company: 'University of Passau - InteLeC-Zentrum'
-        companyUrl: 'https://www.uni-passau.de/en/'
-        date: '2013 - 2014'
+      - job: "Media Computer Scientist"
+        company: "University of Passau - InteLeC-Zentrum"
+        companyUrl: "https://www.uni-passau.de/en/"
+        date: "2013 - 2014"
         # featuredLink:
         # enable: true
         # name: "Univideo Website"
@@ -307,17 +305,17 @@ params:
     # title: "Custom Name"
     # index: true
     items:
-      - title: 'Master AI Engineering (M.Sc.)'
+      - title: "Master AI Engineering (M.Sc.)"
         school:
-          name: 'University of Passau'
-          url: 'https://www.uni-passau.de/en/'
-        date: '2023 - current'
+          name: "University of Passau"
+          url: "https://www.uni-passau.de/en/"
+        date: "2023 - current"
         content: My focus is on the development and optimization of deep learning models. My main seminar is “Software Engineering for Kids”, where I am working on automatic hint generation using LLMs for tutorial systems in Scratch.
-      - title: 'Bachelor of Computer Science (B.Sc.)'
+      - title: "Bachelor of Computer Science (B.Sc.)"
         school:
-          name: 'University of Passau'
-          url: 'https://www.uni-passau.de/en/'
-        date: '2009 - 2013'
+          name: "University of Passau"
+          url: "https://www.uni-passau.de/en/"
+        date: "2009 - 2013"
         # GPA: "3.9 out of 5.0"
         content: |-
           Minor:  **Business Administration**
@@ -330,10 +328,10 @@ params:
         # enable: true
         # name: "My academic record"
         # url: "https://example.com"
-      - title: 'High School'
+      - title: "High School"
         school:
-          name: 'Maristengymnasium Fürstenzell'
-          url: 'http://www.mgfuerstenzell.de/'
+          name: "Maristengymnasium Fürstenzell"
+          url: "http://www.mgfuerstenzell.de/"
         content: |-
           - Advanced courses:
             - physics
@@ -364,37 +362,37 @@ params:
     enable: true
     # title: "custom name"
     items:
-      - title: 'Hunt: Showdown - Loadout Randomizer'
-        content: 'Hunt: Showdown - Loadout Randomizer is a local browser application that generates random loadouts for the game Hunt: Showdown. It is perfectly suited to be used as a browser plugin in OBS-Studio and similar applications and was made exactly for this purpose.'
+      - title: "Hunt: Showdown - Loadout Randomizer"
+        content: "Hunt: Showdown - Loadout Randomizer is a local browser application that generates random loadouts for the game Hunt: Showdown. It is perfectly suited to be used as a browser plugin in OBS-Studio and similar applications and was made exactly for this purpose."
         image: /images/projects/hunt-randomizer-1.webp
         featured:
           name: Start Randomizer
           link: https://grafknusprig.github.io/HuntShowdownLoadoutRandomizer/Randomizer.html
         badges:
-          - 'html'
-          - 'javascript'
+          - "html"
+          - "javascript"
         links:
           - icon: fab fa-github
             url: https://github.com/GrafKnusprig/HuntShowdownLoadoutRandomizer
-      - title: 'BirdCLEF 2024'
-        content: 'Bird species identification from audio, focused on under-studied species in the Western Ghats, a major biodiversity hotspot in India.'
-        image: /images/projects/birdclef-2024.webp
-        featured:
-          name: Read Blog Post
-          link: /blog/projects/birdclef-2024
-        badges:
-          - "kaggle"
-          - "competition"
-          - "machine learning"
-          - "pytorch"
-        links:
-          - icon: fab fa-kaggle
-            url: https://www.kaggle.com/competitions/birdclef-2024
+      # - title: 'BirdCLEF 2024'
+      #   content: 'Bird species identification from audio, focused on under-studied species in the Western Ghats, a major biodiversity hotspot in India.'
+      #   image: /images/projects/birdclef-2024.webp
+      #   featured:
+      #     name: Read Blog Post
+      #     link: /blog/projects/birdclef-2024
+      #   badges:
+      #     - "kaggle"
+      #     - "competition"
+      #     - "machine learning"
+      #     - "pytorch"
+      #   links:
+      #     - icon: fab fa-kaggle
+      #       url: https://www.kaggle.com/competitions/birdclef-2024
 
   #Contact
   contact:
     enable: true
-    title: 'Contact me'
+    title: "Contact me"
     content: If you want to contact me, you can always send me an email.
     email: philipp.info@proton.me
     btnName: Mail me
