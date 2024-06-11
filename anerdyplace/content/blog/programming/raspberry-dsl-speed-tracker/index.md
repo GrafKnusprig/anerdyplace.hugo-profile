@@ -1,5 +1,5 @@
 ---
-title: "Raspberry Pi DSL Speed Tracker"
+title: "Raspberry DSL Speed Tracker"
 author: Philipp
 date: 2024-06-11T20:38:19+02:00
 draft: false
@@ -15,8 +15,7 @@ monitor the stability of the internet connection in our dormitory, I decided to 
 
 Since I had a few spare Raspberry Pis lying around, I utilized one of them for this project.
 
-The Python program for the speed test can be found in my GitHub repository: speed.py
-[GitHub Repository](https://github.com/GrafKnusprig/SpeedPlotBot)
+The Python program for the speed test can be found in my GitHub repository [SpeedPlotBot](https://github.com/GrafKnusprig/SpeedPlotBot)
 
 The repository also includes a script for plotting the data and the necessary service and timer files for the systemd timer on the Raspberry Pi.
 
