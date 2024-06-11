@@ -1,5 +1,5 @@
 ---
-title: "Raspberry Pi Speed Tester"
+title: "Raspberry Pi DSL Speed Tracker"
 author: Philipp
 date: 2024-06-11T20:38:19+02:00
 draft: false
