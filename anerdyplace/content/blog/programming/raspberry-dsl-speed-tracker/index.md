@@ -7,6 +7,7 @@ socialShare: false
 toc: false
 tags: [python, internet, speed, tracker, plot, plotter, isp, dsl]
 suppressThumbnail: false
+thumbnail: Figure2.webp
 ---
 
 # In order to
@@ -76,10 +77,17 @@ the internet speed and send the data to my provider.
 
 With the script standalone-chart-plotter.py, you can easily generate a plot from the collected data.
 
-![Data plot](Figure_1.webp)
+![Data plot](Figure1.webp)
 
 # To retrieve the data on your PC,
 you can simply use SSH to connect to your Raspberry Pi or use tools like [WinSCP](https://winscp.net/eng/index.php) or [PuTTY](https://www.putty.org/).
+
+## Update
+I have added a run-scripts.py that automatically fetches the latest data from the Raspberry Pi over the network and then creates a plot of the last n measurements.
+
+Furthermore, I have implemented a switch --modern for the plotter, which plots the chart in a slightly more modern style.
+
+![Data plot](Figure2.webp)
 
 # For the future
 I have another Telegram bot planned. Because somehow I write a Telegram bot for every tool. Yeah, recently it was even easier to quickly write a bot for my deep net training to get status updates than to get it on my phone in any other way.
