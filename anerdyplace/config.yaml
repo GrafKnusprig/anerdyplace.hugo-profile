@@ -8,6 +8,10 @@ Paginate: 12
 # googleAnalytics: G-DWJJVE27WD
 
 markup:
+  tableOfContents:
+    ordered: false
+    startLevel: 1
+    endLevel: 3
   goldmark:
     renderer:
       unsafe: true
