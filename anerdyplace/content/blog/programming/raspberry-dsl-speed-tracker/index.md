@@ -16,7 +16,7 @@ monitor the stability of the internet connection in our dormitory, I decided to 
 
 Since I had a few spare Raspberry Pis lying around, I utilized one of them for this project.
 
-The Python program for the speed test can be found in my GitHub repository [SpeedPlotBot](https://github.com/GrafKnusprig/SpeedPlotBot)
+The Python program for the speed test can be found in my __GitHub__ repository [https://github.com/GrafKnusprig/SpeedPlotBot](https://github.com/GrafKnusprig/SpeedPlotBot)
 
 The repository also includes a script for plotting the data and the necessary service and timer files for the systemd timer on the Raspberry Pi.
 
@@ -82,15 +82,32 @@ With the script standalone-chart-plotter.py, you can easily generate a plot from
 # To retrieve the data on your PC,
 you can simply use SSH to connect to your Raspberry Pi or use tools like [WinSCP](https://winscp.net/eng/index.php) or [PuTTY](https://www.putty.org/).
 
-## Update
-I have added a run-scripts.py that automatically fetches the latest data from the Raspberry Pi over the network and then creates a plot of the last n measurements.
-
-Furthermore, I have implemented a switch --modern for the plotter, which plots the chart in a slightly more modern style.
-
-![Data plot](Figure2.webp)
-
 # For the future
 I have another Telegram bot planned. Because somehow I write a Telegram bot for every tool. Yeah, recently it was even easier to quickly write a bot for my deep net training to get status updates than to get it on my phone in any other way.
 But currently, it's not a priority for me, so it may take a while.
 
 That's how easy it is. Have fun! :)
+
+---
+---
+---
+
+# Update 2024-06-14
+I have added a script [run_scripts.py](https://github.com/GrafKnusprig/SpeedPlotBot/blob/main/run_scripts.py) that automatically fetches the latest data from the Raspberry Pi over the network and then creates a plot of the last n measurements.
+
+Furthermore, I have implemented a switch --modern for the plotter, which plots the chart in a slightly more modern style.
+
+![Data plot](Figure2.webp)
+
+# Update 2024-06-19
+I combined everything in the new script [mighty_plotter.py](https://github.com/GrafKnusprig/SpeedPlotBot/blob/main/mighty_plotter.py).
+
+This plotter does everything for you. You have various options to set, like:
+
+- "-n", "--last_n", type=int, "Number of last data points to plot"
+- "-d", "--last_duration", "Duration of the last data points to plot (e.g., '1d12h30m')"
+- "-o", "--output_file", "Path to save the plot image"
+- "-i", "--integral", "Use integral method for calculation, insted of mean value"
+- "-m", "--modern", "Give the plot a more modern look"
+- "-fd", "--fixed_download_value", "Fixed download value in Mbps"
+- "-fu", "--fixed_upload_value", "Fixed upload value in Mbps"
