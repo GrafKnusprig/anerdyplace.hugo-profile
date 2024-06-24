@@ -78,11 +78,17 @@ Menus:
       url: /gallery
       weight: 8
 
+    # - identifier: songs
+    #   name: Songs
+    #   title: Songs
+    #   url: /songs
+    #   weight: 9
+
     - identifier: search
       name: Search
       title: Search
       url: /search
-      weight: 9
+      weight: 10
 
     # - identifier: tags
     #   name: Tags
