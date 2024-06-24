@@ -171,6 +171,8 @@ params:
           url: https://github.com/GrafKnusprig
         - icon: fab fa-instagram
           url: https://www.instagram.com/philippraven/
+        - icon: fab fa-linkedin
+          url: https://www.linkedin.com/in/philipp-unger-988a06312/
         - icon: fab fa-soundcloud
           url: https://soundcloud.com/mufuki
         - icon: fab fa-youtube
