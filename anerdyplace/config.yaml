@@ -386,20 +386,20 @@ params:
         links:
           - icon: fab fa-github
             url: https://github.com/GrafKnusprig/HuntShowdownLoadoutRandomizer
-      # - title: 'BirdCLEF 2024'
-      #   content: 'Bird species identification from audio, focused on under-studied species in the Western Ghats, a major biodiversity hotspot in India.'
-      #   image: /images/projects/birdclef-2024.webp
-      #   featured:
-      #     name: Read Blog Post
-      #     link: /blog/projects/birdclef-2024
-      #   badges:
-      #     - "kaggle"
-      #     - "competition"
-      #     - "machine learning"
-      #     - "pytorch"
-      #   links:
-      #     - icon: fab fa-kaggle
-      #       url: https://www.kaggle.com/competitions/birdclef-2024
+      - title: "BirdCLEF 2024"
+        content: "Bird species identification from audio, focused on under-studied species in the Western Ghats, a major biodiversity hotspot in India. This project focuses on developing machine learning models to identify bird species from audio recordings."
+        image: /images/projects/birdclef-2024.webp
+        featured:
+          name: Read Blog Post
+          link: /blog/projects/birdclef-2024
+        badges:
+          - "kaggle"
+          - "competition"
+          - "machine learning"
+          - "pytorch"
+        links:
+          - icon: fab fa-kaggle
+            url: https://www.kaggle.com/competitions/birdclef-2024
 
   #Contact
   contact:
