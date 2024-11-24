@@ -78,11 +78,17 @@ Menus:
       url: /gallery
       weight: 8
 
+    # - identifier: songs
+    #   name: Songs
+    #   title: Songs
+    #   url: /songs
+    #   weight: 9
+
     - identifier: search
       name: Search
       title: Search
       url: /search
-      weight: 9
+      weight: 10
 
     # - identifier: tags
     #   name: Tags
@@ -171,6 +177,8 @@ params:
           url: https://github.com/GrafKnusprig
         - icon: fab fa-instagram
           url: https://www.instagram.com/philippraven/
+        - icon: fab fa-linkedin
+          url: https://www.linkedin.com/in/philipp-unger-988a06312/
         - icon: fab fa-soundcloud
           url: https://soundcloud.com/mufuki
         - icon: fab fa-youtube
@@ -378,20 +386,20 @@ params:
         links:
           - icon: fab fa-github
             url: https://github.com/GrafKnusprig/HuntShowdownLoadoutRandomizer
-      # - title: 'BirdCLEF 2024'
-      #   content: 'Bird species identification from audio, focused on under-studied species in the Western Ghats, a major biodiversity hotspot in India.'
-      #   image: /images/projects/birdclef-2024.webp
-      #   featured:
-      #     name: Read Blog Post
-      #     link: /blog/projects/birdclef-2024
-      #   badges:
-      #     - "kaggle"
-      #     - "competition"
-      #     - "machine learning"
-      #     - "pytorch"
-      #   links:
-      #     - icon: fab fa-kaggle
-      #       url: https://www.kaggle.com/competitions/birdclef-2024
+      - title: "BirdCLEF 2024"
+        content: "Bird species identification from audio, focused on under-studied species in the Western Ghats, a major biodiversity hotspot in India. This project focuses on developing machine learning models to identify bird species from audio recordings."
+        image: /images/projects/birdclef-2024.webp
+        featured:
+          name: Read Blog Post
+          link: /blog/projects/birdclef-2024
+        badges:
+          - "kaggle"
+          - "competition"
+          - "machine learning"
+          - "pytorch"
+        links:
+          - icon: fab fa-kaggle
+            url: https://www.kaggle.com/competitions/birdclef-2024
 
   #Contact
   contact:
