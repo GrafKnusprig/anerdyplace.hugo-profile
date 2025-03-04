@@ -10,19 +10,20 @@ supressThumbnail: false
 thumbnail: /images/blog/generic-thumbs/default.webp
 ---
 
-for the 3d scan i used the app realitiy scan
-its free but your files are public
-photogrammetry
-you can download the scan as glb file, blender works fine with that, even includes uv mappings
+For the 3D scan, I used the app Reality Scan. It's free, but note that your files are public. This app uses photogrammetry, and you can download the scan as a GLB file. Blender works fine with that format and even includes UV mappings.
 
-![image of scan](<Screenshot 2025-03-04 at 14.31.03.png>)
+![Image of scan](<Screenshot 2025-03-04 at 14.31.03.png>)
 
-import into blender and bring to scale:
-measure 2 points where you did real world measurements
-calculate scale factor:
+To import into Blender and bring it to scale:
+1. Measure two points where you did real-world measurements.
+2. Calculate the scale factor:
 
 $$ \text{Scale Factor} = \frac{\text{Real Distance}}{\text{Blender Measured Distance}} $$
 
-some first ideas:
+Here are some initial ideas:
 
-![first ideas](<Screenshot 2025-03-04 at 15.23.08.png>)
+![First ideas](<Screenshot 2025-03-04 at 15.23.08.png>)
+
+I added a cabinet under the turtle house to get more storage room in the kitchen.
+
+![Cabinet addition](image.png)
