@@ -3,7 +3,8 @@ languageCode: "en-us"
 title: "philipp raven"
 theme: hugo-profile
 
-Paginate: 12
+pagination:
+  pagerSize: 12
 # disqusShortname: gurusabarish
 # googleAnalytics: G-DWJJVE27WD
 
