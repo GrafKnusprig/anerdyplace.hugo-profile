@@ -9,8 +9,7 @@ tags: [tag]
 supressThumbnail: false
 thumbnail: /images/blog/generic-thumbs/default.webp
 ---
-
-For the 3D scan, I used the app Reality Scan. It's free, but note that your files are public. This app uses photogrammetry, and you can download the scan as a GLB file. Blender works fine with that format and even includes UV mappings.
+For the 3D scan, I used the app Reality Scan. It's free, but note that your files are public. This app uses photogrammetry, and you can download the scan as a GLB file. Blender works well with that format and even includes UV mappings.
 
 ![Image of scan](<Screenshot 2025-03-04 at 14.31.03.png>)
 
@@ -27,3 +26,17 @@ Here are some initial ideas:
 I added a cabinet under the turtle house to get more storage room in the kitchen.
 
 ![Cabinet addition](image.png)
+
+For measuring and getting the output as measurements, I use the Blender addon MeasureIt.
+
+![MeasureIt addon](<Screenshot 2025-03-05 at 16.40.53.png>)
+
+You can only add the measurements in edit mode, but that's no big deal.
+
+Click the render button.
+
+Then in the compositor, add an alpha layer for the measurements.
+
+![Compositor setup](<Screenshot 2025-03-05 at 16.40.40.png>)
+
+That renders the measurements to your image. You also need to set up a scene with a camera and lights; otherwise, you won't see anything.
