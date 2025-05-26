@@ -10,6 +10,7 @@ supressThumbnail: false
 thumbnail: 3D-model.webp
 ---
 
+
 # ESPod - Shuffle
 instant music - free of distractions
 
@@ -21,7 +22,7 @@ no boot time, no menus, no bullshit!
 > the front side with cute ghosts
 
 ![back of the player](player2.webp)
-> and the back side with a litte, cute turtle
+> and the back side with a little, cute turtle
 
 ---
 
@@ -37,6 +38,7 @@ I was totally surprised by the music quality this 'little' thing can deliver.
 I wanted a super simple, high quality, beefy music player that could take a punch and had a good feel to it.
 
 It also should act like an oldschool cassette walkman! Press play and the music starts where you left of last time - stop and throw it in the bag.
+
 
 So buttons with a good haptic feel were crucial.
 
@@ -134,7 +136,8 @@ A quick overview over the functionality of the player. We need that to go on.
 
 ## Back to the agony
 
-... Sometimes the esp didn't crash for 10 songs, then it crashed every time you skipped to the next song.
+
+... Sometimes the ESP didn't crash for 10 songs, then it crashed every time you skipped to the next song.
 
 Hours and hours I spent together with ChatGPT trying to solve the problem. I added locks, memory-saving methods, checked the heap, and used mutexes to regulate read and write access to the SD card. All without success.
 
@@ -162,6 +165,7 @@ The only thing I kept from ChatGPT's logic was accessing the SD card using a mut
         delete flac;
         flac = nullptr;
     }
+
     if (fileSrc)
     {
         fileSrc->close();
@@ -227,42 +231,52 @@ uint32_t skipID3v2Tag(AudioFileSource *src)
 }
 ```
 
+
 This works like a charm!
-The tags are now skipped in a few ms instead of 30 seeconds.
+The tags are now skipped in a few ms instead of 30 seconds.
 
-This was the final change that made the player what I intendet it to be.
 
-A digital music player that behaves like an oldschool cassette player! Turn the switch on and music starts playing instantly! No boot time, no screen, no menus. Just music without distraction.
+This was the final change that made the player what I intended it to be.
+
+
+A digital music player that behaves like an old-school cassette player! Turn the switch on and music starts playing instantly! No boot time, no screen, no menus. Just music without distraction.
 
 # Finish line
+
 
 This change made all the difference. Finally, everything ran smoothly. There are still occasional crashes that I haven't fully tracked down yet, but they're mostly a thing of the past. Most of the time, the player now runs stably.
 
 # A nice case
 
+
 Of course, the player also needed a nice home. This time, I tried a new approach. I scanned the whole thing in 3D using the [RealityScan](https://play.google.com/store/apps/details?id=com.epicgames.realityscan&hl=en) app and then imported the model into [Blender](https://www.blender.org/).
+
 
 I then quickly and roughly recreated the scan with simple objects like cubes and cylinders. I made sure to model all the openings to the outside in an 'exaggerated' way so that I would end up with an actual opening.
 
 After that, I surrounded the whole thing with a large cuboid and subtracted the inside from the outside.
 
+
 The result was a quick and very precisely fitting case that fit perfectly after printing the first time :) Just the way I like it.
 
-(hink twice, print once!)
+
+(think twice, print once!)
+
 
 ![3D Scan](3D-model.webp)
 > the 3D scan of the combined modules
 
 ![inner construction](inner-construction.webp)
-> the remodelled scan
+> the remodeled scan
 
 ![the housing](housing.webp)
 > the finished housing
 
+
 # The End
 
-Sorry that I totally skipped the whole assembly and soldering part, the layouting and pcb arrangement...
+Sorry that I totally skipped the whole assembly and soldering part, the layout and PCB arrangement...
 
-I didn't make any images during the whole process, but I think yours will look completely diffent anyway :)
+I didn't make any images during the whole process, but I think yours will look completely different anyway :)
 
 Have fun!
