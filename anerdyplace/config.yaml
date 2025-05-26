@@ -401,6 +401,19 @@ params:
         links:
           - icon: fab fa-kaggle
             url: https://www.kaggle.com/competitions/birdclef-2024
+      - title: "Cellshading - Painting my BMW"
+        content: "I had the urge to paint my car in a cellshading style. I mostly used montana graffiti colors and molotow markers. The result is a unique and eye-catching design that I am very proud of."
+        image: /images/projects/graffiti-bmw.webp
+        featured:
+          name: Read Blog Post
+          link: /blog/projects/graffiti-bmw
+        badges:
+          - "car"
+          - "painting"
+          - "cellshading"
+        links:
+          - icon: fab fa-website
+            url: https://www.betterrun.shop/
 
   #Contact
   contact:
