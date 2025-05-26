@@ -63,7 +63,7 @@ For this project I used:
 
 I recently did a project at work with ESP32s and I kind of fell in love with them, so I ordered a bunch without knowing what to do with them - then came this project. :)
 
-The PCM5102 I did order for another project. I built a few Icecast receivers for a silent disco, but then switcht to snapcast. As this was too much to handle for an ESP, I used Raspberries with USB audio-interfaces for this project and was left with this nice DACs. The audio quality is amazing! I really did not expect that depth and clearity from that little module.
+The PCM5102 I did order for another project. I built a few Icecast receivers for a silent disco, but then switched to snapcast. As this was too much to handle for an ESP, I used Raspberries with USB audio-interfaces for this project and was left with this nice DACs. The audio quality is amazing! I really did not expect that depth and clearity from that little module.
 
 The SD module is self explanatory. It's used to read the music from an SD card.
 
