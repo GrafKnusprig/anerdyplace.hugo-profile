@@ -106,6 +106,7 @@ Menus:
 params:
   title: "philipp raven"
   description: "ai engineer - artist - creator"
+  rssTitle: "Stuff Philipp Typed Late at Night"
   # staticPath: ''
   favicon: "/icon.png"
   thumbnailWidth: 350
