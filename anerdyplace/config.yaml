@@ -1,6 +1,6 @@
 baseURL: "https://philippraven.com/"
 languageCode: "en-us"
-title: "philipp raven"
+title: "philippraven"
 theme: hugo-profile
 
 pagination:
@@ -103,10 +103,17 @@ Menus:
     #   url: /songs
     #   weight: 3
 
+services:
+  rss:
+    limit: 15
+
 params:
-  title: "philipp raven"
+  author:
+    email: philipp.info@proton.me
+    name: philippraven
+  title: "philippraven"
   description: "ai engineer - artist - creator"
-  rssTitle: "Stuff Philipp Typed Late at Night"
+  rssTitle: "philippraven's blog"
   # staticPath: ''
   favicon: "/icon.png"
   thumbnailWidth: 350
@@ -435,5 +442,13 @@ params:
 
 outputs:
   home:
-    - HTML
-    - JSON
+  - html
+  - rss
+  - json
+  section:
+  - html
+  - rss
+  taxonomy:
+  - html
+  term:
+  - html
