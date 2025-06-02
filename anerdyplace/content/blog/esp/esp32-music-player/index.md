@@ -5,7 +5,7 @@ date: 2025-05-26T20:47:00+02:00
 draft: false
 socialShare: true
 toc: true
-tags: [music, mp3, flac, player, esp32, programming, audio]
+tags: [music, mp3, flac, wav, player, esp32, programming, audio]
 supressThumbnail: false
 thumbnail: 3D-model.webp
 ---

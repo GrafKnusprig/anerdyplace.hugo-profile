@@ -1,11 +1,11 @@
 ---
-title: "Esp32 Music Player 2"
-author: Philipp
+title: "ESP32 music player 2"
+author: philippraven
 date: 2025-05-31T22:22:19+02:00
 draft: false
-socialShare: false
-toc: false
-tags: [esp32, esp, mp3, player, headphones, music]
+socialShare: true
+toc: true
+tags: [music, mp3, flac, wav, player, esp32, programming, audio]
 supressThumbnail: false
 thumbnail: iteration-2-1.webp
 ---
