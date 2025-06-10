@@ -22,15 +22,18 @@ The original version can be found here: [https://www.youtube.com/watch?v=qv96yJY
 Tuning: D#, G#, C#, F#, A#, D#
 
 Play F like this:
-
-:-------------------<br>
-:-------------------<br>
-:-------------------<br>
-:-------------------<br>
-:-4----4-4----4-4-4-<br>
-:-0-/2-2-2-\2-0-0-0-<br>
+```txt
+-------------------
+-------------------
+-------------------
+-------------------
+-4----4-4----4-4-4-
+-0-/2-2-2-\2-0-0-0-
+```
 
 _And everything as power chords._
+
+---
 
 _Verse 1_
 
@@ -42,13 +45,13 @@ _Verse 1_
 
 [F]I will never bother you
 
-<br>
+---
 
 [C#]Never speak a word again
 
 [D#]I will crawl away for good
 
-<br>
+---
 
 [F]I will move away from here
 
@@ -58,13 +61,13 @@ _Verse 1_
 
 [F]I always knew it would come to this
 
-<br>
+---
 
 [C#]Things have never been so swell
 
 [D#]I have never failed to fail
 
-<br>
+---
  
 _Chorus_
 
@@ -74,7 +77,7 @@ _Chorus_
 
 [C#]He[D#]y!!!
 
-<br>
+---
  
 [F]You know you're right
 
@@ -82,7 +85,7 @@ _Chorus_
 
 [F]You know you're right
 
-<br>
+---
 
 _Verse 2_
 
@@ -94,13 +97,13 @@ _Verse 2_
 
 [F]steaming soup against her mouth
 
-<br>
+---
 
 [C#]Nothing really bothers her
 
 [D#]She just wants to love herself
 
-<br>
+---
 
 [F]I will move away from here
 
@@ -110,13 +113,13 @@ _Verse 2_
 
 [F]Always knew it'd come to this
 
-<br>
+---
 
 [C#]Things have never been so swell
 
 [D#]I have never failed to fail
 
-<br>
+---
 
 _Chorus_
 
@@ -130,8 +133,8 @@ _Chorus_
 
 [C#]He[D#]y!!!
 
-<br>
- 
+---
+
 [F]You know you're right .. _a few more times_
 
 [F]You know your rights .. _three more times_
