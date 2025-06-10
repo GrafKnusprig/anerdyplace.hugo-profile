@@ -1,6 +1,6 @@
 baseURL: "https://philippraven.com/"
 languageCode: "en-us"
-title: "philipp raven"
+title: "philippraven"
 theme: hugo-profile
 
 pagination:
@@ -103,9 +103,17 @@ Menus:
     #   url: /songs
     #   weight: 3
 
+services:
+  rss:
+    limit: 15
+
 params:
-  title: "philipp raven"
+  author:
+    email: philipp.info@proton.me
+    name: philippraven
+  title: "philippraven"
   description: "ai engineer - artist - creator"
+  rssTitle: "philippraven's blog"
   # staticPath: ''
   favicon: "/icon.png"
   thumbnailWidth: 350
@@ -401,6 +409,19 @@ params:
         links:
           - icon: fab fa-kaggle
             url: https://www.kaggle.com/competitions/birdclef-2024
+      - title: "Cellshading - Painting my BMW"
+        content: "I had the urge to paint my car in a cellshading style. I mostly used montana graffiti colors and molotow markers. The result is a unique and eye-catching design that I am very proud of."
+        image: /images/projects/graffiti-bmw.webp
+        featured:
+          name: Read Blog Post
+          link: /blog/projects/graffiti-bmw
+        badges:
+          - "car"
+          - "painting"
+          - "cellshading"
+        links:
+          - icon: fab fa-website
+            url: https://www.betterrun.shop/
 
   #Contact
   contact:
@@ -421,5 +442,13 @@ params:
 
 outputs:
   home:
-    - HTML
-    - JSON
+  - html
+  - rss
+  - json
+  section:
+  - html
+  - rss
+  taxonomy:
+  - html
+  term:
+  - html
