@@ -11,7 +11,7 @@ tags: [cover, nirvana, you know you're right, song, chords]
 _Disclaimer: I do not own any rights to this song. It is not my property and is provided here for educational purposes only._
 
 ## About
-"You Know You're Right" is a song by the American rock band Nirvana, written by lead vocalist and guitarist, Kurt Cobain. It is the first song on the greatest hits album Nirvana, released by DGC Records in October 2002. It is also the final song the band recorded before Cobain's suicide in April 1994
+"You Know You're Right" is a song by the American rock band Nirvana, written by lead vocalist and guitarist, Kurt Cobain. It is the first song on the greatest hits album Nirvana, released by DGC Records in October 2002. It is also the final song the band recorded before Cobain's suicide in April 1994. [[1]](https://en.wikipedia.org/wiki/You_Know_You%27re_Right)
 
 The original version can be found here: [https://www.youtube.com/watch?v=qv96yJYhk3M](https://www.youtube.com/watch?v=qv96yJYhk3M)
 
