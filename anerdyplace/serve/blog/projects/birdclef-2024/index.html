@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html>
+
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+<link rel="icon" href=/icon.png type="image/gif">
+
+<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://philippraven.com/blog/index.xml">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+</noscript>
+
+
+<link rel="stylesheet" href="/css/font.css" media="all">
+
+
+
+<meta property="og:url" content="https://philippraven.com/blog/projects/birdclef-2024/">
+  <meta property="og:site_name" content="philippraven">
+  <meta property="og:title" content="Birdclef 2024">
+  <meta property="og:description" content="You can find the full paper to the project here: Download the paper
+The Challenge Kaggle’s BirdCLEF2024 competition challenges participants to identify bird species from audio recordings collected globally. Utilizing extensive datasets and advanced machine learning techniques, the goal is to enhance automated bird sound recognition. This competition not only aids in biodiversity monitoring but also supports conservation efforts by improving tools for ecologists and ornithologists.
+For more detailed information, check out the BirdCLEF 2024 competition page.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2024-06-08T12:44:19+02:00">
+    <meta property="article:modified_time" content="2024-06-08T12:44:19+02:00">
+    <meta property="article:tag" content="Project">
+    <meta property="article:tag" content="Birdclef">
+    <meta property="article:tag" content="Machine Learning">
+    <meta property="article:tag" content="Ai">
+    <meta property="article:tag" content="Deep Learning">
+    <meta property="article:tag" content="Transformer">
+    <meta property="og:image" content="https://philippraven.com/blog/projects/birdclef-2024/feature.png">
+
+<!-- ENTERING ogimage.html (open graph) --><meta property="og:image" content="https://philippraven.com//blog/projects/birdclef-2024/feature.png" />
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://philippraven.com/blog/projects/birdclef-2024/feature.png">
+  <meta name="twitter:title" content="Birdclef 2024">
+  <meta name="twitter:description" content="You can find the full paper to the project here: Download the paper
+The Challenge Kaggle’s BirdCLEF2024 competition challenges participants to identify bird species from audio recordings collected globally. Utilizing extensive datasets and advanced machine learning techniques, the goal is to enhance automated bird sound recognition. This competition not only aids in biodiversity monitoring but also supports conservation efforts by improving tools for ecologists and ornithologists.
+For more detailed information, check out the BirdCLEF 2024 competition page.">
+
+
+<link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
+<link rel="stylesheet" href="/css/footer.css" media="all">
+
+
+<link rel="stylesheet" href="/css/theme.css" media="all">
+
+
+
+
+<style>
+    :root {
+        --text-color: #343a40;
+        --text-secondary-color: #6c757d;
+        --background-color: #eaedf0;
+        --secondary-background-color: #64ffda;
+        --primary-color: #7c0082;
+        --secondary-color: #f8f9fa;
+
+         
+        --text-color-dark: #e4e6eb;
+        --text-secondary-color-dark: #b0b3b8;
+        --background-color-dark: #18191a;
+        --secondary-background-color-dark: #212529;
+        --primary-color-dark: #ffffff;
+        --secondary-color-dark: #212529;
+    }
+    
+    body {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    html {
+        background-color: var(--background-color) !important;
+    }
+
+    body::-webkit-scrollbar {
+        width: .5em;
+        height: .5em;
+        background-color: var(--background-color);
+    }
+    
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px var(--background-color);
+        border-radius: 1rem;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background-color: var(--secondary-color);
+        outline: 1px solid var(--background-color);
+    }
+
+    #search-content::-webkit-scrollbar {
+        width: .5em;
+        height: .1em;
+        background-color: var(--background-color);
+    }
+</style>
+
+<meta name="description" content="">
+<link rel="stylesheet" href="/css/single.css">
+
+
+<script defer src="/fontawesome-5/all-5.15.4.js"></script>
+
+  <title>
+Birdclef 2024 | philippraven
+
+  </title>
+</head>
+
+<body class="light">
+  
+  
+<script>
+    let localStorageValue = localStorage.getItem("pref-theme");
+    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    switch (localStorageValue) {
+        case "dark":
+            document.body.classList.add('dark');
+            break;
+        case "light":
+            document.body.classList.remove('dark');
+            break;
+        default:
+            if (mediaQuery) {
+                document.body.classList.add('dark');
+            }
+            break;
+    }
+</script>
+
+
+
+<header>
+    <nav class="pt-3 navbar navbar-expand-lg ">
+        <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+            
+            <a class="navbar-brand primary-font text-wrap" href="/">
+                
+                <img src="/icon.png" width="30" height="30"
+                    class="d-inline-block align-top">
+                philippraven
+                
+            </a>
+
+            
+
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                    <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
+                </svg>
+            </button>
+
+            
+            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+                <ul class="navbar-nav ms-auto text-center">
+                    
+
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="About">
+                            About
+                        </a>
+                        <div class="dropdown-menu shadow-lg rounded" aria-labelledby="navbarDropdown">
+                            
+                            <a class="dropdown-item text-center nav-link" href="/"
+                                title="Home">
+                                Home
+                            </a>
+                            
+                            <a class="dropdown-item text-center nav-link" href="/#about"
+                                title="About me">
+                                About me
+                            </a>
+                            
+                            <a class="dropdown-item text-center nav-link" href="/#experience"
+                                title="Experience">
+                                Experience
+                            </a>
+                            
+                            <a class="dropdown-item text-center nav-link" href="/#education"
+                                title="Education">
+                                Education
+                            </a>
+                            
+                            <a class="dropdown-item text-center nav-link" href="/#projects"
+                                title="Projects">
+                                Projects
+                            </a>
+                            
+                            <a class="dropdown-item text-center nav-link" href="/#contact"
+                                title="Contact me">
+                                Contact me
+                            </a>
+                            
+                        </div>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/blog" title="Blog posts">
+                            
+                            Blog
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/gallery" title="Gallery">
+                            
+                            Gallery
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/search" title="Search">
+                            
+                            Search
+                        </a>
+                    </li>
+                    
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        
+                        <div class="text-center">
+                            <button id="theme-toggle">
+                                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<div id="content">
+<section id="single">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-12 col-lg-9">
+        <div class="pr-lg-4">
+          <div class="title mb-5">
+            <h1 class="text-center mb-4">Birdclef 2024</h1>
+            <div class="text-center">
+              Philipp 
+              
+			  
+			  <small>|</small>
+			  
+			  
+			  
+              Jun 8, 2024
+			  
+            </div>
+          </div>
+          
+          <article class="page-content  p-2" id="page-content">
+          <p>You can find the full paper to the project here: <a href="./SS24_AAI_Lab_Report.pdf">Download the paper</a></p>
+<h1 id="the-challenge">The Challenge</h1>
+<p>Kaggle&rsquo;s BirdCLEF2024 competition challenges participants to identify bird species from audio recordings collected globally. Utilizing extensive datasets and advanced machine learning techniques, the goal is to enhance automated bird sound recognition. This competition not only aids in biodiversity monitoring but also supports conservation efforts by improving tools for ecologists and ornithologists.</p>
+<p>For more detailed information, check out the <a href="https://www.kaggle.com/competitions/birdclef-2024">BirdCLEF 2024 competition page</a>.</p>
+<h1 id="background">Background</h1>
+<p>This project is conducted as part of the Applied Artificial Intelligence Lab seminar at the University of Passau.</p>
+<p>Focusing on the development of a robust AI model for bird classification, the project includes regular progress presentations, team discussions, and collaborative work on a shared repository.</p>
+<p>The team comprises <a href="https://www.linkedin.com/in/adkspence/">Spencer Apeadjei-Duodu</a> and myself. Our aim is to advance AI capabilities in ornithology, contributing to broader ecological studies and conservation initiatives. Regular updates and team interactions ensure consistent progress and innovation throughout the project duration.</p>
+<h1 id="the-start">The Start</h1>
+<p>First, we examined the data.
+30 GB of audio files labeled and sorted into their respective folders.
+Our initial idea was to use a custom CNN. For this, we wanted to convert the audio files into spectrogram images and train our CNN on them.</p>
+<p>Good preprocessing was essential for this. We divided the audio files into 5-second chunks and applied various audio filters to them. Spectrogram images were then created from the audio chunks and saved as PNG files in the same labeled folder structure.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">This is a script to preprocess audio files for the birdclef-2024 project.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Author: Philipp Unger
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Project: birdclef-2024
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">https://git.fim.uni-passau.de/ungerp/ss24-aai-lab
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> multiprocessing
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> os
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> time
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> os.path <span style="color:#f92672">import</span> exists
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> pathlib <span style="color:#f92672">import</span> Path
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> librosa
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> noisereduce <span style="color:#66d9ef">as</span> nr
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> tqdm <span style="color:#f92672">import</span> tqdm
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">load_config</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">with</span> open(<span style="color:#e6db74">&#39;config.json&#39;</span>, <span style="color:#e6db74">&#39;r&#39;</span>) <span style="color:#66d9ef">as</span> f:
+</span></span><span style="display:flex;"><span>        _config <span style="color:#f92672">=</span> json<span style="color:#f92672">.</span>load(f)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> _config
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>config <span style="color:#f92672">=</span> load_config()
+</span></span><span style="display:flex;"><span>_input_folder <span style="color:#f92672">=</span> config[<span style="color:#e6db74">&#34;audio_files_input_path&#34;</span>]
+</span></span><span style="display:flex;"><span>_output_folder <span style="color:#f92672">=</span> config[<span style="color:#e6db74">&#34;audio_files_output_path&#34;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">load_audio</span>(filename):
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Load an audio file as a floating point time series.</span>
+</span></span><span style="display:flex;"><span>    audio, sr <span style="color:#f92672">=</span> librosa<span style="color:#f92672">.</span>load(filename, sr<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> audio, sr
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">pad_audio</span>(audio, n_fft):
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># If audio is too short, pad it with zeros</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> len(audio) <span style="color:#f92672">&lt;</span> n_fft:
+</span></span><span style="display:flex;"><span>        audio <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>pad(audio, (<span style="color:#ae81ff">0</span>, n_fft <span style="color:#f92672">-</span> len(audio)), mode<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;constant&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> audio
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">segment_audio</span>(segment, segment_length<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>, sr<span style="color:#f92672">=</span><span style="color:#ae81ff">32000</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Segment audio; each chunk is a list of smaller chunks of `segment_length` seconds</span>
+</span></span><span style="display:flex;"><span>    segmented_chunks <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>    samples_per_segment <span style="color:#f92672">=</span> segment_length <span style="color:#f92672">*</span> sr
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> start <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>, len(segment), samples_per_segment):
+</span></span><span style="display:flex;"><span>        end <span style="color:#f92672">=</span> start <span style="color:#f92672">+</span> samples_per_segment
+</span></span><span style="display:flex;"><span>        segmented_chunks<span style="color:#f92672">.</span>append(segment[start:end])
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> segmented_chunks
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">generate_square_spectrogram</span>(audio, sr, output_path, size<span style="color:#f92672">=</span><span style="color:#ae81ff">224</span>, fmin<span style="color:#f92672">=</span><span style="color:#ae81ff">2000</span>, fmax<span style="color:#f92672">=</span><span style="color:#ae81ff">8000</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Compute the Mel-scaled spectrogram with specified frequency range</span>
+</span></span><span style="display:flex;"><span>    s <span style="color:#f92672">=</span> librosa<span style="color:#f92672">.</span>feature<span style="color:#f92672">.</span>melspectrogram(y<span style="color:#f92672">=</span>audio, sr<span style="color:#f92672">=</span>sr, n_mels<span style="color:#f92672">=</span><span style="color:#ae81ff">128</span>, fmax<span style="color:#f92672">=</span>fmax, fmin<span style="color:#f92672">=</span>fmin)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Convert to decibels</span>
+</span></span><span style="display:flex;"><span>    s_dB <span style="color:#f92672">=</span> librosa<span style="color:#f92672">.</span>power_to_db(s, ref<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>max)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Plotting</span>
+</span></span><span style="display:flex;"><span>    plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(size <span style="color:#f92672">/</span> <span style="color:#ae81ff">100</span>, size <span style="color:#f92672">/</span> <span style="color:#ae81ff">100</span>), dpi<span style="color:#f92672">=</span><span style="color:#ae81ff">100</span>)  <span style="color:#75715e"># Set the figure size to achieve the desired image size</span>
+</span></span><span style="display:flex;"><span>    librosa<span style="color:#f92672">.</span>display<span style="color:#f92672">.</span>specshow(s_dB, sr<span style="color:#f92672">=</span>sr, x_axis<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;time&#39;</span>, y_axis<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;mel&#39;</span>, fmin<span style="color:#f92672">=</span>fmin, fmax<span style="color:#f92672">=</span>fmax, cmap<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;gray&#39;</span>)
+</span></span><span style="display:flex;"><span>    plt<span style="color:#f92672">.</span>axis(<span style="color:#e6db74">&#39;off&#39;</span>)  <span style="color:#75715e"># Disable axes to make the image square</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Remove borders and white space</span>
+</span></span><span style="display:flex;"><span>    plt<span style="color:#f92672">.</span>tight_layout(pad<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Save the figure as a grayscale image</span>
+</span></span><span style="display:flex;"><span>    plt<span style="color:#f92672">.</span>savefig(output_path, bbox_inches<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;tight&#39;</span>, pad_inches<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>    plt<span style="color:#f92672">.</span>close()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">process_file</span>(file_paths):
+</span></span><span style="display:flex;"><span>    input_file_path, output_file_path <span style="color:#f92672">=</span> file_paths
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># print(f&#34;Processing {input_file_path}&#34;)</span>
+</span></span><span style="display:flex;"><span>    audio, sr <span style="color:#f92672">=</span> load_audio(input_file_path)
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># audio = apply_highpass_filter(audio, sr, cutoff_freq=2000.0, order=5)</span>
+</span></span><span style="display:flex;"><span>    audio <span style="color:#f92672">=</span> nr<span style="color:#f92672">.</span>reduce_noise(audio, sr)  <span style="color:#75715e"># Works much better!</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    segment_length_seconds <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span>    samples_per_segment <span style="color:#f92672">=</span> segment_length_seconds <span style="color:#f92672">*</span> sr  <span style="color:#75715e"># sr is the sample rate</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    segments <span style="color:#f92672">=</span> segment_audio(audio, segment_length<span style="color:#f92672">=</span>segment_length_seconds, sr<span style="color:#f92672">=</span>sr)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i, segment <span style="color:#f92672">in</span> enumerate(segments):
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># If the segment is smaller than 5 seconds, skip it</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># This helps cleaning the data and avoiding distorted spectrograms</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> len(segment) <span style="color:#f92672">&lt;</span> samples_per_segment:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">continue</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Extract the directory and filename parts</span>
+</span></span><span style="display:flex;"><span>        directory <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>dirname(output_file_path)
+</span></span><span style="display:flex;"><span>        filename <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>basename(output_file_path)
+</span></span><span style="display:flex;"><span>        filename_without_extension, extension <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>splitext(filename)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        image_name <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(
+</span></span><span style="display:flex;"><span>            directory,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>filename_without_extension<span style="color:#e6db74">}</span><span style="color:#e6db74">_</span><span style="color:#e6db74">{</span>i<span style="color:#e6db74">}</span><span style="color:#e6db74">.</span><span style="color:#e6db74">{</span>extension<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>,
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># os.makedirs(</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">#     os.path.dirname(image_name), exist_ok=True</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># )  # Create output folders if they don&#39;t exist</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> exists(image_name):  <span style="color:#75715e"># Saves at least a little bit of time...</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># generate_spectrogram(segment, sr, image_name)</span>
+</span></span><span style="display:flex;"><span>            generate_square_spectrogram(segment, sr, image_name)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">prepare_file_pairs</span>(input_folder, output_folder):
+</span></span><span style="display:flex;"><span>    file_pairs <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>    input_folder <span style="color:#f92672">=</span> Path(input_folder)
+</span></span><span style="display:flex;"><span>    output_folder <span style="color:#f92672">=</span> Path(output_folder)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> input_path <span style="color:#f92672">in</span> input_folder<span style="color:#f92672">.</span>rglob(<span style="color:#e6db74">&#39;*.ogg&#39;</span>):
+</span></span><span style="display:flex;"><span>        output_path <span style="color:#f92672">=</span> output_folder <span style="color:#f92672">/</span> input_path<span style="color:#f92672">.</span>relative_to(input_folder)<span style="color:#f92672">.</span>with_suffix(<span style="color:#e6db74">&#39;.png&#39;</span>)
+</span></span><span style="display:flex;"><span>        output_path<span style="color:#f92672">.</span>parent<span style="color:#f92672">.</span>mkdir(parents<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, exist_ok<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)  <span style="color:#75715e"># Ensure output directory exists</span>
+</span></span><span style="display:flex;"><span>        file_pairs<span style="color:#f92672">.</span>append((input_path, output_path))
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> file_pairs
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">parallel_process_files</span>(input_folder, output_folder):
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Prepare input-output file pairs</span>
+</span></span><span style="display:flex;"><span>    file_pairs <span style="color:#f92672">=</span> prepare_file_pairs(input_folder, output_folder)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> file_pairs:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;No new files to process.&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Determine the number of processes to use</span>
+</span></span><span style="display:flex;"><span>    num_processes <span style="color:#f92672">=</span> multiprocessing<span style="color:#f92672">.</span>cpu_count()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Create a pool of processes</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">with</span> multiprocessing<span style="color:#f92672">.</span>Pool(processes<span style="color:#f92672">=</span>num_processes) <span style="color:#66d9ef">as</span> pool:
+</span></span><span style="display:flex;"><span>        list(tqdm(pool<span style="color:#f92672">.</span>imap(process_file, file_pairs), total<span style="color:#f92672">=</span>len(file_pairs), desc<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Processing Files&#34;</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Processing complete.&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
+</span></span><span style="display:flex;"><span>    start_time <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span>    parallel_process_files(_input_folder, _output_folder)
+</span></span><span style="display:flex;"><span>    end_time <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span>    elapsed_time <span style="color:#f92672">=</span> end_time <span style="color:#f92672">-</span> start_time
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Processing files took </span><span style="color:#e6db74">{</span>elapsed_time<span style="color:#e6db74">}</span><span style="color:#e6db74"> seconds.&#34;</span>)
+</span></span></code></pre></div><p>The first pipeline consisted of:</p>
+<ul>
+<li>High pass filter</li>
+<li>Noise reduction</li>
+<li>Normalization</li>
+<li>Segmentation</li>
+<li>Spectrogram images</li>
+</ul>
+<p>This took an extremely long time. Approximately 48 hours for the entire dataset. And if something didn&rsquo;t work or if we wanted to fine-tune something, we would have to do it all over again. We then searched for better filtering methods and used better libraries.</p>
+<p>The second pipeline was more refined:</p>
+<ul>
+<li>We removed the high pass filter and instead cut the spectrogram image below 2kHz.</li>
+<li>We used the library <a href="https://pypi.org/project/noisereduce/">noisereduce</a> as the noise filter.</li>
+<li>Then we directly segmented and generated spectrogram images. The images were exported as squares and monochrome color. This ensures better compatibility with our models.</li>
+</ul>
+<p>As a cherry on top, the pipeline was parallelized.
+All of this reduced the preprocessing time from 48 hours to 1 hour and 10 minutes.</p>
+<h1 id="the-first-model">The first model</h1>
+<p>We tried to implement it in <a href="https://www.tensorflow.org/">tensorflow</a>.
+Unfortunately, we encountered errors on the AI server provided to us.
+That&rsquo;s why we switched to <a href="https://pytorch.org/">PyTorch</a>.
+This was much easier to handle.</p>
+<p>The model itself was nothing special.
+Just a few convolutional, pooling and linear layers.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SimpleCNN</span>(nn<span style="color:#f92672">.</span>Module):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __init__(self, num_classes):
+</span></span><span style="display:flex;"><span>        super(SimpleCNN, self)<span style="color:#f92672">.</span>__init__()
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>conv1 <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Conv2d(<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">32</span>, kernel_size<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>, padding<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>conv2 <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Conv2d(<span style="color:#ae81ff">32</span>, <span style="color:#ae81ff">64</span>, kernel_size<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>, padding<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>conv3 <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Conv2d(<span style="color:#ae81ff">64</span>, <span style="color:#ae81ff">128</span>, kernel_size<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>, padding<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>pool <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>MaxPool2d(kernel_size<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>, stride<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>, padding<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>fc1 <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Linear(<span style="color:#ae81ff">128</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">16</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">16</span>, <span style="color:#ae81ff">256</span>)
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>fc2 <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Linear(<span style="color:#ae81ff">256</span>, num_classes)
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>dropout <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Dropout(<span style="color:#ae81ff">0.5</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">forward</span>(self, x):
+</span></span><span style="display:flex;"><span>        x <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>pool(F<span style="color:#f92672">.</span>relu(self<span style="color:#f92672">.</span>conv1(x)))
+</span></span><span style="display:flex;"><span>        x <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>pool(F<span style="color:#f92672">.</span>relu(self<span style="color:#f92672">.</span>conv2(x)))
+</span></span><span style="display:flex;"><span>        x <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>pool(F<span style="color:#f92672">.</span>relu(self<span style="color:#f92672">.</span>conv3(x)))
+</span></span><span style="display:flex;"><span>        x <span style="color:#f92672">=</span> x<span style="color:#f92672">.</span>view(<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">128</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">16</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">16</span>)
+</span></span><span style="display:flex;"><span>        x <span style="color:#f92672">=</span> F<span style="color:#f92672">.</span>relu(self<span style="color:#f92672">.</span>fc1(x))
+</span></span><span style="display:flex;"><span>        x <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>dropout(x)
+</span></span><span style="display:flex;"><span>        x <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>fc2(x)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> x
+</span></span></code></pre></div><p>We just reached 48% accuracy with that.
+So we tried something else.</p>
+<h1 id="resnet18">ResNet18</h1>
+<p>Was one of the less good decisions and the time would probably have been better invested elsewhere. But we see our project as a process in which you simply try out freely in all directions and see what comes out of it.</p>
+<p><a href="https://pytorch.org/vision/master/models/generated/torchvision.models.resnet18.html">ResNet18</a> is unfortunately a somewhat older model that has now been replaced by faster and better models. It is a pretraind CNN model.</p>
+<p>It has severall advantages:</p>
+<ul>
+<li>Can directly be applied to the Spectrogram images</li>
+<li>Fast training time</li>
+<li>Good at extracting features</li>
+</ul>
+<p>The initialization of the model is super easy for that:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">create_spectrogram_model</span>(num_classes):
+</span></span><span style="display:flex;"><span>    model <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>resnet18(pretrained<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>    num_ftrs <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>fc<span style="color:#f92672">.</span>in_features
+</span></span><span style="display:flex;"><span>    model<span style="color:#f92672">.</span>fc <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>Linear(num_ftrs, num_classes)
+</span></span><span style="display:flex;"><span>    model <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>to(device)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> model
+</span></span></code></pre></div><h3 id="the-hyperparameters">The Hyperparameters:</h3>
+<ul>
+<li>Batch size = 64</li>
+<li>Epochs = 5</li>
+<li>Learning rate = 0.0001</li>
+</ul>
+<h3 id="the-performance">The Performance:</h3>
+<ul>
+<li>TrainLoss: 1.42</li>
+<li>ValLoss: 1.58</li>
+<li>ValAcc: 63.40%</li>
+</ul>
+<h1 id="inception_v3">Inception_v3</h1>
+<p>Next, we tried <a href="https://pytorch.org/hub/pytorch_vision_inception_v3/">Inception_v3</a>.
+Also a pretrained CNN model with all it&rsquo;s advantages and disadvantages.
+Inception_v3 is also an older model, which you can see in the results.</p>
+<p>The initialization is also as easy as it gets:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>inception <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>inception_v3(pretrained<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span></code></pre></div><p>This model gave us a slightly better performance:</p>
+<h3 id="hyperparameters">Hyperparameters:</h3>
+<ul>
+<li>Learning Rate: 0.001</li>
+<li>Batch Size: 32</li>
+<li>Optimizer: Adam</li>
+<li>Loss Function: Cross-Entropy Loss</li>
+<li>Epochs: 20</li>
+</ul>
+<h3 id="performance">Performance:</h3>
+<ul>
+<li>Training Loss: 0.2660</li>
+<li>Validation Loss: 1.5370</li>
+<li>Validation Accuracy: 73.84%</li>
+</ul>
+<h1 id="resnext-50-a-big-leap">ResNeXt-50: A Big Leap</h1>
+<p>Now we get a little more modern&hellip;</p>
+<p>We then tried ResNeXt-50, which incorporates the concept of &ldquo;cardinality&rdquo; by performing multiple transformations in parallel.</p>
+<h3 id="training-setup">Training Setup:</h3>
+<ul>
+<li>Hyperparameter Tuning: Performed using Optuna.</li>
+<li>Epochs: 5 (early stopping applied)</li>
+<li>Learning Rate: 0.0001</li>
+<li>Batch Size: 64</li>
+</ul>
+<h3 id="results">Results:</h3>
+<ul>
+<li>Training Loss: 0.2433</li>
+<li>Validation Loss: 1.3121</li>
+<li>Validation Accuracy: 75.11%</li>
+<li>Validation AUC: 0.9880</li>
+</ul>
+<p>This model outperformed all previous approaches in both accuracy and AUC. The use of Optuna for hyperparameter tuning proved highly beneficial in optimizing the model’s performance.</p>
+<h1 id="a-failed-attempt-audio-spectrogram-transformer-ast">A Failed Attempt: Audio Spectrogram Transformer (AST)</h1>
+<p>As part of our exploration of cutting-edge models, we experimented with the <strong>Audio Spectrogram Transformer (AST)</strong>. This model processes raw audio directly, bypassing the need to convert audio into spectrogram images, theoretically allowing the model to learn features directly from the audio waveforms.</p>
+<p>Our reasoning was that this approach could potentially outperform traditional CNN-based methods that rely on spectrogram images, especially when dealing with complex, noisy data like bird calls in natural environments. The AST, having been pre-trained on AudioSet, seemed like a promising candidate for transfer learning in this domain.</p>
+<h3 id="the-setup">The Setup</h3>
+<p>We initially faced issues with the .ogg file format and the 32 kHz sampling rate, as the AST model expects raw audio inputs in a different format (16 kHz). To resolve this, we employed SoX and PyDub to convert and resample the audio files. After several preprocessing attempts, we managed to create the appropriate inputs for the AST model.</p>
+<p>However, that was just the beginning of the difficulties. Upon running the model, we encountered the following cryptic error:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vbnet" data-lang="vbnet"><span style="display:flex;"><span>AssertionError: choose a window size 400 that <span style="color:#f92672">is</span> <span style="color:#f92672">[</span>2, 1<span style="color:#f92672">]</span>
+</span></span></code></pre></div><p>Despite consulting the model’s documentation and even reaching out to the author on GitHub, it took multiple iterations to identify the problem: we were using the wrong feature extractor. Initially, we were working with the AST feature extractor:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>feature_extractor <span style="color:#f92672">=</span> ASTFeatureExtractor<span style="color:#f92672">.</span>from_pretrained(model_name)
+</span></span></code></pre></div><p>After trial and error, we switched to the Wav2Vec2FeatureExtractor, which was more appropriate for our audio input:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>feature_extractor <span style="color:#f92672">=</span> Wav2Vec2FeatureExtractor<span style="color:#f92672">.</span>from_pretrained(model_name)
+</span></span></code></pre></div><h3 id="the-outcome">The Outcome</h3>
+<p>Switching the feature extractor fixed the initial issue, but more errors followed. Each fix led to another hurdle, with error messages that were poorly documented and difficult to troubleshoot. These issues ranged from training crashes to input size mismatches. Given the tight competition deadlines and the lack of sufficient community support for AST, we reluctantly decided to abandon this approach.</p>
+<p>While the AST model holds significant potential for audio classification tasks, the implementation difficulties in our case, combined with the limited time for the competition, made it infeasible. It was a stark reminder of how early-stage models, no matter how promising, can often pose significant risks in terms of implementation time and troubleshooting.</p>
+<h1 id="challenges-and-lessons-learned">Challenges and Lessons Learned</h1>
+<p>This project, like many in machine learning, presented several challenges that were both technical and strategic. One of the biggest hurdles was dealing with the sheer size and complexity of the dataset. Preprocessing 30 GB of audio files into spectrograms was computationally expensive, and our initial attempts took nearly 48 hours for a single attempt. Although we were able to reduce this to just over an hour through parallelization, it highlighted the importance of efficient data pipelines in large-scale machine learning projects. The lesson here is that investing time early in optimizing preprocessing steps can save significant time later on.</p>
+<p>Another challenge was managing the models’ performance, particularly with older architectures like ResNet-18 and Inception v3. While these models provided moderate improvements, they were outclassed by newer architectures like ResNeXt-50. This drove home the importance of staying up to date with the latest model architectures in deep learning, as newer models often have built-in optimizations that improve performance with less tuning.</p>
+<p>The failed attempt with AST also underscored the risk of diving into cutting-edge models without a deep understanding of their requirements. While AST promised better performance by working directly with raw audio, the technical issues and cryptic error messages made it clear that newer models often come with undocumented pitfalls, especially when the community support is limited.</p>
+<p>Lastly, a key strategic challenge was managing our time and focus. Initially, we experimented widely with different architectures, which spread our efforts too thin. In hindsight, narrowing down our approach earlier and dedicating more time to fine-tuning a select few models (e.g., ResNeXt-50) could have yielded even better results. Balancing exploration with a focused strategy is a critical skill in research.</p>
+<h1 id="future-work">Future Work</h1>
+<p>Moving forward, we see several opportunities to build on the progress made in this project. One clear direction is to further explore transformer-based models for audio processing. While our attempt with AST failed due to technical issues, transformers still hold significant promise. Their ability to process raw audio directly could lead to improvements in both training efficiency and classification accuracy, especially as these models evolve and more resources become available.</p>
+<p>We also plan to incorporate more advanced validation techniques, such as k-fold cross-validation. Our current validation strategy, which involved splitting the data into training and validation sets, could be improved to give a more reliable measure of model performance. K-fold cross-validation would ensure that our models are tested on multiple subsets of the data, reducing the risk of overfitting and providing a more robust evaluation.</p>
+<p>In addition, we’re interested in exploring ways to improve the preprocessing pipeline further. While our parallelized approach significantly reduced processing time, there may be room for additional optimizations, such as experimenting with different spectrogram generation techniques or leveraging GPU-based preprocessing. Faster, more efficient preprocessing will be essential as we scale to larger datasets.</p>
+<p>Lastly, engaging more actively with the machine learning community, especially on platforms like Kaggle, could provide new insights and collaborations. Community engagement was an area where we missed out during this project, and it’s clear that tapping into collective knowledge early on could accelerate progress, particularly when dealing with new architectures or troubleshooting errors.</p>
+
+          </article>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-3">
+        <div class="sticky-sidebar">
+          
+          <aside class="toc" id="toc">
+              <h5>
+                Table Of Contents
+              </h5>
+              <div class="toc-content">
+                <nav id="TableOfContents">
+  <ul>
+    <li><a href="#the-challenge">The Challenge</a></li>
+    <li><a href="#background">Background</a></li>
+    <li><a href="#the-start">The Start</a></li>
+    <li><a href="#the-first-model">The first model</a></li>
+    <li><a href="#resnet18">ResNet18</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#the-hyperparameters">The Hyperparameters:</a></li>
+            <li><a href="#the-performance">The Performance:</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#inception_v3">Inception_v3</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#hyperparameters">Hyperparameters:</a></li>
+            <li><a href="#performance">Performance:</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#resnext-50-a-big-leap">ResNeXt-50: A Big Leap</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#training-setup">Training Setup:</a></li>
+            <li><a href="#results">Results:</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#a-failed-attempt-audio-spectrogram-transformer-ast">A Failed Attempt: Audio Spectrogram Transformer (AST)</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#the-setup">The Setup</a></li>
+            <li><a href="#the-outcome">The Outcome</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#challenges-and-lessons-learned">Challenges and Lessons Learned</a></li>
+    <li><a href="#future-work">Future Work</a></li>
+  </ul>
+</nav>
+              </div>
+          </aside>
+          
+
+          
+          <aside class="tags">
+            <h5>Tags</h5>
+            <ul class="tags-ul list-unstyled list-inline">
+              
+              <li class="list-inline-item"><a href="https://philippraven.com/tags/project" target="_self">project</a></li>
+              
+              <li class="list-inline-item"><a href="https://philippraven.com/tags/birdclef" target="_self">birdclef</a></li>
+              
+              <li class="list-inline-item"><a href="https://philippraven.com/tags/machine-learning" target="_self">machine learning</a></li>
+              
+              <li class="list-inline-item"><a href="https://philippraven.com/tags/ai" target="_self">ai</a></li>
+              
+              <li class="list-inline-item"><a href="https://philippraven.com/tags/deep-learning" target="_self">deep learning</a></li>
+              
+              <li class="list-inline-item"><a href="https://philippraven.com/tags/transformer" target="_self">transformer</a></li>
+              
+              <li class="list-inline-item"><a href="https://philippraven.com/tags/cnn" target="_self">cnn</a></li>
+              
+            </ul>
+          </aside>
+          
+
+          
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-9 p-4">
+        
+      </div>
+    </div>
+  </div>
+  <div class="p-2 px-3" id="rightSideButtonStack">
+    <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
+      <i class="fas fa-angle-up"></i>
+    </button>
+    <button class="p-2 px-3" onclick="tocFunction()" id="tocScroll">
+      <i class="fas fa-angle-double-down"></i>
+    </button>
+    <button class="p-2 px-3" onclick="bottomFunction()" id="bottomScroll">
+      <i class="fas fa-angle-down"></i>
+    </button>
+  </div>
+</section>
+
+<script>
+  var topScroll = document.getElementById('topScroll');
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    showTop();
+    showToc();
+    showBottom();
+  }
+
+  function showTop() {
+    if(topScroll && topScroll != null && topScroll != 'undefined') {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        topScroll.style.display = 'block';
+      } else {
+        topScroll.style.display = 'none';
+      }
+    }
+  }
+
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+
+  
+  var pageContent = document.getElementById('page-content');
+  var bottomScroll = document.getElementById('bottomScroll');
+
+  function showBottom() {
+    if(bottomScroll && bottomScroll != null && bottomScroll != 'undefined' &&
+       pageContent && pageContent != null && pageContent != 'undefined') {
+      if(bottomInViewport(pageContent)) {
+        bottomScroll.style.display = 'block';
+      } else {
+        bottomScroll.style.display = 'none';
+      }
+    }
+  }
+
+  function bottomFunction() {
+    if(pageContent && pageContent != null && pageContent != 'undefined') {
+      pageContent.scrollIntoView(false);
+      bottomScroll.style.display = 'none';
+    }
+  }
+
+  function bottomInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+      rect.bottom >= (window.innerHeight + 1|| document.documentElement.clientHeight + 1) 
+    );
+  }
+
+  
+  var tocScroll = document.getElementById('tocScroll');
+  var toc = document.getElementById('toc');
+
+  function showToc() {
+    if(toc && toc != null && toc != 'undefined' &&
+       tocScroll && tocScroll != null && tocScroll != 'undefined') {
+      if(isInViewport(toc)) {
+        tocScroll.style.display = 'none';
+      } else {
+        tocScroll.style.display = 'block';
+      }
+    }
+  }
+
+  function tocFunction() {
+    if(toc && toc != null && toc != 'undefined') {
+      toc.scrollIntoView(true);
+    }
+  }
+
+  function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+</script>
+
+
+  </div><footer>
+    <div class="container py-3" id="recent-posts">
+    
+    <div class="h3 text-center text-secondary py-3">Recent blog posts</div>
+    <div class="row justify-content-center">
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                <div class="card-body bg-transparent p-4 shadow-sm">
+                    
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                        
+                        
+                            
+                                
+                                
+                            
+                        
+                     
+                    
+                        <a href="/blog/esp/esp32-music-player-2/">
+                            <img src="/blog/esp/esp32-music-player-2/iteration-2-1_hu_f4e24501842cd71.webp" alt="ESP32 music player 2" class="rounded img-fluid">
+                        </a>
+                    
+
+                    <a href="/blog/esp/esp32-music-player-2/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="ESP32 music player 2">ESP32 music player 2</h5>
+                    </a>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">May 31, 2025</span>
+                    <a href="/blog/esp/esp32-music-player-2/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                <div class="card-body bg-transparent p-4 shadow-sm">
+                    
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                        
+                        
+                            
+                                
+                                
+                            
+                        
+                     
+                    
+                        <a href="/blog/esp/esp32-music-player/">
+                            <img src="/blog/esp/esp32-music-player/3D-model_hu_942edbc969aff83d.webp" alt="ESP32 music player" class="rounded img-fluid">
+                        </a>
+                    
+
+                    <a href="/blog/esp/esp32-music-player/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="ESP32 music player">ESP32 music player</h5>
+                    </a>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">May 26, 2025</span>
+                    <a href="/blog/esp/esp32-music-player/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                <div class="card-body bg-transparent p-4 shadow-sm">
+                    
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                        
+                        
+                            
+                                
+                                
+                            
+                        
+                     
+                    
+                        <a href="/blog/projects/graffiti-bmw/">
+                            <img src="/blog/projects/graffiti-bmw/feature_hu_45960779775a0ff0.webp" alt="Graffiti BMW" class="rounded img-fluid">
+                        </a>
+                    
+
+                    <a href="/blog/projects/graffiti-bmw/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Graffiti BMW">Graffiti BMW</h5>
+                    </a>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">May 26, 2025</span>
+                    <a href="/blog/projects/graffiti-bmw/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+</div>
+<div class="text-center pt-2">
+    
+
+    
+
+    
+
+    
+
+    
+</div><div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            <div class="pb-2">
+                <a href="https://philippraven.com/" title="philippraven">
+                    <img alt="Footer logo" src="/icon.png"
+                        height="40px" width="40px">
+                </a>
+            </div>
+            &copy; 2026  All Rights Reserved
+            <br>
+            <a href="https://philippraven.com/blog/index.xml" type="application/rss+xml">RSS Feed</a>
+            
+            
+                
+                
+                    
+                
+                
+                
+                    
+                    
+                
+            
+        </div>
+    </div>
+</div><div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            <a href="https://philippraven.com//legal-notice" title="Legal Notice">Legal Notice</a>
+        </div>
+    </div>
+</div></footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+</script>
+
+
+
+
+
+
+
+
+
+  <section id="search-content" class="py-2">
+    <div class="container" id="search-results"></div>
+  </section>
+</body>
+
+</html>

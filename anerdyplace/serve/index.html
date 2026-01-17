@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="generator" content="Hugo 0.144.2"><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+<link rel="icon" href=/icon.png type="image/gif">
+
+<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://philippraven.com/blog/index.xml">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+</noscript>
+
+
+<link rel="stylesheet" href="/css/font.css" media="all">
+
+
+
+<meta property="og:url" content="https://philippraven.com/">
+  <meta property="og:site_name" content="philippraven">
+  <meta property="og:title" content="philippraven">
+  <meta property="og:description" content="ai engineer - artist - creator">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="website">
+
+<!-- ENTERING ogimage.html (open graph) --><meta property="og:image" content="https://philippraven.com/feature.webp" />
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="philippraven">
+  <meta name="twitter:description" content="ai engineer - artist - creator">
+
+
+<link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
+<link rel="stylesheet" href="/css/footer.css" media="all">
+
+
+<link rel="stylesheet" href="/css/theme.css" media="all">
+
+
+
+
+<style>
+    :root {
+        --text-color: #343a40;
+        --text-secondary-color: #6c757d;
+        --background-color: #eaedf0;
+        --secondary-background-color: #64ffda;
+        --primary-color: #7c0082;
+        --secondary-color: #f8f9fa;
+
+         
+        --text-color-dark: #e4e6eb;
+        --text-secondary-color-dark: #b0b3b8;
+        --background-color-dark: #18191a;
+        --secondary-background-color-dark: #212529;
+        --primary-color-dark: #ffffff;
+        --secondary-color-dark: #212529;
+    }
+    
+    body {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    html {
+        background-color: var(--background-color) !important;
+    }
+
+    body::-webkit-scrollbar {
+        width: .5em;
+        height: .5em;
+        background-color: var(--background-color);
+    }
+    
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px var(--background-color);
+        border-radius: 1rem;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background-color: var(--secondary-color);
+        outline: 1px solid var(--background-color);
+    }
+
+    #search-content::-webkit-scrollbar {
+        width: .5em;
+        height: .1em;
+        background-color: var(--background-color);
+    }
+</style>
+
+<meta name="description" content=ai&#32;engineer&#32;-&#32;artist&#32;-&#32;creator>
+<link rel="stylesheet" href="/css/index.css" media="all">
+<link rel="stylesheet" href="/css/projects.css" media="all">
+
+
+<script defer src="/fontawesome-5/all-5.15.4.js"></script>
+
+  <title>
+philippraven
+
+  </title>
+</head>
+
+<body class="light">
+  
+  
+<script>
+    let localStorageValue = localStorage.getItem("pref-theme");
+    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    switch (localStorageValue) {
+        case "dark":
+            document.body.classList.add('dark');
+            break;
+        case "light":
+            document.body.classList.remove('dark');
+            break;
+        default:
+            if (mediaQuery) {
+                document.body.classList.add('dark');
+            }
+            break;
+    }
+</script>
+
+
+
+<header>
+    <nav class="pt-3 navbar navbar-expand-lg ">
+        <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+            
+            <a class="navbar-brand primary-font text-wrap" href="/">
+                
+                <img src="/icon.png" width="30" height="30"
+                    class="d-inline-block align-top">
+                philippraven
+                
+            </a>
+
+            
+
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                    <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
+                </svg>
+            </button>
+
+            
+            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+                <ul class="navbar-nav ms-auto text-center">
+                    
+
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="About">
+                            About
+                        </a>
+                        <div class="dropdown-menu shadow-lg rounded" aria-labelledby="navbarDropdown">
+                            
+                            <a class="dropdown-item text-center nav-link" href="/"
+                                title="Home">
+                                Home
+                            </a>
+                            
+                            <a class="dropdown-item text-center nav-link" href="/#about"
+                                title="About me">
+                                About me
+                            </a>
+                            
+                            <a class="dropdown-item text-center nav-link" href="/#experience"
+                                title="Experience">
+                                Experience
+                            </a>
+                            
+                            <a class="dropdown-item text-center nav-link" href="/#education"
+                                title="Education">
+                                Education
+                            </a>
+                            
+                            <a class="dropdown-item text-center nav-link" href="/#projects"
+                                title="Projects">
+                                Projects
+                            </a>
+                            
+                            <a class="dropdown-item text-center nav-link" href="/#contact"
+                                title="Contact me">
+                                Contact me
+                            </a>
+                            
+                        </div>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/blog" title="Blog posts">
+                            
+                            Blog
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/gallery" title="Gallery">
+                            
+                            Gallery
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/search" title="Search">
+                            
+                            Search
+                        </a>
+                    </li>
+                    
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        
+                        <div class="text-center">
+                            <button id="theme-toggle">
+                                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<div id="content">
+<section id="hero" class="py-5 align-middle">
+    <div class="container px-3 px-sm-5 px-md-5 px-lg-5 pt-lg-3">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-8 content" id="primary-font">
+                <span class="subtitle">
+                    Hi, I&#39;m
+                </span>
+                <h2>
+                    Philipp
+                </h2>
+                <h3>
+                    
+                </h3>
+                <p class="hero-content">
+                    ai engineer - artist - creator
+                </p>
+                <div class="row">
+                    <div class="col-auto h-100">
+                        
+                    </div>
+                    <div class="col-auto px-0 h-100"><span>
+    
+    <span class="px-1">
+        <a href="https://github.com/GrafKnusprig" target="_blank" class="btn social-icon">
+            <i class="fab fa-github"></i>
+        </a>
+    </span>
+    
+    <span class="px-1">
+        <a href="https://www.instagram.com/philippraven/" target="_blank" class="btn social-icon">
+            <i class="fab fa-instagram"></i>
+        </a>
+    </span>
+    
+    <span class="px-1">
+        <a href="https://www.linkedin.com/in/philipp-unger-988a06312/" target="_blank" class="btn social-icon">
+            <i class="fab fa-linkedin"></i>
+        </a>
+    </span>
+    
+    <span class="px-1">
+        <a href="https://soundcloud.com/mufuki" target="_blank" class="btn social-icon">
+            <i class="fab fa-soundcloud"></i>
+        </a>
+    </span>
+    
+    <span class="px-1">
+        <a href="https://www.youtube.com/channel/UCJ29i8qd-09tz47yZP7lxrA" target="_blank" class="btn social-icon">
+            <i class="fab fa-youtube"></i>
+        </a>
+    </span>
+    
+    <span class="px-1">
+        <a href="https://www.thingiverse.com/search?q=grafknusprig" target="_blank" class="btn social-icon">
+            <i class="fas fa-cube"></i>
+        </a>
+    </span>
+    
+
+    
+</span></div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-4">
+                <div class="row justify-content-center">
+                    <div class="col-sm-12 col-md-9 pt-5 image px-5 px-md-5 px-lg-0 text-center">
+                        <img src="/images/profile-pic-3.webp" 
+                            class="img-thumbnail mx-auto" 
+                            alt=""
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="py-0 py-sm-5">
+  <div class="container bg-transparent">
+    <h3 class="text-center bg-transparent">About Me</h3>
+    <div class="bg-transparent row justify-content-center px-3 py-5">
+      
+      <div class="col-sm-12 col-md-12 col-lg-8 content">
+        <p>When you ask someone to tell you about themselves, it&rsquo;s never easy.</p>
+<p>I&rsquo;ve been interested in all sorts of things all my life and my interests are constantly changing. I live to evolve and discover new joys in life.
+If I had to describe myself in one word, it would be that I am an artist.</p>
+<p>After school, I studied computer science and now have over 10 years of professional experience as a full stack software engineer.</p>
+<p>Since one skill alone does not satisfy me, I have many hobbies.
+I enjoy personalizing everything in my life, adapting things and processes to my needs.
+Here I can live out my creativity to the full.</p>
+<p>My passions also include art and music. I often do small favors for my friends. Whether it&rsquo;s 3D models, logos, programs, websites, videos or photoshoots&hellip; the list is truly endless.</p>
+<p>Whenever possible, I make my designs and programs open source. I&rsquo;m a big advocate of that.</p>
+<br>
+<p>On this website I want to give an overview of my projects. Unfortunately, I can&rsquo;t keep up with posting everything I do here. But I&rsquo;ll try to post something from time to time.</p>
+<hr>
+<p><b>FAQ:</b>
+Why the nickname raven? - Well, I like ravens. ;)</p>
+</p>
+<br><br><br><br><br> 
+        <h3 class="text-center bg-transparent">
+          Stuff I use regularly
+        </h3>
+        
+        <div class="bg-transparent row justify-content-center px-3 py-5">
+          <ul>
+            
+            <li><a href="https://www.adobe.com/creativecloud.html">AdobeSuite</a></li>
+            
+            <li><a href="https://www.arduino.cc/">Arduino</a></li>
+            
+            <li><a href="https://www.audacityteam.org/">Audacity</a></li>
+            
+            <li><a href="https://www.blender.org/">Blender</a></li>
+            
+            <li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/">C#</a></li>
+            
+            <li><a href="https://chat.openai.com/">ChatGPT</a></li>
+            
+            <li><a href="https://ffmpeg.org/">FFmpeg</a></li>
+            
+            <li><a href="https://www.freecad.org/">FreeCAD</a></li>
+            
+            <li><a href="https://github.com/">GitHub</a></li>
+            
+            <li><a href="https://about.gitlab.com/">GitLab</a></li>
+            
+            <li><a href="https://gohugo.io/">HUGO</a></li>
+            
+            <li><a href="https://www.java.com/">Java</a></li>
+            
+            <li><a href="https://www.w3schools.com/js/">JavaScript</a></li>
+            
+            <li><a href="https://www.jetbrains.com/">JetBrains</a></li>
+            
+            <li><a href="https://miktex.org/">MiKTeX</a></li>
+            
+            <li><a href="https://www.akaipro.com/mpc-beats">MPC Beats</a></li>
+            
+            <li><a href="https://nodejs.org/en/">Node.js</a></li>
+            
+            <li><a href="https://openscad.org/">OpenSCAD</a></li>
+            
+            <li><a href="https://obsproject.com/">OBS-Studio</a></li>
+            
+            <li><a href="https://pytorch.org/">PyTorch</a></li>
+            
+            <li><a href="https://www.python.org/">Python</a></li>
+            
+            <li><a href="https://www.raspberrypi.org/">Raspberry Pi</a></li>
+            
+            <li><a href="https://scratch.mit.edu/">Scratch</a></li>
+            
+            <li><a href="https://shotcut.org/">Shotcut</a></li>
+            
+            <li><a href="https://ultimaker.com/software/ultimaker-cura">UltiMaker Cura</a></li>
+            
+            <li><a href="https://visualstudio.microsoft.com">VisualStudio</a></li>
+            
+            <li><a href="https://vb-audio.com/Voicemeeter/">VoiceMeeter</a></li>
+            
+          </ul>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="experience" class="py-5">
+  <div class="container">
+    <h3 class="text-center">
+      Experience
+    </h3>
+    <div class="row justify-content-center py-5">
+       
+      <div class="col-12 p-0">
+        <div class="row row align-items-center justify-content-center m-1 mb-4">
+          
+
+          <div class="col-md-9">
+            <div class="card">
+              <div class="card-body">
+                <div class="float-end">
+                  <small>2024 - current</small>
+                </div>
+                <h5 class="card-title">Data Scientist</h5>
+
+                
+                <a href="https://www.fim.uni-passau.de/en/chair-for-software-engineering-ii/" target="_blank">
+                  <h6>University of Passau - Chair of Software Engineering II </h6>
+                </a>
+                 
+                <div class="py-1 education-content">
+                  <p>I work as a research assistant at the Chair of Software Engineering 2 under Prof. Gordon Fraser.</p>
+<p>I am currently working at the InnRaum³ as part of the INTERREG project. There I am responsible for running various courses for school pupils, students, trainees and employees. My work includes design from 3D model to print, AI development, setting up the makerspace and recruiting new members, safety training and machine maintenance.</p>
+
+                </div>
+
+                 
+                <div class="py-1">
+                  <a href="https://www.innraum.eu/" class="btn">
+                    InnRaum³
+                  </a>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-12 p-0">
+        <div class="row row align-items-center justify-content-center m-1 mb-4">
+          
+
+          <div class="col-md-9">
+            <div class="card">
+              <div class="card-body">
+                <div class="float-end">
+                  <small>2023 - current</small>
+                </div>
+                <h5 class="card-title">Robotics Trainer (honorary)</h5>
+
+                
+                <a href="https://mgf.de/" target="_blank">
+                  <h6>Maristengymnasium Fürstenzell</h6>
+                </a>
+                 
+                <div class="py-1 education-content">
+                  I honorarily work as a trainer for the robotics course at the Maristengymnasium Füstenzell. Here, I teach children in grades 5-11 how to program autonomous robots using Scratch and Python.
+                </div>
+
+                 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-12 p-0">
+        <div class="row row align-items-center justify-content-center m-1 mb-4">
+          
+
+          <div class="col-md-9">
+            <div class="card">
+              <div class="card-body">
+                <div class="float-end">
+                  <small>2014 - 2023</small>
+                </div>
+                <h5 class="card-title">Software Developer</h5>
+
+                
+                <a href="https://dap-systems.de/" target="_blank">
+                  <h6>DAP Systems</h6>
+                </a>
+                 
+                <div class="py-1 education-content">
+                  <p>I worked as a software developer at <a href="https://dap-systems.de/">DAP Systems.</a> in Passau, BY Germany.</p>
+<ul>
+<li>Fullstack developer for WebReporting, ImageSurfer, RadioXpert-Web [2019 - 2023]</li>
+<li>Backend developer for RadioXpert, Evogenius Reporting, TVScope [2014 - 2019]</li>
+</ul>
+<p>I have experience in ASP.NET, Angular, C#, CSS, EXT JS, HTML, JavaScript, Less, .Net Framework / Core, Node.js, PHP, SQL, TypeScript and more.</p>
+
+                </div>
+
+                 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-12 p-0">
+        <div class="row row align-items-center justify-content-center m-1 mb-4">
+          
+
+          <div class="col-md-9">
+            <div class="card">
+              <div class="card-body">
+                <div class="float-end">
+                  <small>2013 - 2014</small>
+                </div>
+                <h5 class="card-title">Media Computer Scientist</h5>
+
+                
+                <a href="https://www.uni-passau.de/en/" target="_blank">
+                  <h6>University of Passau - InteLeC-Zentrum</h6>
+                </a>
+                 
+                <div class="py-1 education-content">
+                  I worked as a web developer for the <a href="https://univideo.uni-passau.de/">univideo website</a> and more. Doing mainly HTML, CSS and JS.
+                </div>
+
+                 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+<section id="education" class="py-5">
+    <div class="container">
+        <h3 class="text-center">Education</h3>
+        <div class="row justify-content-center py-5">
+            
+            
+            <div class="col-12 p-0">
+                <div class="row row align-items-center justify-content-center m-1 mb-4">
+                    
+
+                    <div class="col-md-9">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="float-end">
+                                    <small>2023 - current</small>
+                                </div>
+                                <h5 class="card-title">Master AI Engineering (M.Sc.)</h5>
+                                
+                                
+                                <a href="https://www.uni-passau.de/en/" target="_blank">
+                                    <h6>
+                                    University of Passau
+                                    </h6>
+                                </a>
+                                
+
+                                
+                                <div class="py-1 education-content">
+                                    My focus is on the development and optimization of deep learning models. My main seminar is “Software Engineering for Kids”, where I am working on automatic hint generation using LLMs for tutorial systems in Scratch.
+                                </div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 p-0">
+                <div class="row row align-items-center justify-content-center m-1 mb-4">
+                    
+
+                    <div class="col-md-9">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="float-end">
+                                    <small>2009 - 2013</small>
+                                </div>
+                                <h5 class="card-title">Bachelor of Computer Science (B.Sc.)</h5>
+                                
+                                
+                                <a href="https://www.uni-passau.de/en/" target="_blank">
+                                    <h6>
+                                    University of Passau
+                                    </h6>
+                                </a>
+                                
+
+                                
+                                <div class="py-1 education-content">
+                                    <p>Minor:  <strong>Business Administration</strong></p>
+<p>Bachelor thesis:</p>
+<ul>
+<li>
+<p><a href="https://www.forwiss.uni-passau.de/extern/doc/BA_Unger.pdf"><strong>Automatisierung der Kartographierung von Straßenschildern (Automated street sign mapping)</strong></a></p>
+<p><a href="https://www.forwiss.uni-passau.de/en/">FORWISS</a>, University of Passau, <a href="https://www.fim.uni-passau.de/en/digital-image-processing/">Chair of Mathematics with focus on Digital Image Processing</a></p>
+</li>
+</ul>
+
+                                </div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 p-0">
+                <div class="row row align-items-center justify-content-center m-1 mb-4">
+                    
+
+                    <div class="col-md-9">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="float-end">
+                                    <small></small>
+                                </div>
+                                <h5 class="card-title">High School</h5>
+                                
+                                
+                                <a href="http://www.mgfuerstenzell.de/" target="_blank">
+                                    <h6>
+                                    Maristengymnasium Fürstenzell
+                                    </h6>
+                                </a>
+                                
+
+                                
+                                <div class="py-1 education-content">
+                                    <ul>
+<li>Advanced courses:
+<ul>
+<li>physics</li>
+<li>art</li>
+</ul>
+</li>
+<li>Senior project: Digital and craft implementation of a 3D optical illusion</li>
+</ul>
+
+                                </div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+<section id="projects" class="py-5">
+    <div class="container">
+        <h3 class="text-center">Projects</h3>
+        <div class="row justify-content-center px-3 px-md-5">
+            
+            <div class="col-lg-4 col-md-6 my-3">
+                <div class="card my-3 h-100" title="Hunt: Showdown - Loadout Randomizer">
+                    <div class="card-head">
+                        <img class="card-img-top" src="/images/projects/hunt-randomizer-1.webp" alt="Hunt: Showdown - Loadout Randomizer">
+                    </div>
+                    <div class="card-body bg-transparent p-3">
+                        <div class="pb-2 bg-transparent">
+                            
+                            <span class="badge badge-secondary">html</span>
+                            
+                            <span class="badge badge-secondary">javascript</span>
+                            
+                        </div>
+                        <h5 class="card-title bg-transparent mt-1">Hunt: Showdown - Loadout Randomizer</h5>
+                        <div class="card-text bg-transparent secondary-font">
+                            Hunt: Showdown - Loadout Randomizer is a local browser application that generates random loadouts for the game Hunt: Showdown. It is perfectly suited to be used as a browser plugin in OBS-Studio and similar applications and was made exactly for this purpose.
+                        </div>
+                    </div>
+                    
+                    <div class="card-footer py-3">
+                        
+                        <span class="m-1 mx-2">
+                            <a href="https://github.com/GrafKnusprig/HuntShowdownLoadoutRandomizer" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </span>
+                        
+                        
+                        <span class="float-end">
+                            <a class="btn btn-sm" href="https://grafknusprig.github.io/HuntShowdownLoadoutRandomizer/Randomizer.html" target="_blank">
+                                Start Randomizer
+                            </a>
+                        </span>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 my-3">
+                <div class="card my-3 h-100" title="BirdCLEF 2024">
+                    <div class="card-head">
+                        <img class="card-img-top" src="/images/projects/birdclef-2024.webp" alt="BirdCLEF 2024">
+                    </div>
+                    <div class="card-body bg-transparent p-3">
+                        <div class="pb-2 bg-transparent">
+                            
+                            <span class="badge badge-secondary">kaggle</span>
+                            
+                            <span class="badge badge-secondary">competition</span>
+                            
+                            <span class="badge badge-secondary">machine learning</span>
+                            
+                            <span class="badge badge-secondary">pytorch</span>
+                            
+                        </div>
+                        <h5 class="card-title bg-transparent mt-1">BirdCLEF 2024</h5>
+                        <div class="card-text bg-transparent secondary-font">
+                            Bird species identification from audio, focused on under-studied species in the Western Ghats, a major biodiversity hotspot in India. This project focuses on developing machine learning models to identify bird species from audio recordings.
+                        </div>
+                    </div>
+                    
+                    <div class="card-footer py-3">
+                        
+                        <span class="m-1 mx-2">
+                            <a href="https://www.kaggle.com/competitions/birdclef-2024" target="_blank">
+                                <i class="fab fa-kaggle"></i>
+                            </a>
+                        </span>
+                        
+                        
+                        <span class="float-end">
+                            <a class="btn btn-sm" href="/blog/projects/birdclef-2024" target="_blank">
+                                Read Blog Post
+                            </a>
+                        </span>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 my-3">
+                <div class="card my-3 h-100" title="Cellshading - Painting my BMW">
+                    <div class="card-head">
+                        <img class="card-img-top" src="/images/projects/graffiti-bmw.webp" alt="Cellshading - Painting my BMW">
+                    </div>
+                    <div class="card-body bg-transparent p-3">
+                        <div class="pb-2 bg-transparent">
+                            
+                            <span class="badge badge-secondary">car</span>
+                            
+                            <span class="badge badge-secondary">painting</span>
+                            
+                            <span class="badge badge-secondary">cellshading</span>
+                            
+                        </div>
+                        <h5 class="card-title bg-transparent mt-1">Cellshading - Painting my BMW</h5>
+                        <div class="card-text bg-transparent secondary-font">
+                            I had the urge to paint my car in a cellshading style. I mostly used montana graffiti colors and molotow markers. The result is a unique and eye-catching design that I am very proud of.
+                        </div>
+                    </div>
+                    
+                    <div class="card-footer py-3">
+                        
+                        <span class="m-1 mx-2">
+                            <a href="https://www.betterrun.shop/" target="_blank">
+                                <i class="fab fa-website"></i>
+                            </a>
+                        </span>
+                        
+                        
+                        <span class="float-end">
+                            <a class="btn btn-sm" href="/blog/projects/graffiti-bmw" target="_blank">
+                                Read Blog Post
+                            </a>
+                        </span>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="py-5">
+    <div class="container">
+        <h3 class="text-center">Contact me</h3>
+        <div class="px-0 px-md-5 px-lg-5">
+            <div class="row justify-content-center px-md-5">
+                <div class="col-md-8 py-3">
+                    <div class="text-center">
+                        If you want to contact me, you can always send me an email.
+                    </div>
+                    
+                    <div class="text-center pt-3">
+                        <a href="mailto:philipp.info@proton.me" class="btn">
+                            Mail me
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="contact-form-status"></div>
+</section>
+
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="check-circle-fill" viewBox="0 0 16 16">
+    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+  </symbol>
+  <symbol id="info-fill" viewBox="0 0 16 16">
+    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+  </symbol>
+  <symbol id="exclamation-triangle-fill" viewBox="0 0 16 16">
+    <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+  </symbol>
+</svg>
+
+  </div><footer>
+    <div class="container py-3" id="recent-posts">
+    
+    <div class="h3 text-center text-secondary py-3">Recent blog posts</div>
+    <div class="row justify-content-center">
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                <div class="card-body bg-transparent p-4 shadow-sm">
+                    
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                        
+                        
+                            
+                                
+                                
+                            
+                        
+                     
+                    
+                        <a href="/blog/esp/esp32-music-player-2/">
+                            <img src="/blog/esp/esp32-music-player-2/iteration-2-1_hu_f4e24501842cd71.webp" alt="ESP32 music player 2" class="rounded img-fluid">
+                        </a>
+                    
+
+                    <a href="/blog/esp/esp32-music-player-2/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="ESP32 music player 2">ESP32 music player 2</h5>
+                    </a>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">May 31, 2025</span>
+                    <a href="/blog/esp/esp32-music-player-2/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                <div class="card-body bg-transparent p-4 shadow-sm">
+                    
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                        
+                        
+                            
+                                
+                                
+                            
+                        
+                     
+                    
+                        <a href="/blog/esp/esp32-music-player/">
+                            <img src="/blog/esp/esp32-music-player/3D-model_hu_942edbc969aff83d.webp" alt="ESP32 music player" class="rounded img-fluid">
+                        </a>
+                    
+
+                    <a href="/blog/esp/esp32-music-player/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="ESP32 music player">ESP32 music player</h5>
+                    </a>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">May 26, 2025</span>
+                    <a href="/blog/esp/esp32-music-player/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                <div class="card-body bg-transparent p-4 shadow-sm">
+                    
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                        
+                        
+                            
+                                
+                                
+                            
+                        
+                     
+                    
+                        <a href="/blog/projects/graffiti-bmw/">
+                            <img src="/blog/projects/graffiti-bmw/feature_hu_45960779775a0ff0.webp" alt="Graffiti BMW" class="rounded img-fluid">
+                        </a>
+                    
+
+                    <a href="/blog/projects/graffiti-bmw/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Graffiti BMW">Graffiti BMW</h5>
+                    </a>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">May 26, 2025</span>
+                    <a href="/blog/projects/graffiti-bmw/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+</div>
+<div class="text-center pt-2">
+    
+
+    
+
+    
+
+    
+
+    
+</div><div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            <div class="pb-2">
+                <a href="https://philippraven.com/" title="philippraven">
+                    <img alt="Footer logo" src="/icon.png"
+                        height="40px" width="40px">
+                </a>
+            </div>
+            &copy; 2026  All Rights Reserved
+            <br>
+            <a href="https://philippraven.com/blog/index.xml" type="application/rss+xml">RSS Feed</a>
+            
+            
+                
+                
+                    
+                
+                
+                
+                    
+                    
+                
+            
+        </div>
+    </div>
+</div><div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            <a href="https://philippraven.com//legal-notice" title="Legal Notice">Legal Notice</a>
+        </div>
+    </div>
+</div></footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+</script>
+
+
+
+
+
+
+
+
+
+  <section id="search-content" class="py-2">
+    <div class="container" id="search-results"></div>
+  </section>
+</body>
+
+</html>

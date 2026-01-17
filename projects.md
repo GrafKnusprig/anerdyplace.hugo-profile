@@ -1,5 +1,7 @@
 # Upcoming Projects
 
+## Raspberry Home Network Addblocker
+
 ## GPS Tracking Dashcam
 - Raspberry Zero W based dashcam with wide angle lens
 - GPS data baked directly into the video
@@ -14,7 +16,7 @@
 - multiscale fretboard 24.75 to 648mm
 - nut 42mm
 - radius fingerboard 305mm
-- https://www.ekips.org/tools/guitar/fretfind2d/#showFretboardEdges=on&showStrings=on&extendFrets=on&showBoundingBox=on&showMetas=on&len=25&lenF=+628&lenL=648&pDist=.33258&ipDist=0.5&nutWidth=38&bridgeWidth=52&oE=2.5&oN=0.09375&oB=0.09375&oL=0.09375&oF=0.09375&oNL=0.09375&oNF=0.09375&oBL=0.09375&oBF=0.09375&root=12&scl=!+12tet.scl%0A!%0A12+tone+equal+temperament%0A12%0A!%0A100.0%0A200.%0A300.%0A400.%0A500.%0A600.%0A700.%0A800.%0A900.%0A1000.%0A1100.%0A2%2F1%0A&numFrets=25&numStrings=6&t%5B%5D=0&t%5B%5D=0&t%5B%5D=0&t%5B%5D=0&t%5B%5D=0&t%5B%5D=0&il%5B%5D=25&il%5B%5D=25.5&il%5B%5D=26&il%5B%5D=26.5&il%5B%5D=27&il%5B%5D=27.5&ig%5B%5D=0&ig%5B%5D=0&ig%5B%5D=0&ig%5B%5D=0&ig%5B%5D=0&ig%5B%5D=0&u=mm&sl=multiple&ns=equal&scale=et&o=equal
+https://www.ekips.org/tools/guitar/fretfind2d/#showFretboardEdges=on&showStrings=on&extendFrets=on&showBoundingBox=on&showMetas=on&len=25&lenF=+628&lenL=648&pDist=.33258&ipDist=0.5&nutWidth=38&bridgeWidth=52&oE=2.5&oN=0.09375&oB=0.09375&oL=0.09375&oF=0.09375&oNL=0.09375&oNF=0.09375&oBL=0.09375&oBF=0.09375&root=12&scl=!+12tet.scl%0A!%0A12+tone+equal+temperament%0A12%0A!%0A100.0%0A200.%0A300.%0A400.%0A500.%0A600.%0A700.%0A800.%0A900.%0A1000.%0A1100.%0A2%2F1%0A&numFrets=25&numStrings=6&t%5B%5D=0&t%5B%5D=0&t%5B%5D=0&t%5B%5D=0&t%5B%5D=0&t%5B%5D=0&il%5B%5D=25&il%5B%5D=25.5&il%5B%5D=26&il%5B%5D=26.5&il%5B%5D=27&il%5B%5D=27.5&ig%5B%5D=0&ig%5B%5D=0&ig%5B%5D=0&ig%5B%5D=0&ig%5B%5D=0&ig%5B%5D=0&u=mm&sl=multiple&ns=equal&scale=et&o=equal
 
 07.10.2025
 https://www.ekips.org/tools/guitar/fretfind2d/#showFretboardEdges=on&showStrings=on&extendFrets=on&showBoundingBox=on&showMetas=on&len=25&lenF=+628&lenL=648&pDist=.33258&ipDist=0.5&nutWidth=38&bridgeWidth=52&oE=3.5&oN=0.09375&oB=0.09375&oL=0.09375&oF=0.09375&oNL=0.09375&oNF=0.09375&oBL=0.09375&oBF=0.09375&root=12&scl=!+12tet.scl%0A!%0A12+tone+equal+temperament%0A12%0A!%0A100.0%0A200.%0A300.%0A400.%0A500.%0A600.%0A700.%0A800.%0A900.%0A1000.%0A1100.%0A2%2F1%0A&numFrets=25&numStrings=6&t%5B%5D=0&t%5B%5D=0&t%5B%5D=0&t%5B%5D=0&t%5B%5D=0&t%5B%5D=0&il%5B%5D=25&il%5B%5D=25.5&il%5B%5D=26&il%5B%5D=26.5&il%5B%5D=27&il%5B%5D=27.5&ig%5B%5D=0&ig%5B%5D=0&ig%5B%5D=0&ig%5B%5D=0&ig%5B%5D=0&ig%5B%5D=0&u=mm&sl=multiple&ns=equal&scale=et&o=equal

@@ -6,7 +6,6 @@ draft: true
 socialShare: false
 toc: true
 tags: [3d, onshape, 3d printing, cad, key holder, thingiverse]
-thumbnail: thumb.webp
 ---
 
 {{< instagram "embed1.html" >}}

@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html>
+
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+<link rel="icon" href=/icon.png type="image/gif">
+
+<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://philippraven.com/blog/index.xml">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+</noscript>
+
+
+<link rel="stylesheet" href="/css/font.css" media="all">
+
+
+
+<meta property="og:url" content="https://philippraven.com/blog/esp/esp32-music-player-2/">
+  <meta property="og:site_name" content="philippraven">
+  <meta property="og:title" content="ESP32 music player 2">
+  <meta property="og:description" content="ESP32 music player - part 2 I used the player for a few hours now, but I noticed a big flaw in my design. Well design is a little far-fetched. I just put a few parts together and called it a music player. :D
+The first iteration In the first iteration I tried my headphones directly on the PCM5102 and they sounded amazing and loud enough for my taste. But something felt off using headphones directly on a DAC preamp.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2025-05-31T22:22:19+02:00">
+    <meta property="article:modified_time" content="2025-05-31T22:22:19+02:00">
+    <meta property="article:tag" content="Music">
+    <meta property="article:tag" content="Mp3">
+    <meta property="article:tag" content="Flac">
+    <meta property="article:tag" content="Wav">
+    <meta property="article:tag" content="Player">
+    <meta property="article:tag" content="Esp32">
+
+<!-- ENTERING ogimage.html (open graph) --><meta property="og:image" content="https://philippraven.com//blog/esp/esp32-music-player-2/iteration-2-1.webp" />
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="ESP32 music player 2">
+  <meta name="twitter:description" content="ESP32 music player - part 2 I used the player for a few hours now, but I noticed a big flaw in my design. Well design is a little far-fetched. I just put a few parts together and called it a music player. :D
+The first iteration In the first iteration I tried my headphones directly on the PCM5102 and they sounded amazing and loud enough for my taste. But something felt off using headphones directly on a DAC preamp.">
+
+
+<link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
+<link rel="stylesheet" href="/css/footer.css" media="all">
+
+
+<link rel="stylesheet" href="/css/theme.css" media="all">
+
+
+
+
+<style>
+    :root {
+        --text-color: #343a40;
+        --text-secondary-color: #6c757d;
+        --background-color: #eaedf0;
+        --secondary-background-color: #64ffda;
+        --primary-color: #7c0082;
+        --secondary-color: #f8f9fa;
+
+         
+        --text-color-dark: #e4e6eb;
+        --text-secondary-color-dark: #b0b3b8;
+        --background-color-dark: #18191a;
+        --secondary-background-color-dark: #212529;
+        --primary-color-dark: #ffffff;
+        --secondary-color-dark: #212529;
+    }
+    
+    body {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    html {
+        background-color: var(--background-color) !important;
+    }
+
+    body::-webkit-scrollbar {
+        width: .5em;
+        height: .5em;
+        background-color: var(--background-color);
+    }
+    
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px var(--background-color);
+        border-radius: 1rem;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background-color: var(--secondary-color);
+        outline: 1px solid var(--background-color);
+    }
+
+    #search-content::-webkit-scrollbar {
+        width: .5em;
+        height: .1em;
+        background-color: var(--background-color);
+    }
+</style>
+
+<meta name="description" content="">
+<link rel="stylesheet" href="/css/single.css">
+
+
+<script defer src="/fontawesome-5/all-5.15.4.js"></script>
+
+  <title>
+ESP32 music player 2 | philippraven
+
+  </title>
+</head>
+
+<body class="light">
+  
+  
+<script>
+    let localStorageValue = localStorage.getItem("pref-theme");
+    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    switch (localStorageValue) {
+        case "dark":
+            document.body.classList.add('dark');
+            break;
+        case "light":
+            document.body.classList.remove('dark');
+            break;
+        default:
+            if (mediaQuery) {
+                document.body.classList.add('dark');
+            }
+            break;
+    }
+</script>
+
+
+
+<header>
+    <nav class="pt-3 navbar navbar-expand-lg ">
+        <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+            
+            <a class="navbar-brand primary-font text-wrap" href="/">
+                
+                <img src="/icon.png" width="30" height="30"
+                    class="d-inline-block align-top">
+                philippraven
+                
+            </a>
+
+            
+
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                    <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
+                </svg>
+            </button>
+
+            
+            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+                <ul class="navbar-nav ms-auto text-center">
+                    
+
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="About">
+                            About
+                        </a>
+                        <div class="dropdown-menu shadow-lg rounded" aria-labelledby="navbarDropdown">
+                            
+                            <a class="dropdown-item text-center nav-link" href="/"
+                                title="Home">
+                                Home
+                            </a>
+                            
+                            <a class="dropdown-item text-center nav-link" href="/#about"
+                                title="About me">
+                                About me
+                            </a>
+                            
+                            <a class="dropdown-item text-center nav-link" href="/#experience"
+                                title="Experience">
+                                Experience
+                            </a>
+                            
+                            <a class="dropdown-item text-center nav-link" href="/#education"
+                                title="Education">
+                                Education
+                            </a>
+                            
+                            <a class="dropdown-item text-center nav-link" href="/#projects"
+                                title="Projects">
+                                Projects
+                            </a>
+                            
+                            <a class="dropdown-item text-center nav-link" href="/#contact"
+                                title="Contact me">
+                                Contact me
+                            </a>
+                            
+                        </div>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/blog" title="Blog posts">
+                            
+                            Blog
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/gallery" title="Gallery">
+                            
+                            Gallery
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/search" title="Search">
+                            
+                            Search
+                        </a>
+                    </li>
+                    
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        
+                        <div class="text-center">
+                            <button id="theme-toggle">
+                                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<div id="content">
+<section id="single">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-12 col-lg-9">
+        <div class="pr-lg-4">
+          <div class="title mb-5">
+            <h1 class="text-center mb-4">ESP32 music player 2</h1>
+            <div class="text-center">
+              philippraven 
+              
+			  
+			  <small>|</small>
+			  
+			  
+			  
+              May 31, 2025
+			  
+            </div>
+          </div>
+          
+          <article class="page-content  p-2" id="page-content">
+          <h1 id="esp32-music-player---part-2">ESP32 music player - part 2</h1>
+<p>I used the player for a few hours now, but I noticed a big flaw in my design. Well design is a little far-fetched. I just put a few parts together and called it a music player. :D</p>
+<h1 id="the-first-iteration">The first iteration</h1>
+<p>In the first iteration I tried my headphones directly on the PCM5102 and they sounded amazing and loud enough for my taste.
+But something felt off using headphones directly on a DAC preamp.</p>
+<p>I did a little research and found out, that the PCM5102 is designed for low-current and high-impedance loads, like that of amplifiers.
+Not the low impedance and current-hungry nature of headphones. Talking 16-80 ohms headphones.</p>
+<p>I figured, that it also could damage the DAC or my headphones in the long run.</p>
+<h1 id="the-second-iteration">The second iteration</h1>
+<p>I almost immediately went down to work and cracked the glued and beautifully painted housing open again. This hurt real bad&hellip;</p>
+<p>I had a MAX4410 laying around from another project.</p>
+<h2 id="new-goals">New goals</h2>
+<p>The goals for the second iteration were:</p>
+<ul>
+<li>rework the complete layout of the components</li>
+<li>remove the micro-usb port for charging and use the usb-c of the esp to both charge and program the player</li>
+<li>integrate the MAX4410 without making the overall footprint bigger</li>
+<li>use the switched pot of the max as the power button</li>
+</ul>
+<h2 id="work">Work&hellip;</h2>
+<p>So I removed everything. The switch, the buttons, all the wires, the modules. I started over again. Moved all the components to new places and I stuffed a lot more in there. A new step down module to power the esp, the dac, the sd card reader and the amp. Was a little worried that this would be a little much for the small esp ldo.
+I also added a mode button, so 3 buttons in the new version. And I added a neopixel to show the modes with different colors.</p>
+<p>The headphone jacks of the dac and amp got removed to reduce their size and I soldered one of them directly to the pcb.</p>
+<p>The traces of the volume pot on the amp were cut, and I placed it between the charger module&rsquo;s 5V and the buck converter. So it can switch the whole player.</p>
+<p>It was a success and I&rsquo;m pleased that the whole thing really didn&rsquo;t become much bigger.</p>
+<p><p class="md__image">
+  <img class="img-fluid" src="iteration-2.webp" alt="image 1"  />
+</p></p>
+<blockquote>
+<p>a lot of new cables&hellip;</p></blockquote>
+<p><p class="md__image">
+  <img class="img-fluid" src="iteration-2-1.webp" alt="image 2"  />
+</p></p>
+<blockquote>
+<p>the finished thing</p></blockquote>
+<h1 id="more-flaws">More flaws</h1>
+<p>I found out that the MAX4410 sounds like a good idea on paper, but it’s not really made for full-blown line-level signals like the PCM5102 puts out.</p>
+<p>It ends up being way too loud, with barely any control over the volume. I had to set the gain to 0.05 on the software side, which is a very bad idea, because this throws most of the PCM5102&rsquo;s dynamic range out of the window&hellip;</p>
+<h2 id="a-fix-for-now">A fix for now</h2>
+<p>As the assembly and the components do not survive yet another disassembly, I will drop a simple resistor voltage divider between the DAC and the amp to reduce the input signal. That brings the volume down to something usable without losing the dynamics of the PCM5102.</p>
+<h2 id="for-the-next-step">For the next step</h2>
+<p>A better fit is something like the TPA6132. It handles proper DAC output levels, drives headphones cleanly, and just plays nicer overall. This chip comes on a small module, simple and plain. Without audio jack and volume pot.</p>
+<p>So I ordered a bunch of new stuff for the third iteration.</p>
+<h1 id="what-comes-next">What comes next?</h1>
+<p>The next iteration will be smaller and again a little better. I still want to use a 18650 battery with around 3500mAh, because they are safe and I like their heft and overall look. Also their easy way of being replaced.</p>
+<p>I will not use a full ESP32 dev board, but a esp32 cam module. These modules come with a sd card reader on board and yet are smaller than the full dev boards. They have a separate programmer board, which is really nice.</p>
+<p>I&rsquo;m still going to use a PCM5102 as dac, I like them for their low noise level and high dynamic range.</p>
+<p>A TPA6132 is going to be used as the headphone amp, with a stereo volume pot in between the dac and the amp.</p>
+<p>I also found nice charging boards for the 18650 batteries with usb-c ports and I will combine them with fixed 5V to 3.3V step down converters. I played with the idea of skipping the boost and buck steps and using a buck directly on the 3.7V battery, but most of them - especially the small ones - need at least a 1V difference to work. So from 3.7V to 3.3V is not going to work for now. I&rsquo;m sure there is a way, but I need a little more research for that.</p>
+
+          </article>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-3">
+        <div class="sticky-sidebar">
+          
+          <aside class="toc" id="toc">
+              <h5>
+                Table Of Contents
+              </h5>
+              <div class="toc-content">
+                <nav id="TableOfContents">
+  <ul>
+    <li><a href="#esp32-music-player---part-2">ESP32 music player - part 2</a></li>
+    <li><a href="#the-first-iteration">The first iteration</a></li>
+    <li><a href="#the-second-iteration">The second iteration</a>
+      <ul>
+        <li><a href="#new-goals">New goals</a></li>
+        <li><a href="#work">Work&hellip;</a></li>
+      </ul>
+    </li>
+    <li><a href="#more-flaws">More flaws</a>
+      <ul>
+        <li><a href="#a-fix-for-now">A fix for now</a></li>
+        <li><a href="#for-the-next-step">For the next step</a></li>
+      </ul>
+    </li>
+    <li><a href="#what-comes-next">What comes next?</a></li>
+  </ul>
+</nav>
+              </div>
+          </aside>
+          
+
+          
+          <aside class="tags">
+            <h5>Tags</h5>
+            <ul class="tags-ul list-unstyled list-inline">
+              
+              <li class="list-inline-item"><a href="https://philippraven.com/tags/music" target="_self">music</a></li>
+              
+              <li class="list-inline-item"><a href="https://philippraven.com/tags/mp3" target="_self">mp3</a></li>
+              
+              <li class="list-inline-item"><a href="https://philippraven.com/tags/flac" target="_self">flac</a></li>
+              
+              <li class="list-inline-item"><a href="https://philippraven.com/tags/wav" target="_self">wav</a></li>
+              
+              <li class="list-inline-item"><a href="https://philippraven.com/tags/player" target="_self">player</a></li>
+              
+              <li class="list-inline-item"><a href="https://philippraven.com/tags/esp32" target="_self">esp32</a></li>
+              
+              <li class="list-inline-item"><a href="https://philippraven.com/tags/programming" target="_self">programming</a></li>
+              
+              <li class="list-inline-item"><a href="https://philippraven.com/tags/audio" target="_self">audio</a></li>
+              
+            </ul>
+          </aside>
+          
+
+          
+          <aside class="social">
+            <h5>Social</h5>
+            <div class="social-content">
+              <ul class="list-inline">
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://twitter.com/share?text=ESP32%20music%20player%202&url=https%3a%2f%2fphilippraven.com%2fblog%2fesp%2fesp32-music-player-2%2f">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://api.whatsapp.com/send?text=ESP32%20music%20player%202: https%3a%2f%2fphilippraven.com%2fblog%2fesp%2fesp32-music-player-2%2f">
+                    <i class="fab fa-whatsapp"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="mailto:?subject=ESP32%20music%20player%202&amp;body=Check out this site https%3a%2f%2fphilippraven.com%2fblog%2fesp%2fesp32-music-player-2%2f">
+                    <i class="fa fa-envelope"></i>
+                  </a>
+                </li> 
+              </ul>
+            </div>
+          </aside>
+          
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-9 p-4">
+        
+      </div>
+    </div>
+  </div>
+  <div class="p-2 px-3" id="rightSideButtonStack">
+    <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
+      <i class="fas fa-angle-up"></i>
+    </button>
+    <button class="p-2 px-3" onclick="tocFunction()" id="tocScroll">
+      <i class="fas fa-angle-double-down"></i>
+    </button>
+    <button class="p-2 px-3" onclick="bottomFunction()" id="bottomScroll">
+      <i class="fas fa-angle-down"></i>
+    </button>
+  </div>
+</section>
+
+<script>
+  var topScroll = document.getElementById('topScroll');
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    showTop();
+    showToc();
+    showBottom();
+  }
+
+  function showTop() {
+    if(topScroll && topScroll != null && topScroll != 'undefined') {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        topScroll.style.display = 'block';
+      } else {
+        topScroll.style.display = 'none';
+      }
+    }
+  }
+
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+
+  
+  var pageContent = document.getElementById('page-content');
+  var bottomScroll = document.getElementById('bottomScroll');
+
+  function showBottom() {
+    if(bottomScroll && bottomScroll != null && bottomScroll != 'undefined' &&
+       pageContent && pageContent != null && pageContent != 'undefined') {
+      if(bottomInViewport(pageContent)) {
+        bottomScroll.style.display = 'block';
+      } else {
+        bottomScroll.style.display = 'none';
+      }
+    }
+  }
+
+  function bottomFunction() {
+    if(pageContent && pageContent != null && pageContent != 'undefined') {
+      pageContent.scrollIntoView(false);
+      bottomScroll.style.display = 'none';
+    }
+  }
+
+  function bottomInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+      rect.bottom >= (window.innerHeight + 1|| document.documentElement.clientHeight + 1) 
+    );
+  }
+
+  
+  var tocScroll = document.getElementById('tocScroll');
+  var toc = document.getElementById('toc');
+
+  function showToc() {
+    if(toc && toc != null && toc != 'undefined' &&
+       tocScroll && tocScroll != null && tocScroll != 'undefined') {
+      if(isInViewport(toc)) {
+        tocScroll.style.display = 'none';
+      } else {
+        tocScroll.style.display = 'block';
+      }
+    }
+  }
+
+  function tocFunction() {
+    if(toc && toc != null && toc != 'undefined') {
+      toc.scrollIntoView(true);
+    }
+  }
+
+  function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+</script>
+
+
+  </div><footer>
+    <div class="container py-3" id="recent-posts">
+    
+    <div class="h3 text-center text-secondary py-3">Recent blog posts</div>
+    <div class="row justify-content-center">
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                <div class="card-body bg-transparent p-4 shadow-sm">
+                    
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                        
+                        
+                            
+                                
+                                
+                            
+                        
+                     
+                    
+                        <a href="/blog/esp/esp32-music-player-2/">
+                            <img src="/blog/esp/esp32-music-player-2/iteration-2-1_hu_f4e24501842cd71.webp" alt="ESP32 music player 2" class="rounded img-fluid">
+                        </a>
+                    
+
+                    <a href="/blog/esp/esp32-music-player-2/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="ESP32 music player 2">ESP32 music player 2</h5>
+                    </a>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">May 31, 2025</span>
+                    <a href="/blog/esp/esp32-music-player-2/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                <div class="card-body bg-transparent p-4 shadow-sm">
+                    
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                        
+                        
+                            
+                                
+                                
+                            
+                        
+                     
+                    
+                        <a href="/blog/esp/esp32-music-player/">
+                            <img src="/blog/esp/esp32-music-player/3D-model_hu_942edbc969aff83d.webp" alt="ESP32 music player" class="rounded img-fluid">
+                        </a>
+                    
+
+                    <a href="/blog/esp/esp32-music-player/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="ESP32 music player">ESP32 music player</h5>
+                    </a>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">May 26, 2025</span>
+                    <a href="/blog/esp/esp32-music-player/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                <div class="card-body bg-transparent p-4 shadow-sm">
+                    
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                        
+                        
+                            
+                                
+                                
+                            
+                        
+                     
+                    
+                        <a href="/blog/projects/graffiti-bmw/">
+                            <img src="/blog/projects/graffiti-bmw/feature_hu_45960779775a0ff0.webp" alt="Graffiti BMW" class="rounded img-fluid">
+                        </a>
+                    
+
+                    <a href="/blog/projects/graffiti-bmw/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Graffiti BMW">Graffiti BMW</h5>
+                    </a>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">May 26, 2025</span>
+                    <a href="/blog/projects/graffiti-bmw/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+</div>
+<div class="text-center pt-2">
+    
+
+    
+
+    
+
+    
+
+    
+</div><div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            <div class="pb-2">
+                <a href="https://philippraven.com/" title="philippraven">
+                    <img alt="Footer logo" src="/icon.png"
+                        height="40px" width="40px">
+                </a>
+            </div>
+            &copy; 2026  All Rights Reserved
+            <br>
+            <a href="https://philippraven.com/blog/index.xml" type="application/rss+xml">RSS Feed</a>
+            
+            
+                
+                
+                    
+                
+                
+                
+                    
+                    
+                
+            
+        </div>
+    </div>
+</div><div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            <a href="https://philippraven.com//legal-notice" title="Legal Notice">Legal Notice</a>
+        </div>
+    </div>
+</div></footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+</script>
+
+
+
+
+
+
+
+
+
+  <section id="search-content" class="py-2">
+    <div class="container" id="search-results"></div>
+  </section>
+</body>
+
+</html>

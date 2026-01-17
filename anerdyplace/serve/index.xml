@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>philippraven</title>
+    <link>https://philippraven.com/</link>
+    <description>Recent content on philippraven</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>philipp.info@proton.me (philippraven)</managingEditor>
+    <webMaster>philipp.info@proton.me (philippraven)</webMaster>
+    <lastBuildDate>Sat, 31 May 2025 22:22:19 +0200</lastBuildDate>
+    <atom:link href="https://philippraven.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ESP32 music player 2</title>
+      <link>https://philippraven.com/blog/esp/esp32-music-player-2/</link>
+      <pubDate>Sat, 31 May 2025 22:22:19 +0200</pubDate><author>philipp.info@proton.me (philippraven)</author>
+      <guid>https://philippraven.com/blog/esp/esp32-music-player-2/</guid>
+      <description>&lt;h1 id=&#34;esp32-music-player---part-2&#34;&gt;ESP32 music player - part 2&lt;/h1&gt;&#xA;&lt;p&gt;I used the player for a few hours now, but I noticed a big flaw in my design. Well design is a little far-fetched. I just put a few parts together and called it a music player. :D&lt;/p&gt;&#xA;&lt;h1 id=&#34;the-first-iteration&#34;&gt;The first iteration&lt;/h1&gt;&#xA;&lt;p&gt;In the first iteration I tried my headphones directly on the PCM5102 and they sounded amazing and loud enough for my taste.&#xA;But something felt off using headphones directly on a DAC preamp.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ESP32 music player</title>
+      <link>https://philippraven.com/blog/esp/esp32-music-player/</link>
+      <pubDate>Mon, 26 May 2025 20:47:00 +0200</pubDate><author>philipp.info@proton.me (philippraven)</author>
+      <guid>https://philippraven.com/blog/esp/esp32-music-player/</guid>
+      <description>&lt;h1 id=&#34;espod---shuffle&#34;&gt;ESPod - Shuffle&lt;/h1&gt;&#xA;&lt;p&gt;instant music - free of distractions&lt;/p&gt;&#xA;&lt;p&gt;no boot time, no menus, no bullshit!&lt;/p&gt;&#xA;&lt;p&gt;❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️&lt;/p&gt;&#xA;&lt;p&gt;&lt;p class=&#34;md__image&#34;&gt;&#xA;  &lt;img class=&#34;img-fluid&#34; src=&#34;player1.webp&#34; alt=&#34;front of the player&#34;  /&gt;&#xA;&lt;/p&gt;&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;the front side with cute ghosts&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;&lt;p class=&#34;md__image&#34;&gt;&#xA;  &lt;img class=&#34;img-fluid&#34; src=&#34;player2.webp&#34; alt=&#34;back of the player&#34;  /&gt;&#xA;&lt;/p&gt;&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;and the back side with a little, cute turtle&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;hr&gt;&#xA;&lt;h1 id=&#34;yes-its-true&#34;&gt;Yes it&amp;rsquo;s true&lt;/h1&gt;&#xA;&lt;p&gt;I built an ESP32 based music player that can play mp3, wav and flac!&lt;/p&gt;&#xA;&lt;p&gt;Well, flac is more a proof of concept, including stutters and lags. But the rest works exceptionally well!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Graffiti BMW</title>
+      <link>https://philippraven.com/blog/projects/graffiti-bmw/</link>
+      <pubDate>Mon, 26 May 2025 08:47:00 +0200</pubDate><author>philipp.info@proton.me (philippraven)</author>
+      <guid>https://philippraven.com/blog/projects/graffiti-bmw/</guid>
+      <description>&lt;p&gt;&amp;hellip; coming soon &amp;hellip;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>BMW Graffiti Passau</title>
+      <link>https://philippraven.com/gallery/bmw-graffiti-passau/</link>
+      <pubDate>Sun, 02 Mar 2025 00:00:00 +0000</pubDate><author>philipp.info@proton.me (philippraven)</author>
+      <guid>https://philippraven.com/gallery/bmw-graffiti-passau/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Minimalist Wallet</title>
+      <link>https://philippraven.com/blog/3d/minimalist-wallet/</link>
+      <pubDate>Sun, 16 Feb 2025 01:01:18 +0100</pubDate><author>philipp.info@proton.me (philippraven)</author>
+      <guid>https://philippraven.com/blog/3d/minimalist-wallet/</guid>
+      <description>&lt;h1 id=&#34;3d-printed-minimalist-wallet&#34;&gt;3D printed Minimalist Wallet&lt;/h1&gt;&#xA;&lt;h2 id=&#34;version-1&#34;&gt;Version 1&lt;/h2&gt;&#xA;&lt;p&gt;&lt;p class=&#34;md__image&#34;&gt;&#xA;  &lt;img class=&#34;img-fluid&#34; src=&#34;Screenshot%202025-02-16%20010207.png&#34; alt=&#34;alt text&#34;  /&gt;&#xA;&lt;/p&gt;&lt;/p&gt;&#xA;&lt;p&gt;Version 1 was our first try. We experimented with a screw design which ended up with several quirks:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Limited Space:&lt;/strong&gt; Not enough room for coins.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Design Constraints:&lt;/strong&gt; The width was dictated by the minimal screw length.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Rubber Band Mechanism:&lt;/strong&gt; A rubber band was clamped in and wrapped around the wallet, aiming to secure money bills.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;This early version was a stepping stone towards a better design. Future iterations will focus on expanding storage and refining the fastening method.&#xA;&lt;p class=&#34;md__image&#34;&gt;&#xA;  &lt;img class=&#34;img-fluid&#34; src=&#34;Screenshot%202025-02-16%20010232.png&#34; alt=&#34;alt text&#34;  /&gt;&#xA;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Key Holder</title>
+      <link>https://philippraven.com/blog/3d/printing/key-holder/</link>
+      <pubDate>Sun, 24 Nov 2024 00:00:00 +0000</pubDate><author>philipp.info@proton.me (philippraven)</author>
+      <guid>https://philippraven.com/blog/3d/printing/key-holder/</guid>
+      <description>&lt;h1 id=&#34;for-over-a-year&#34;&gt;For over a year,&lt;/h1&gt;&#xA;&lt;p&gt;I used a key holder I found on Thingiverse, created by &lt;strong&gt;Protean Man&lt;/strong&gt; (&lt;a href=&#34;https://www.thingiverse.com/thing:2749745&#34;&gt;link here&lt;/a&gt;). While the design was functional and made my life a little easier, I had a few gripes with it right from the start.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-didnt-work-for-me&#34;&gt;What Didn’t Work for Me&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;The Logo&lt;/strong&gt;: Protean Man’s logo is prominently displayed on the key holder, which always annoyed me.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;The Model&lt;/strong&gt;: The STL file had quite a few unnecessary vertices, and the overall form felt strange and not as streamlined as I’d like.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Still, I printed it in PLA and used it for over a year. It held up surprisingly well, but by now the key holder is warped and it&amp;rsquo;s time for a new one.&#xA;&lt;p class=&#34;md__image&#34;&gt;&#xA;  &lt;img class=&#34;img-fluid&#34; src=&#34;oldkeyholder.webp&#34; alt=&#34;warped holder&#34;  /&gt;&#xA;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Quiet Air Purifier</title>
+      <link>https://philippraven.com/blog/diy/air-purifier/</link>
+      <pubDate>Sun, 16 Jun 2024 22:09:38 +0200</pubDate><author>philipp.info@proton.me (philippraven)</author>
+      <guid>https://philippraven.com/blog/diy/air-purifier/</guid>
+      <description>&lt;h1 id=&#34;this-monstrosity&#34;&gt;This Monstrosity&lt;/h1&gt;&#xA;&lt;p&gt;&lt;p class=&#34;md__image&#34;&gt;&#xA;  &lt;img class=&#34;img-fluid&#34; src=&#34;feature.webp&#34; alt=&#34;Quiet air purifier&#34;  /&gt;&#xA;&lt;/p&gt;&lt;/p&gt;&#xA;&lt;p&gt;is a simple air filter box.&#xA;It&amp;rsquo;s not a beauty, but it does its job very well.&#xA;The 4 fans are powered by 5V and are very quiet.&lt;/p&gt;&#xA;&lt;p&gt;My room in the dormitory has an old carpet. Although I have already cleaned it for several hours with a wet vacuum cleaner, it is still extremely dusty in my room every day.&#xA;In addition, I have many trees outside my window that I am allergic to. That&amp;rsquo;s why I built this powerful HEPA filter.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Raspberry DSL Speed Tracker</title>
+      <link>https://philippraven.com/blog/programming/raspberry-dsl-speed-tracker/</link>
+      <pubDate>Tue, 11 Jun 2024 20:38:19 +0200</pubDate><author>philipp.info@proton.me (philippraven)</author>
+      <guid>https://philippraven.com/blog/programming/raspberry-dsl-speed-tracker/</guid>
+      <description>&lt;h1 id=&#34;in-order-to&#34;&gt;In order to&lt;/h1&gt;&#xA;&lt;p&gt;monitor the stability of the internet connection in our dormitory, I decided to create a Raspberry Pi-based speed tester. The internet service provider recommends using the Ookla speed test for this purpose.&lt;/p&gt;&#xA;&lt;p&gt;Since I had a few spare Raspberry Pis lying around, I utilized one of them for this project.&lt;/p&gt;&#xA;&lt;p&gt;The Python program for the speed test can be found in my &lt;strong&gt;GitHub&lt;/strong&gt; repository &lt;a href=&#34;https://github.com/GrafKnusprig/SpeedPlotBot&#34;&gt;https://github.com/GrafKnusprig/SpeedPlotBot&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;The repository also includes a script for plotting the data and the necessary service and timer files for the systemd timer on the Raspberry Pi.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Soundgarden - Black Hole Sun</title>
+      <link>https://philippraven.com/songs/soundgarden-black_hole_sun/</link>
+      <pubDate>Tue, 11 Jun 2024 00:00:00 +0200</pubDate><author>philipp.info@proton.me (philippraven)</author>
+      <guid>https://philippraven.com/songs/soundgarden-black_hole_sun/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Disclaimer: I do not own any rights to this song. It is not my property and is provided here for educational purposes only.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;about&#34;&gt;About&lt;/h2&gt;&#xA;&lt;p&gt;&amp;ldquo;Black Hole Sun&amp;rdquo; is a song by American rock band Soundgarden. Written by frontman Chris Cornell, the song was released in May 1994 by A&amp;amp;M Records as the third single from the band&amp;rsquo;s fourth studio album, Superunknown (1994). Considered to be the band&amp;rsquo;s signature song, it topped the US Billboard Album Rock Tracks chart, where it spent a total of seven weeks at number one. Despite peaking at number two on the Billboard Modern Rock Tracks chart, &amp;ldquo;Black Hole Sun&amp;rdquo; finished as the number-one track of 1994 for that listing. Worldwide, the single reached the top 10 in Australia, Canada, France, and Ireland, while in Iceland, it reached number one. The accompanying music video was directed by Howard Greenhalgh and received the award for Best Metal/Hard Rock Video at the 1994 MTV Video Music Awards. &lt;a href=&#34;https://en.wikipedia.org/wiki/Black_Hole_Sun&#34;&gt;[1]&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Nirvana - You Know You&#39;re Right (Cover)</title>
+      <link>https://philippraven.com/songs/nirvana-you_know_youre_right/</link>
+      <pubDate>Mon, 10 Jun 2024 00:00:00 +0200</pubDate><author>philipp.info@proton.me (philippraven)</author>
+      <guid>https://philippraven.com/songs/nirvana-you_know_youre_right/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Disclaimer: I do not own any rights to this song. It is not my property and is provided here for educational purposes only.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;about&#34;&gt;About&lt;/h2&gt;&#xA;&lt;p&gt;&amp;ldquo;You Know You&amp;rsquo;re Right&amp;rdquo; is a song by the American rock band Nirvana, written by lead vocalist and guitarist, Kurt Cobain. It is the first song on the greatest hits album Nirvana, released by DGC Records in October 2002. It is also the final song the band recorded before Cobain&amp;rsquo;s suicide in April 1994. &lt;a href=&#34;https://en.wikipedia.org/wiki/You_Know_You%27re_Right&#34;&gt;[1]&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Silverchair - Tomorrow</title>
+      <link>https://philippraven.com/songs/silverchair-tomorrow/</link>
+      <pubDate>Sun, 09 Jun 2024 00:00:00 +0200</pubDate><author>philipp.info@proton.me (philippraven)</author>
+      <guid>https://philippraven.com/songs/silverchair-tomorrow/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Disclaimer: I do not own any rights to this song. It is not my property and is provided here for educational purposes only.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;about&#34;&gt;About&lt;/h2&gt;&#xA;&lt;p&gt;&amp;ldquo;Tomorrow&amp;rdquo; is a song by Australian rock band Silverchair, which was released on 16 September 1994 on their debut EP, also titled Tomorrow. The song was re-recorded and included on Frogstomp, the band&amp;rsquo;s debut studio album, released six months later on 27 March 1995. Written by singer and lead guitarist Daniel Johns and drummer Ben Gillies, it was produced and engineered by Phil McKellar at the national radio station Triple J&amp;rsquo;s studios for SBS-TV&amp;rsquo;s show Nomad, which aired on 16 June 1994. After the broadcast, Silverchair were signed to the Murmur record label – a Sony Music subsidiary – which subsequently issued the Tomorrow EP. &lt;a href=&#34;https://en.wikipedia.org/wiki/Tomorrow_(Silverchair_song)&#34;&gt;[1]&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Flooding in Passau</title>
+      <link>https://philippraven.com/gallery/flooding-in-passau/</link>
+      <pubDate>Sat, 08 Jun 2024 12:49:08 +0200</pubDate><author>philipp.info@proton.me (philippraven)</author>
+      <guid>https://philippraven.com/gallery/flooding-in-passau/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Birdclef 2024</title>
+      <link>https://philippraven.com/blog/projects/birdclef-2024/</link>
+      <pubDate>Sat, 08 Jun 2024 12:44:19 +0200</pubDate><author>philipp.info@proton.me (philippraven)</author>
+      <guid>https://philippraven.com/blog/projects/birdclef-2024/</guid>
+      <description>&lt;p&gt;You can find the full paper to the project here: &lt;a href=&#34;./SS24_AAI_Lab_Report.pdf&#34;&gt;Download the paper&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;the-challenge&#34;&gt;The Challenge&lt;/h1&gt;&#xA;&lt;p&gt;Kaggle&amp;rsquo;s BirdCLEF2024 competition challenges participants to identify bird species from audio recordings collected globally. Utilizing extensive datasets and advanced machine learning techniques, the goal is to enhance automated bird sound recognition. This competition not only aids in biodiversity monitoring but also supports conservation efforts by improving tools for ecologists and ornithologists.&lt;/p&gt;&#xA;&lt;p&gt;For more detailed information, check out the &lt;a href=&#34;https://www.kaggle.com/competitions/birdclef-2024&#34;&gt;BirdCLEF 2024 competition page&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Clothespin</title>
+      <link>https://philippraven.com/blog/3d/clothespin/</link>
+      <pubDate>Fri, 07 Jun 2024 22:41:25 +0200</pubDate><author>philipp.info@proton.me (philippraven)</author>
+      <guid>https://philippraven.com/blog/3d/clothespin/</guid>
+      <description>&lt;h1 id=&#34;currently&#34;&gt;Currently&lt;/h1&gt;&#xA;&lt;p&gt;I&amp;rsquo;m having a lot of fun designing clothespins with compliant mechanisms.&lt;/p&gt;&#xA;&lt;p&gt;It all started when I wanted to try FreeCAD and needed something to design. And somehow, the idea came to me.&lt;/p&gt;&#xA;&lt;h1 id=&#34;the-first-two&#34;&gt;The first two&lt;/h1&gt;&#xA;&lt;p&gt;were easy. They are inspired by Ikea clothespins. I made a regular version and a slim version. Both are currently 3D printed in PLA and in use, and they still work. You just have to be careful. If you open them too wide, they won&amp;rsquo;t close completely. I will eventually test them with other materials.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Monitor Stand</title>
+      <link>https://philippraven.com/blog/3d/blender/monitor-stand/</link>
+      <pubDate>Tue, 04 Jun 2024 23:40:32 +0200</pubDate><author>philipp.info@proton.me (philippraven)</author>
+      <guid>https://philippraven.com/blog/3d/blender/monitor-stand/</guid>
+      <description>&lt;h1 id=&#34;i-wanted-a-vertical-monitor&#34;&gt;I wanted a vertical monitor&lt;/h1&gt;&#xA;&lt;p&gt;But I only had an old ACER G236HL left, which neither has a Vesa mount nor an adjustable stand.&lt;/p&gt;&#xA;&lt;p&gt;Of course, I had to solve this problem with 3D printed parts. Building a complete monitor stand where the screen is placed like a tablet is too common.&#xA;So, I needed something better.&lt;/p&gt;&#xA;&lt;p&gt;I took a closer look at the original stand and thought that I could easily reuse it.&#xA;The only thing I needed was the right profile for the mounting bracket and then a part where the monitor can stand.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

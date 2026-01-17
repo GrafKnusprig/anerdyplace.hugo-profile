@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html>
+
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+<link rel="icon" href=/icon.png type="image/gif">
+
+<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://philippraven.com/blog/index.xml">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+</noscript>
+
+
+<link rel="stylesheet" href="/css/font.css" media="all">
+
+
+
+<meta property="og:url" content="https://philippraven.com/blog/diy/air-purifier/">
+  <meta property="og:site_name" content="philippraven">
+  <meta property="og:title" content="Quiet Air Purifier">
+  <meta property="og:description" content="This Monstrosity is a simple air filter box. It’s not a beauty, but it does its job very well. The 4 fans are powered by 5V and are very quiet.
+My room in the dormitory has an old carpet. Although I have already cleaned it for several hours with a wet vacuum cleaner, it is still extremely dusty in my room every day. In addition, I have many trees outside my window that I am allergic to. That’s why I built this powerful HEPA filter.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2024-06-16T22:09:38+02:00">
+    <meta property="article:modified_time" content="2024-06-16T22:09:38+02:00">
+    <meta property="article:tag" content="Diy">
+    <meta property="article:tag" content="Air Purifier">
+    <meta property="article:tag" content="Dust Filter">
+    <meta property="article:tag" content="Air Filter">
+    <meta property="article:tag" content="Filter Box">
+    <meta property="article:tag" content="Quiet Air Purifier">
+    <meta property="og:image" content="https://philippraven.com/blog/diy/air-purifier/feature.webp">
+
+<!-- ENTERING ogimage.html (open graph) --><meta property="og:image" content="https://philippraven.com//blog/diy/air-purifier/feature.webp" /><meta property="og:image" content="https://philippraven.com//blog/diy/air-purifier/image-1.webp" /><meta property="og:image" content="https://philippraven.com//blog/diy/air-purifier/image-2.webp" /><meta property="og:image" content="https://philippraven.com//blog/diy/air-purifier/image.webp" />
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://philippraven.com/blog/diy/air-purifier/feature.webp">
+  <meta name="twitter:title" content="Quiet Air Purifier">
+  <meta name="twitter:description" content="This Monstrosity is a simple air filter box. It’s not a beauty, but it does its job very well. The 4 fans are powered by 5V and are very quiet.
+My room in the dormitory has an old carpet. Although I have already cleaned it for several hours with a wet vacuum cleaner, it is still extremely dusty in my room every day. In addition, I have many trees outside my window that I am allergic to. That’s why I built this powerful HEPA filter.">
+
+
+<link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
+<link rel="stylesheet" href="/css/footer.css" media="all">
+
+
+<link rel="stylesheet" href="/css/theme.css" media="all">
+
+
+
+
+<style>
+    :root {
+        --text-color: #343a40;
+        --text-secondary-color: #6c757d;
+        --background-color: #eaedf0;
+        --secondary-background-color: #64ffda;
+        --primary-color: #7c0082;
+        --secondary-color: #f8f9fa;
+
+         
+        --text-color-dark: #e4e6eb;
+        --text-secondary-color-dark: #b0b3b8;
+        --background-color-dark: #18191a;
+        --secondary-background-color-dark: #212529;
+        --primary-color-dark: #ffffff;
+        --secondary-color-dark: #212529;
+    }
+    
+    body {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    html {
+        background-color: var(--background-color) !important;
+    }
+
+    body::-webkit-scrollbar {
+        width: .5em;
+        height: .5em;
+        background-color: var(--background-color);
+    }
+    
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px var(--background-color);
+        border-radius: 1rem;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background-color: var(--secondary-color);
+        outline: 1px solid var(--background-color);
+    }
+
+    #search-content::-webkit-scrollbar {
+        width: .5em;
+        height: .1em;
+        background-color: var(--background-color);
+    }
+</style>
+
+<meta name="description" content="">
+<link rel="stylesheet" href="/css/single.css">
+
+
+<script defer src="/fontawesome-5/all-5.15.4.js"></script>
+
+  <title>
+Quiet Air Purifier | philippraven
+
+  </title>
+</head>
+
+<body class="light">
+  
+  
+<script>
+    let localStorageValue = localStorage.getItem("pref-theme");
+    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    switch (localStorageValue) {
+        case "dark":
+            document.body.classList.add('dark');
+            break;
+        case "light":
+            document.body.classList.remove('dark');
+            break;
+        default:
+            if (mediaQuery) {
+                document.body.classList.add('dark');
+            }
+            break;
+    }
+</script>
+
+
+
+<header>
+    <nav class="pt-3 navbar navbar-expand-lg ">
+        <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+            
+            <a class="navbar-brand primary-font text-wrap" href="/">
+                
+                <img src="/icon.png" width="30" height="30"
+                    class="d-inline-block align-top">
+                philippraven
+                
+            </a>
+
+            
+
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                    <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
+                </svg>
+            </button>
+
+            
+            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+                <ul class="navbar-nav ms-auto text-center">
+                    
+
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="About">
+                            About
+                        </a>
+                        <div class="dropdown-menu shadow-lg rounded" aria-labelledby="navbarDropdown">
+                            
+                            <a class="dropdown-item text-center nav-link" href="/"
+                                title="Home">
+                                Home
+                            </a>
+                            
+                            <a class="dropdown-item text-center nav-link" href="/#about"
+                                title="About me">
+                                About me
+                            </a>
+                            
+                            <a class="dropdown-item text-center nav-link" href="/#experience"
+                                title="Experience">
+                                Experience
+                            </a>
+                            
+                            <a class="dropdown-item text-center nav-link" href="/#education"
+                                title="Education">
+                                Education
+                            </a>
+                            
+                            <a class="dropdown-item text-center nav-link" href="/#projects"
+                                title="Projects">
+                                Projects
+                            </a>
+                            
+                            <a class="dropdown-item text-center nav-link" href="/#contact"
+                                title="Contact me">
+                                Contact me
+                            </a>
+                            
+                        </div>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/blog" title="Blog posts">
+                            
+                            Blog
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/gallery" title="Gallery">
+                            
+                            Gallery
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/search" title="Search">
+                            
+                            Search
+                        </a>
+                    </li>
+                    
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        
+                        <div class="text-center">
+                            <button id="theme-toggle">
+                                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<div id="content">
+<section id="single">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-12 col-lg-9">
+        <div class="pr-lg-4">
+          <div class="title mb-5">
+            <h1 class="text-center mb-4">Quiet Air Purifier</h1>
+            <div class="text-center">
+              Philipp 
+              
+			  
+			  <small>|</small>
+			  
+			  
+			  
+              Jun 16, 2024
+			  
+            </div>
+          </div>
+          
+          <article class="page-content  p-2" id="page-content">
+          <h1 id="this-monstrosity">This Monstrosity</h1>
+<p><p class="md__image">
+  <img class="img-fluid" src="feature.webp" alt="Quiet air purifier"  />
+</p></p>
+<p>is a simple air filter box.
+It&rsquo;s not a beauty, but it does its job very well.
+The 4 fans are powered by 5V and are very quiet.</p>
+<p>My room in the dormitory has an old carpet. Although I have already cleaned it for several hours with a wet vacuum cleaner, it is still extremely dusty in my room every day.
+In addition, I have many trees outside my window that I am allergic to. That&rsquo;s why I built this powerful HEPA filter.</p>
+<h1 id="the-price">The Price</h1>
+<p>is not particularly high either.
+I didn&rsquo;t see the point in spending so much money on a box like this. Other DIY solutions also end up around 300€.</p>
+<p>I actually managed to build this thing for just <span style="color:lightgreen"><strong>70€.</strong></span></p>
+<h1 id="i-ordered-the-parts">I ordered the parts</h1>
+<p>from China. 🤫</p>
+<p><p class="md__image">
+  <img class="img-fluid" src="image.webp" alt="Hepa Filters"  />
+</p></p>
+<p>The Hepa filters are 38x33cm in size and cost me 10€ each.</p>
+<p><p class="md__image">
+  <img class="img-fluid" src="image-1.webp" alt="Image of the fans"  />
+</p></p>
+<p>I got 4 120mm 5V USB fans with protective grills for 5€ each.</p>
+<p>In addition, a 4-port USB hub and a 3m cable for 5€.</p>
+<p>The finishing touch is a rigid foam board from the hardware store, also for 5€.</p>
+<h1 id="the-performance">The Performance</h1>
+<p>is surprisingly good!</p>
+<p><p class="md__image">
+  <img class="img-fluid" src="image-2.webp" alt="Image of the suction power"  />
+</p></p>
+<p>You can clearly feel the airflow on all sides of the box. It is even strong enough to easily suck in a piece of paper.</p>
+<h1 id="i-built-it">I built it</h1>
+<p>as cheap and good as possible.
+The angles holding the box together are the corners of the shipping carton in which the filters were delivered.</p>
+<h2 id="the-glue">The glue</h2>
+<p>is only hot glue, everything is held together with it.</p>
+<p>I also sealed each edge with a line of hot glue at the end, creating a completely airtight box.</p>
+<p>I read something online which finally let me decide on going full hot glue on this project. Lot&rsquo;s of DIYers build their stuff with duct tape. But one guy pointed out, that the tape never fully dries and releases fumes over a long period of time. And he is acutally right. I store all my stuff in sealable containers. Spray paint, grease, electronics and also my sticky tapes. And I can tell you, if you open one of those boxes, a big cloud of fumes comes directly to your face and almost let you faint. 😄</p>
+<p>So hot glue it was, till it is easy to work with and it hardens in the end.</p>
+<h2 id="the-fans">The fans</h2>
+<p>I initially wanted to install in a way that they blow the air out of the box from the top, creating a vacuum inside the box. However, when testing the fans, I noticed that they vibrate strongly in a horizontal orientation and are no longer whisper-quiet.
+On the other hand, when mounted vertically, they run completely quietly.
+To avoid unnecessarily shortening their lifespan and dealing with the humming noise, I decided to completely change my plans and install the fans vertically on one side.
+But that doesn&rsquo;t affect the performance of the device, and it works just as well.</p>
+
+          </article>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-3">
+        <div class="sticky-sidebar">
+          
+          <aside class="toc" id="toc">
+              <h5>
+                Table Of Contents
+              </h5>
+              <div class="toc-content">
+                <nav id="TableOfContents">
+  <ul>
+    <li><a href="#this-monstrosity">This Monstrosity</a></li>
+    <li><a href="#the-price">The Price</a></li>
+    <li><a href="#i-ordered-the-parts">I ordered the parts</a></li>
+    <li><a href="#the-performance">The Performance</a></li>
+    <li><a href="#i-built-it">I built it</a>
+      <ul>
+        <li><a href="#the-glue">The glue</a></li>
+        <li><a href="#the-fans">The fans</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+              </div>
+          </aside>
+          
+
+          
+          <aside class="tags">
+            <h5>Tags</h5>
+            <ul class="tags-ul list-unstyled list-inline">
+              
+              <li class="list-inline-item"><a href="https://philippraven.com/tags/diy" target="_self">diy</a></li>
+              
+              <li class="list-inline-item"><a href="https://philippraven.com/tags/air-purifier" target="_self">air purifier</a></li>
+              
+              <li class="list-inline-item"><a href="https://philippraven.com/tags/dust-filter" target="_self">dust filter</a></li>
+              
+              <li class="list-inline-item"><a href="https://philippraven.com/tags/air-filter" target="_self">air filter</a></li>
+              
+              <li class="list-inline-item"><a href="https://philippraven.com/tags/filter-box" target="_self">filter box</a></li>
+              
+              <li class="list-inline-item"><a href="https://philippraven.com/tags/quiet-air-purifier" target="_self">Quiet air purifier</a></li>
+              
+            </ul>
+          </aside>
+          
+
+          
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-9 p-4">
+        
+      </div>
+    </div>
+  </div>
+  <div class="p-2 px-3" id="rightSideButtonStack">
+    <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
+      <i class="fas fa-angle-up"></i>
+    </button>
+    <button class="p-2 px-3" onclick="tocFunction()" id="tocScroll">
+      <i class="fas fa-angle-double-down"></i>
+    </button>
+    <button class="p-2 px-3" onclick="bottomFunction()" id="bottomScroll">
+      <i class="fas fa-angle-down"></i>
+    </button>
+  </div>
+</section>
+
+<script>
+  var topScroll = document.getElementById('topScroll');
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    showTop();
+    showToc();
+    showBottom();
+  }
+
+  function showTop() {
+    if(topScroll && topScroll != null && topScroll != 'undefined') {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        topScroll.style.display = 'block';
+      } else {
+        topScroll.style.display = 'none';
+      }
+    }
+  }
+
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+
+  
+  var pageContent = document.getElementById('page-content');
+  var bottomScroll = document.getElementById('bottomScroll');
+
+  function showBottom() {
+    if(bottomScroll && bottomScroll != null && bottomScroll != 'undefined' &&
+       pageContent && pageContent != null && pageContent != 'undefined') {
+      if(bottomInViewport(pageContent)) {
+        bottomScroll.style.display = 'block';
+      } else {
+        bottomScroll.style.display = 'none';
+      }
+    }
+  }
+
+  function bottomFunction() {
+    if(pageContent && pageContent != null && pageContent != 'undefined') {
+      pageContent.scrollIntoView(false);
+      bottomScroll.style.display = 'none';
+    }
+  }
+
+  function bottomInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+      rect.bottom >= (window.innerHeight + 1|| document.documentElement.clientHeight + 1) 
+    );
+  }
+
+  
+  var tocScroll = document.getElementById('tocScroll');
+  var toc = document.getElementById('toc');
+
+  function showToc() {
+    if(toc && toc != null && toc != 'undefined' &&
+       tocScroll && tocScroll != null && tocScroll != 'undefined') {
+      if(isInViewport(toc)) {
+        tocScroll.style.display = 'none';
+      } else {
+        tocScroll.style.display = 'block';
+      }
+    }
+  }
+
+  function tocFunction() {
+    if(toc && toc != null && toc != 'undefined') {
+      toc.scrollIntoView(true);
+    }
+  }
+
+  function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+</script>
+
+
+  </div><footer>
+    <div class="container py-3" id="recent-posts">
+    
+    <div class="h3 text-center text-secondary py-3">Recent blog posts</div>
+    <div class="row justify-content-center">
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                <div class="card-body bg-transparent p-4 shadow-sm">
+                    
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                        
+                        
+                            
+                                
+                                
+                            
+                        
+                     
+                    
+                        <a href="/blog/esp/esp32-music-player-2/">
+                            <img src="/blog/esp/esp32-music-player-2/iteration-2-1_hu_f4e24501842cd71.webp" alt="ESP32 music player 2" class="rounded img-fluid">
+                        </a>
+                    
+
+                    <a href="/blog/esp/esp32-music-player-2/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="ESP32 music player 2">ESP32 music player 2</h5>
+                    </a>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">May 31, 2025</span>
+                    <a href="/blog/esp/esp32-music-player-2/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                <div class="card-body bg-transparent p-4 shadow-sm">
+                    
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                        
+                        
+                            
+                                
+                                
+                            
+                        
+                     
+                    
+                        <a href="/blog/esp/esp32-music-player/">
+                            <img src="/blog/esp/esp32-music-player/3D-model_hu_942edbc969aff83d.webp" alt="ESP32 music player" class="rounded img-fluid">
+                        </a>
+                    
+
+                    <a href="/blog/esp/esp32-music-player/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="ESP32 music player">ESP32 music player</h5>
+                    </a>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">May 26, 2025</span>
+                    <a href="/blog/esp/esp32-music-player/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                <div class="card-body bg-transparent p-4 shadow-sm">
+                    
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                        
+                        
+                            
+                                
+                                
+                            
+                        
+                     
+                    
+                        <a href="/blog/projects/graffiti-bmw/">
+                            <img src="/blog/projects/graffiti-bmw/feature_hu_45960779775a0ff0.webp" alt="Graffiti BMW" class="rounded img-fluid">
+                        </a>
+                    
+
+                    <a href="/blog/projects/graffiti-bmw/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Graffiti BMW">Graffiti BMW</h5>
+                    </a>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">May 26, 2025</span>
+                    <a href="/blog/projects/graffiti-bmw/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+</div>
+<div class="text-center pt-2">
+    
+
+    
+
+    
+
+    
+
+    
+</div><div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            <div class="pb-2">
+                <a href="https://philippraven.com/" title="philippraven">
+                    <img alt="Footer logo" src="/icon.png"
+                        height="40px" width="40px">
+                </a>
+            </div>
+            &copy; 2026  All Rights Reserved
+            <br>
+            <a href="https://philippraven.com/blog/index.xml" type="application/rss+xml">RSS Feed</a>
+            
+            
+                
+                
+                    
+                
+                
+                
+                    
+                    
+                
+            
+        </div>
+    </div>
+</div><div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            <a href="https://philippraven.com//legal-notice" title="Legal Notice">Legal Notice</a>
+        </div>
+    </div>
+</div></footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+</script>
+
+
+
+
+
+
+
+
+
+  <section id="search-content" class="py-2">
+    <div class="container" id="search-results"></div>
+  </section>
+</body>
+
+</html>
