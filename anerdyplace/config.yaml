@@ -112,7 +112,7 @@ params:
     email: philipp.info@proton.me
     name: philippraven
   title: "philippraven"
-  description: "ai engineer - artist - creator"
+  description: "software engineer - artist - maker"
   rssTitle: "philippraven's blog"
   # staticPath: ''
   favicon: "/icon.png"
@@ -173,8 +173,8 @@ params:
     intro: "Hi, I'm"
     title: "Philipp"
     # subtitle: "Unger"
-    content: "ai engineer - artist - creator"
-    image: /images/profile-pic-3.webp
+    content: "software engineer - artist - maker"
+    image: /images/profile01.webp
     # button:
     # enable: true
     # name: "Resume"
@@ -238,12 +238,12 @@ params:
       enable: true
       title: ""
       items:
-        - "[AdobeSuite](https://www.adobe.com/creativecloud.html)"
         - "[Arduino](https://www.arduino.cc/)"
         - "[Audacity](https://www.audacityteam.org/)"
         - "[Blender](https://www.blender.org/)"
         - "[C#](https://docs.microsoft.com/en-us/dotnet/csharp/)"
-        - "[ChatGPT](https://chat.openai.com/)"
+        - "[ChatGPT](https://chatgpt.com/) / Codex"
+        - "[ComfyUI](https://www.comfy.org/)"
         - "[FFmpeg](https://ffmpeg.org/)"
         - "[FreeCAD](https://www.freecad.org/)"
         - "[GitHub](https://github.com/)"
@@ -257,24 +257,39 @@ params:
         - "[Node.js](https://nodejs.org/en/)"
         - "[OpenSCAD](https://openscad.org/)"
         - "[OBS-Studio](https://obsproject.com/)"
+        - "[Pandoc](https://pandoc.org/)"
+        - "Power tools"
         - "[PyTorch](https://pytorch.org/)"
         - "[Python](https://www.python.org/)"
         - "[Raspberry Pi](https://www.raspberrypi.org/)"
+        - "[REAPER](https://www.reaper.fm/)"
         - "[Scratch](https://scratch.mit.edu/)"
-        - "[Shotcut](https://shotcut.org/)"
+        - "Soldering iron"
         - "[UltiMaker Cura](https://ultimaker.com/software/ultimaker-cura)"
         - "[VisualStudio](https://visualstudio.microsoft.com)"
         - "[VoiceMeeter](https://vb-audio.com/Voicemeeter/)"
+        - "I'm fluent in Windows, macOS, and Linux."
 
   # Experience
   experience:
     enable: true
     title: "Experience"
     items:
+      - job: "Research Assistant and Software Engineer"
+        company: "Fraunhofer IIS - Development Center X-ray Technology (EZRT)"
+        companyUrl: "https://www.iis.fraunhofer.de/de/ff/zfp.html"
+        date: "2026 - current"
+        featuredLink:
+          enable: true
+          name: "Fraunhofer EZRT"
+          url: "https://www.iis.fraunhofer.de/de/ff/zfp.html"
+        content: |-
+          I work at the Development Center X-ray Technology (EZRT), focusing on the processing and visualization of large CT datasets.
+
       - job: "Data Scientist"
         company: "University of Passau - Chair of Software Engineering II "
         companyUrl: "https://www.fim.uni-passau.de/en/chair-for-software-engineering-ii/"
-        date: 2024 - current
+        date: "2024 - 2026"
         featuredLink:
           enable: true
           name: "InnRaum³"
@@ -283,9 +298,9 @@ params:
         #   enable: true
         #   content: I am currently working at the InnRaum³ as part of the INTERREG project. There I am responsible for running various courses for school pupils, students, trainees and employees. My work includes design from 3D model to print, AI development, setting up the makerspace and recruiting new members, safety training and machine maintenance.
         content: |-
-          I work as a research assistant at the Chair of Software Engineering 2 under Prof. Gordon Fraser.
+          I worked as a research assistant at the Chair of Software Engineering 2 under Prof. Gordon Fraser.
 
-          I am currently working at the InnRaum³ as part of the INTERREG project. There I am responsible for running various courses for school pupils, students, trainees and employees. My work includes design from 3D model to print, AI development, setting up the makerspace and recruiting new members, safety training and machine maintenance.
+          I worked at InnRaum³ as part of the INTERREG project. I was responsible for running various courses for school pupils, students, trainees and employees. My work included design from 3D model to print, AI development, setting up the makerspace and recruiting new members, safety training and machine maintenance.
 
       - job: "Robotics Trainer (honorary)"
         company: Maristengymnasium Fürstenzell
@@ -330,8 +345,14 @@ params:
         school:
           name: "University of Passau"
           url: "https://www.uni-passau.de/en/"
-        date: "2023 - current"
-        content: My focus is on the development and optimization of deep learning models. My main seminar is “Software Engineering for Kids”, where I am working on automatic hint generation using LLMs for tutorial systems in Scratch.
+        date: "2023 - 2026"
+        content: |-
+          My focus was on the development and optimization of deep learning models, software testing, and data visualization. For my seminar “Software Engineering for Kids”, I worked on automatic hint generation using LLMs for tutorial systems in Scratch.
+
+          Master's thesis:
+            - **Block-Based Static Structural Testing: a Pattern Parser for Scratch Programs**
+
+              [University of Passau](https://www.uni-passau.de/en/), [Chair of Software Engineering II](https://www.fim.uni-passau.de/en/chair-for-software-engineering-ii/)
       - title: "Bachelor of Computer Science (B.Sc.)"
         school:
           name: "University of Passau"
@@ -381,47 +402,17 @@ params:
   # projects
   projects:
     enable: true
-    # title: "custom name"
+    title: "Current Projects"
     items:
-      - title: "Hunt: Showdown - Loadout Randomizer"
-        content: "Hunt: Showdown - Loadout Randomizer is a local browser application that generates random loadouts for the game Hunt: Showdown. It is perfectly suited to be used as a browser plugin in OBS-Studio and similar applications and was made exactly for this purpose."
-        image: /images/projects/hunt-randomizer-1.webp
+      - title: "Nova"
+        content: "NOVA (Networked Organization & Visualization Assistant) is an AI-assisted work and research protocol that turns project knowledge into a living, searchable network. Use it as a standalone desktop workspace or alongside an AI-enabled IDE to connect decisions, evidence, experiments, and implementation history."
+        image: "https://raw.githubusercontent.com/GrafKnusprig/nova/master/images/NOVA_splash.png"
         featured:
-          name: Start Randomizer
-          link: https://grafknusprig.github.io/HuntShowdownLoadoutRandomizer/Randomizer.html
-        badges:
-          - "html"
-          - "javascript"
+          name: View on GitHub
+          link: https://github.com/GrafKnusprig/nova
         links:
           - icon: fab fa-github
-            url: https://github.com/GrafKnusprig/HuntShowdownLoadoutRandomizer
-      - title: "BirdCLEF 2024"
-        content: "Bird species identification from audio, focused on under-studied species in the Western Ghats, a major biodiversity hotspot in India. This project focuses on developing machine learning models to identify bird species from audio recordings."
-        image: /images/projects/birdclef-2024.webp
-        featured:
-          name: Read Blog Post
-          link: /blog/projects/birdclef-2024
-        badges:
-          - "kaggle"
-          - "competition"
-          - "machine learning"
-          - "pytorch"
-        links:
-          - icon: fab fa-kaggle
-            url: https://www.kaggle.com/competitions/birdclef-2024
-      - title: "Cellshading - Painting my BMW"
-        content: "I had the urge to paint my car in a cellshading style. I mostly used montana graffiti colors and molotow markers. The result is a unique and eye-catching design that I am very proud of."
-        image: /images/projects/graffiti-bmw.webp
-        featured:
-          name: Read Blog Post
-          link: /blog/projects/graffiti-bmw
-        badges:
-          - "car"
-          - "painting"
-          - "cellshading"
-        links:
-          - icon: fab fa-website
-            url: https://www.betterrun.shop/
+            url: https://github.com/GrafKnusprig/nova
 
   #Contact
   contact:

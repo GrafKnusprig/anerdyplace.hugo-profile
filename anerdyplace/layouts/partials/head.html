@@ -47,6 +47,10 @@
 <link rel="stylesheet" href="{{ .Site.Params.staticPath }}/style.css">
 {{ end }}
 
+{{ if .Params.modelViewer }}
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+{{ end }}
+
 <style>
     :root {
         --text-color: {{ .Site.Params.color.textColor | default "#343a40" }};

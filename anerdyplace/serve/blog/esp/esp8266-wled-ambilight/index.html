@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html>
+
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+<link rel="icon" href=/icon.png type="image/gif">
+
+<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://philippraven.com/blog/index.xml">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+</noscript>
+
+
+<link rel="stylesheet" href="/css/font.css" media="all">
+
+
+
+<meta property="og:url" content="https://philippraven.com/blog/esp/esp8266-wled-ambilight/">
+  <meta property="og:site_name" content="philippraven">
+  <meta property="og:title" content="ESP WLED AMBILIGHT">
+  <meta property="og:description" content="DIY ESP Ambilight This is a really amazing and surprisingly quick and easy project I think anyone could do.
+Our TV is right in front of a white wall and so I thought this is perfect for trying out an ambilight. This is something I wanted to do for a long time, but in the past this was always a rather complicated task and I didn’t really know what I even wanted or what could be done.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2026-01-17T00:50:00+02:00">
+    <meta property="article:modified_time" content="2026-01-17T00:50:00+02:00">
+    <meta property="article:tag" content="Esp">
+    <meta property="article:tag" content="Esp8266">
+    <meta property="article:tag" content="Wled">
+    <meta property="article:tag" content="Hyperion">
+    <meta property="article:tag" content="Ambilight">
+    <meta property="article:tag" content="Led">
+
+<!-- ENTERING ogimage.html (open graph) --><meta property="og:image" content="https://philippraven.com//blog/esp/esp8266-wled-ambilight/ambilight_test.gif" />
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="ESP WLED AMBILIGHT">
+  <meta name="twitter:description" content="DIY ESP Ambilight This is a really amazing and surprisingly quick and easy project I think anyone could do.
+Our TV is right in front of a white wall and so I thought this is perfect for trying out an ambilight. This is something I wanted to do for a long time, but in the past this was always a rather complicated task and I didn’t really know what I even wanted or what could be done.">
+
+
+<link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
+<link rel="stylesheet" href="/css/footer.css" media="all">
+
+
+<link rel="stylesheet" href="/css/theme.css" media="all">
+
+
+
+
+
+
+<style>
+    :root {
+        --text-color: #343a40;
+        --text-secondary-color: #6c757d;
+        --background-color: #eaedf0;
+        --secondary-background-color: #64ffda;
+        --primary-color: #7c0082;
+        --secondary-color: #f8f9fa;
+
+         
+        --text-color-dark: #e4e6eb;
+        --text-secondary-color-dark: #b0b3b8;
+        --background-color-dark: #18191a;
+        --secondary-background-color-dark: #212529;
+        --primary-color-dark: #ffffff;
+        --secondary-color-dark: #212529;
+    }
+    
+    body {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    html {
+        background-color: var(--background-color) !important;
+    }
+
+    body::-webkit-scrollbar {
+        width: .5em;
+        height: .5em;
+        background-color: var(--background-color);
+    }
+    
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px var(--background-color);
+        border-radius: 1rem;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background-color: var(--secondary-color);
+        outline: 1px solid var(--background-color);
+    }
+
+    #search-content::-webkit-scrollbar {
+        width: .5em;
+        height: .1em;
+        background-color: var(--background-color);
+    }
+</style>
+
+<meta name="description" content="">
+<link rel="stylesheet" href="/css/single.css">
+
+
+<script defer src="/fontawesome-5/all-5.15.4.js"></script>
+
+  <title>
+ESP WLED AMBILIGHT | philippraven
+
+  </title>
+</head>
+
+<body class="light">
+  
+  
+<script>
+    let localStorageValue = localStorage.getItem("pref-theme");
+    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    switch (localStorageValue) {
+        case "dark":
+            document.body.classList.add('dark');
+            break;
+        case "light":
+            document.body.classList.remove('dark');
+            break;
+        default:
+            if (mediaQuery) {
+                document.body.classList.add('dark');
+            }
+            break;
+    }
+</script>
+
+
+
+<header>
+    <nav class="pt-3 navbar navbar-expand-lg ">
+        <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+            
+            <a class="navbar-brand primary-font text-wrap" href="/">
+                
+                <img src="/icon.png" width="30" height="30"
+                    class="d-inline-block align-top">
+                philippraven
+                
+            </a>
+
+            
+
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" data-view-component="true">
+                    <path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path>
+                </svg>
+            </button>
+
+            
+            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+                <ul class="navbar-nav ms-auto text-center">
+                    
+
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="About">
+                            About
+                        </a>
+                        <div class="dropdown-menu shadow-lg rounded" aria-labelledby="navbarDropdown">
+                            
+                            <a class="dropdown-item text-center nav-link" href="/"
+                                title="Home">
+                                Home
+                            </a>
+                            
+                            <a class="dropdown-item text-center nav-link" href="/#about"
+                                title="About me">
+                                About me
+                            </a>
+                            
+                            <a class="dropdown-item text-center nav-link" href="/#experience"
+                                title="Experience">
+                                Experience
+                            </a>
+                            
+                            <a class="dropdown-item text-center nav-link" href="/#education"
+                                title="Education">
+                                Education
+                            </a>
+                            
+                            <a class="dropdown-item text-center nav-link" href="/#projects"
+                                title="Projects">
+                                Projects
+                            </a>
+                            
+                            <a class="dropdown-item text-center nav-link" href="/#contact"
+                                title="Contact me">
+                                Contact me
+                            </a>
+                            
+                        </div>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/blog" title="Blog posts">
+                            
+                            Blog
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/gallery" title="Gallery">
+                            
+                            Gallery
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/search" title="Search">
+                            
+                            Search
+                        </a>
+                    </li>
+                    
+                    
+
+                    
+                    <li class="nav-item navbar-text">
+                        
+                        <div class="text-center">
+                            <button id="theme-toggle">
+                                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<div id="content">
+<section id="single">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-12 col-lg-9">
+        <div class="pr-lg-4">
+          <div class="title mb-5">
+            <h1 class="text-center mb-4">ESP WLED AMBILIGHT</h1>
+            <div class="text-center">
+              philippraven 
+              
+			  
+			  <small>|</small>
+			  
+			  
+			  
+              Jan 17, 2026
+			  
+            </div>
+          </div>
+          
+          <article class="page-content  p-2" id="page-content">
+          <p><p class="md__image">
+  <img class="img-fluid" src="ambilight_test.gif" alt="Ambilight Test"  />
+</p></p>
+<h1 id="diy-esp-ambilight">DIY ESP Ambilight</h1>
+<p>This is a really amazing and surprisingly quick and easy project I think anyone could do.</p>
+<p>Our TV is right in front of a white wall and so I thought this is perfect for trying out an ambilight. This is something I wanted to do for a long time, but in the past this was always a rather complicated task and I didn&rsquo;t really know what I even wanted or what could be done.</p>
+<p>Reading into the matter I came across a few things I already heard about but never really paid attention to.</p>
+<h1 id="what-many-people-do">What many people do</h1>
+<p>And what I think is the way this was done a long time ago is with an Arduino or ESP and <a href="https://fastled.io/">FastLED</a>, then some kind of software that communicates over serial and sets the colors.</p>
+<p>I have all the needed drivers on my machine, so it would not have been a problem in that regard. But the software was cryptic, also some phishy Chinese executables I found.</p>
+<p>I was looking a little longer and found something better.</p>
+<h1 id="i-came-across-prismatik">I came across Prismatik</h1>
+<p><a href="https://www.prismatik.com/software.htm">Prismatik</a></p>
+<p>Installed. Looked nice. A little old-fashioned, but workable. Next up, what controller should I use.</p>
+<h1 id="i-remembered-having-some-d1-minis-around">I remembered having some D1 minis around</h1>
+<p>So why not go a step further than FastLED and save some cables by using the WiFi capabilities of the ESP? A little googling later I came across WLED.</p>
+<p>WLED, that&rsquo;s something. I heard about that. Famous, big community, open source. I like.</p>
+<p>So how do I connect it with Prismatik? I found a plugin on GitHub: <a href="https://github.com/Lord-FEAR/Prismatik-WLED-WiFi">Prismatik-WLED-WiFi</a></p>
+<p>Nice, I thought. But where is the release of the plugin?</p>
+<p>Ahh, no longer continued, because I quote &ldquo;Hyperion now supports WLED out of the box.&rdquo;</p>
+<h1 id="what-is-hyperion-now-all-of-a-sudden">What is Hyperion now all of a sudden?</h1>
+<p>I thought. And why did I not hear about it until now and only read about it in the GitHub of a WLED plugin that is no longer maintained?</p>
+<p>So here it is: <a href="https://github.com/hyperion-project/hyperion">Hyperion on GitHub</a></p>
+<p>The Hyperion GitHub.</p>
+<p>Install it. You get a web UI interface, easy and intuitive.
+Under LED connections - you guessed it - you can connect to your WLED device.</p>
+<h1 id="speaking-of-wled">Speaking of WLED</h1>
+<p>Holy shit this was easy. I never could have imagined.</p>
+<p>You go to <a href="https://install.wled.me/">install.wled.me</a>
+Plug in your ESP and click install. That&rsquo;s it. It asks you about your WiFi SSID and password, done.</p>
+<p>The locally hosted web admin page of your now fresh ESP based WLED controller opens and you set up your type of addressable LED and the number of them. Done.</p>
+<h1 id="in-hyperion">In Hyperion</h1>
+<p>You open the connection tab, choose WLED, there it is already.
+Click connect.</p>
+<p>Go to the setup tab and set the right layout for the LEDs you installed on your TV.</p>
+<p>Open the video capture tab, check screen capture, save and done.
+Now you have ambilight.</p>
+<h1 id="ah-i-forgot-to-mention-the-led-strip">Ah, I forgot to mention the LED strip</h1>
+<p>I had an old, pre-used 5m LED strip from AliExpress laying around that I had once installed behind a cabinet in my old flat.</p>
+<p>And I honestly have to say&hellip; with WLED that easy to set up, I will never use a single one of those sketchy Chinese LED controllers with their weird high power consumption phishing apps ever again.</p>
+<p>Just take a cheap ESP, no matter which one, 8266, 32, mini, does not matter. Flash WLED. Done.</p>
+<p>Open source Android app without bloat. Fast, immediate connection. Secure.</p>
+<p>What else can you wish for?</p>
+<p>Ah yes, and you need to solder the 3 pins of the LED strip and use some external power supply to power the LEDs. Because in my case I use 80 pieces behind the TV which the ESP can obviously not power with its LDO.</p>
+<p>But if you read this, you probably know how to solder.</p>
+<h1 id="fine-tuning">Fine tuning</h1>
+<p>After the installation and setup, you can even fine-tune your new ambilight in the Hyperion settings.</p>
+<p>Set up the provided colors so that the reflection on the wall matches the colors on your TV. You can also set up white balance and even the light reaction delay.</p>
+<p>For me that was another 30 minutes of playing around and then I got it perfect.</p>
+<p>I really can recommend trying this out. It hugely leveled up the immersion for our movie nights! The fast reaction of the ambient light of only a few milliseconds is at its best (or worst) in jump scare horror movies!</p>
+<p>Have fun. :)</p>
+
+          </article>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-3">
+        <div class="sticky-sidebar">
+          
+          <aside class="toc" id="toc">
+              <h5>
+                Table Of Contents
+              </h5>
+              <div class="toc-content">
+                <nav id="TableOfContents">
+  <ul>
+    <li><a href="#diy-esp-ambilight">DIY ESP Ambilight</a></li>
+    <li><a href="#what-many-people-do">What many people do</a></li>
+    <li><a href="#i-came-across-prismatik">I came across Prismatik</a></li>
+    <li><a href="#i-remembered-having-some-d1-minis-around">I remembered having some D1 minis around</a></li>
+    <li><a href="#what-is-hyperion-now-all-of-a-sudden">What is Hyperion now all of a sudden?</a></li>
+    <li><a href="#speaking-of-wled">Speaking of WLED</a></li>
+    <li><a href="#in-hyperion">In Hyperion</a></li>
+    <li><a href="#ah-i-forgot-to-mention-the-led-strip">Ah, I forgot to mention the LED strip</a></li>
+    <li><a href="#fine-tuning">Fine tuning</a></li>
+  </ul>
+</nav>
+              </div>
+          </aside>
+          
+
+          
+          <aside class="tags">
+            <h5>Tags</h5>
+            <ul class="tags-ul list-unstyled list-inline">
+              
+              <li class="list-inline-item"><a href="https://philippraven.com/tags/esp" target="_self">esp</a></li>
+              
+              <li class="list-inline-item"><a href="https://philippraven.com/tags/esp8266" target="_self">esp8266</a></li>
+              
+              <li class="list-inline-item"><a href="https://philippraven.com/tags/wled" target="_self">wled</a></li>
+              
+              <li class="list-inline-item"><a href="https://philippraven.com/tags/hyperion" target="_self">hyperion</a></li>
+              
+              <li class="list-inline-item"><a href="https://philippraven.com/tags/ambilight" target="_self">ambilight</a></li>
+              
+              <li class="list-inline-item"><a href="https://philippraven.com/tags/led" target="_self">led</a></li>
+              
+            </ul>
+          </aside>
+          
+
+          
+          <aside class="social">
+            <h5>Social</h5>
+            <div class="social-content">
+              <ul class="list-inline">
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://twitter.com/share?text=ESP%20WLED%20AMBILIGHT&url=https%3a%2f%2fphilippraven.com%2fblog%2fesp%2fesp8266-wled-ambilight%2f">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://api.whatsapp.com/send?text=ESP%20WLED%20AMBILIGHT: https%3a%2f%2fphilippraven.com%2fblog%2fesp%2fesp8266-wled-ambilight%2f">
+                    <i class="fab fa-whatsapp"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="mailto:?subject=ESP%20WLED%20AMBILIGHT&amp;body=Check out this site https%3a%2f%2fphilippraven.com%2fblog%2fesp%2fesp8266-wled-ambilight%2f">
+                    <i class="fa fa-envelope"></i>
+                  </a>
+                </li> 
+              </ul>
+            </div>
+          </aside>
+          
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-9 p-4">
+        
+      </div>
+    </div>
+  </div>
+  <div class="p-2 px-3" id="rightSideButtonStack">
+    <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
+      <i class="fas fa-angle-up"></i>
+    </button>
+    <button class="p-2 px-3" onclick="tocFunction()" id="tocScroll">
+      <i class="fas fa-angle-double-down"></i>
+    </button>
+    <button class="p-2 px-3" onclick="bottomFunction()" id="bottomScroll">
+      <i class="fas fa-angle-down"></i>
+    </button>
+  </div>
+</section>
+
+<script>
+  var topScroll = document.getElementById('topScroll');
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    showTop();
+    showToc();
+    showBottom();
+  }
+
+  function showTop() {
+    if(topScroll && topScroll != null && topScroll != 'undefined') {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        topScroll.style.display = 'block';
+      } else {
+        topScroll.style.display = 'none';
+      }
+    }
+  }
+
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+
+  
+  var pageContent = document.getElementById('page-content');
+  var bottomScroll = document.getElementById('bottomScroll');
+
+  function showBottom() {
+    if(bottomScroll && bottomScroll != null && bottomScroll != 'undefined' &&
+       pageContent && pageContent != null && pageContent != 'undefined') {
+      if(bottomInViewport(pageContent)) {
+        bottomScroll.style.display = 'block';
+      } else {
+        bottomScroll.style.display = 'none';
+      }
+    }
+  }
+
+  function bottomFunction() {
+    if(pageContent && pageContent != null && pageContent != 'undefined') {
+      pageContent.scrollIntoView(false);
+      bottomScroll.style.display = 'none';
+    }
+  }
+
+  function bottomInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+      rect.bottom >= (window.innerHeight + 1|| document.documentElement.clientHeight + 1) 
+    );
+  }
+
+  
+  var tocScroll = document.getElementById('tocScroll');
+  var toc = document.getElementById('toc');
+
+  function showToc() {
+    if(toc && toc != null && toc != 'undefined' &&
+       tocScroll && tocScroll != null && tocScroll != 'undefined') {
+      if(isInViewport(toc)) {
+        tocScroll.style.display = 'none';
+      } else {
+        tocScroll.style.display = 'block';
+      }
+    }
+  }
+
+  function tocFunction() {
+    if(toc && toc != null && toc != 'undefined') {
+      toc.scrollIntoView(true);
+    }
+  }
+
+  function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+</script>
+
+
+  </div><footer>
+    <div class="container py-3" id="recent-posts">
+    
+    <div class="h3 text-center text-secondary py-3">Recent blog posts</div>
+    <div class="row justify-content-center">
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                <div class="card-body bg-transparent p-4 shadow-sm">
+                    
+                    
+                    
+                    
+                    
+                    
+
+                    
+                     
+                    
+                        
+                        <div class="card-text secondary-font">
+                            <p><h1 id="i-made-this-nice-pedalboard">I MADE THIS NICE PEDALBOARD</h1>
+<model-viewer
+    src="Pedalboard_Assembly.glb"
+    alt="Ein 3D-Modell"
+    shadow-intensity="1.5"
+    shadow-softness="0.5"
+    exposure=".75"
+    auto-rotate
+    camera-controls
+    style="width: 100%; height: 400px;">
+</model-viewer></p>
+                        </div>
+                    
+
+                    <a href="/blog/diy/guitar-pedal-board/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="Guitar Pedal Board">Guitar Pedal Board</h5>
+                    </a>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">April 12, 2026</span>
+                    <a href="/blog/diy/guitar-pedal-board/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                <div class="card-body bg-transparent p-4 shadow-sm">
+                    
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                        
+                        
+                            
+                            
+                                
+                                    
+                                    
+                                
+                            
+                            
+                        
+                     
+                    
+                        <a href="/blog/esp/esp8266-wled-ambilight/">
+                            <img src="/blog/esp/esp8266-wled-ambilight/ambilight_test_hu_78ab14f09c991d39.gif" alt="ESP WLED AMBILIGHT" class="rounded img-fluid">
+                        </a>
+                    
+
+                    <a href="/blog/esp/esp8266-wled-ambilight/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="ESP WLED AMBILIGHT">ESP WLED AMBILIGHT</h5>
+                    </a>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">January 17, 2026</span>
+                    <a href="/blog/esp/esp8266-wled-ambilight/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 pt-2">
+            <div class="card h-100">
+                <div class="card-body bg-transparent p-4 shadow-sm">
+                    
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                        
+                        
+                            
+                            
+                            
+                        
+                     
+                    
+                        
+                        <div class="card-text secondary-font">
+                            <p><h1 id="esp32-music-player---part-3">ESP32 music player - part 3</h1>
+<p>so jetzt sind wir also schon bei teil 3 dieser never ending story :)</p>
+<h1 id="was-ist-alles-passiert">was ist alles passiert?</h1>
+<p>ich habe eine komplette woche mit miniflac gekämpft.
+// hier miniflac github repo einfügen</p>
+<p>letztenendes habe ich es hinbekommen …</p></p>
+                        </div>
+                    
+
+                    <a href="/blog/esp/esp32-music-player-3/" class="primary-font card-title">
+                        <h5 class="card-title bg-transparent" title="ESP32 music player 3">ESP32 music player 3</h5>
+                    </a>
+                </div>
+                <div class="mt-auto card-footer">
+                    <span class="float-start">June 19, 2025</span>
+                    <a href="/blog/esp/esp32-music-player-3/" class="float-end btn btn-outline-info btn-sm">Read</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+</div>
+<div class="text-center pt-2">
+    
+
+    
+
+    
+
+    
+
+    
+</div><div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            <div class="pb-2">
+                <a href="https://philippraven.com/" title="philippraven">
+                    <img alt="Footer logo" src="/icon.png"
+                        height="40px" width="40px">
+                </a>
+            </div>
+            &copy; 2026  All Rights Reserved
+            <br>
+            <a href="https://philippraven.com/blog/index.xml" type="application/rss+xml">RSS Feed</a>
+            
+            
+                
+                
+                    
+                
+                
+                
+                    
+                    
+                
+            
+        </div>
+    </div>
+</div><div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            <a href="https://philippraven.com//legal-notice" title="Legal Notice">Legal Notice</a>
+        </div>
+    </div>
+</div></footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+</script>
+
+
+
+
+
+
+
+
+
+  <section id="search-content" class="py-2">
+    <div class="container" id="search-results"></div>
+  </section>
+</body>
+
+</html>

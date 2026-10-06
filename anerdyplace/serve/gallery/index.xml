@@ -24,5 +24,12 @@
       <guid>https://philippraven.com/gallery/flooding-in-passau/</guid>
       <description></description>
     </item>
+    <item>
+      <title>Image Gallery</title>
+      <link>https://philippraven.com/gallery/example/</link>
+      <pubDate>Sat, 25 Jun 2022 18:35:46 +0530</pubDate><author>philipp.info@proton.me (philippraven)</author>
+      <guid>https://philippraven.com/gallery/example/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

@@ -3,39 +3,66 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://philippraven.com/blog/</loc>
-    <lastmod>2026-01-17T00:50:00+02:00</lastmod>
+    <lastmod>2026-04-12T21:05:38+02:00</lastmod>
+  </url><url>
+    <loc>https://philippraven.com/blog/diy/guitar-pedal-board/</loc>
+    <lastmod>2026-04-12T21:05:38+02:00</lastmod>
   </url><url>
     <loc>https://philippraven.com/</loc>
+    <lastmod>2026-04-12T21:05:38+02:00</lastmod>
+  </url><url>
+    <loc>https://philippraven.com/tags/ambilight/</loc>
+    <lastmod>2026-01-17T00:50:00+02:00</lastmod>
+  </url><url>
+    <loc>https://philippraven.com/tags/esp/</loc>
+    <lastmod>2026-01-17T00:50:00+02:00</lastmod>
+  </url><url>
+    <loc>https://philippraven.com/blog/esp/esp8266-wled-ambilight/</loc>
+    <lastmod>2026-01-17T00:50:00+02:00</lastmod>
+  </url><url>
+    <loc>https://philippraven.com/tags/esp8266/</loc>
+    <lastmod>2026-01-17T00:50:00+02:00</lastmod>
+  </url><url>
+    <loc>https://philippraven.com/tags/hyperion/</loc>
+    <lastmod>2026-01-17T00:50:00+02:00</lastmod>
+  </url><url>
+    <loc>https://philippraven.com/tags/led/</loc>
+    <lastmod>2026-01-17T00:50:00+02:00</lastmod>
+  </url><url>
+    <loc>https://philippraven.com/tags/</loc>
+    <lastmod>2026-01-17T00:50:00+02:00</lastmod>
+  </url><url>
+    <loc>https://philippraven.com/tags/wled/</loc>
     <lastmod>2026-01-17T00:50:00+02:00</lastmod>
   </url><url>
     <loc>https://philippraven.com/tags/audio/</loc>
-    <lastmod>2025-05-31T22:22:19+02:00</lastmod>
+    <lastmod>2025-06-19T00:50:00+02:00</lastmod>
   </url><url>
     <loc>https://philippraven.com/tags/esp32/</loc>
-    <lastmod>2025-05-31T22:22:19+02:00</lastmod>
+    <lastmod>2025-06-19T00:50:00+02:00</lastmod>
   </url><url>
-    <loc>https://philippraven.com/blog/esp/esp32-music-player-2/</loc>
-    <lastmod>2025-05-31T22:22:19+02:00</lastmod>
+    <loc>https://philippraven.com/blog/esp/esp32-music-player-3/</loc>
+    <lastmod>2025-06-19T00:50:00+02:00</lastmod>
   </url><url>
     <loc>https://philippraven.com/tags/flac/</loc>
-    <lastmod>2025-05-31T22:22:19+02:00</lastmod>
+    <lastmod>2025-06-19T00:50:00+02:00</lastmod>
   </url><url>
     <loc>https://philippraven.com/tags/mp3/</loc>
-    <lastmod>2025-05-31T22:22:19+02:00</lastmod>
+    <lastmod>2025-06-19T00:50:00+02:00</lastmod>
   </url><url>
     <loc>https://philippraven.com/tags/music/</loc>
-    <lastmod>2025-05-31T22:22:19+02:00</lastmod>
+    <lastmod>2025-06-19T00:50:00+02:00</lastmod>
   </url><url>
     <loc>https://philippraven.com/tags/player/</loc>
-    <lastmod>2025-05-31T22:22:19+02:00</lastmod>
+    <lastmod>2025-06-19T00:50:00+02:00</lastmod>
   </url><url>
     <loc>https://philippraven.com/tags/programming/</loc>
-    <lastmod>2025-05-31T22:22:19+02:00</lastmod>
-  </url><url>
-    <loc>https://philippraven.com/tags/</loc>
-    <lastmod>2025-05-31T22:22:19+02:00</lastmod>
+    <lastmod>2025-06-19T00:50:00+02:00</lastmod>
   </url><url>
     <loc>https://philippraven.com/tags/wav/</loc>
+    <lastmod>2025-06-19T00:50:00+02:00</lastmod>
+  </url><url>
+    <loc>https://philippraven.com/blog/esp/esp32-music-player-2/</loc>
     <lastmod>2025-05-31T22:22:19+02:00</lastmod>
   </url><url>
     <loc>https://philippraven.com/blog/esp/esp32-music-player/</loc>
@@ -64,6 +91,12 @@
   </url><url>
     <loc>https://philippraven.com/tags/painting/</loc>
     <lastmod>2025-05-26T08:47:00+02:00</lastmod>
+  </url><url>
+    <loc>https://philippraven.com/tags/tag/</loc>
+    <lastmod>2025-03-04T14:34:12+01:00</lastmod>
+  </url><url>
+    <loc>https://philippraven.com/blog/3d/blender/turtle-park/</loc>
+    <lastmod>2025-03-04T14:34:12+01:00</lastmod>
   </url><url>
     <loc>https://philippraven.com/tags/2025/</loc>
     <lastmod>2025-03-02T00:00:00+00:00</lastmod>
@@ -104,10 +137,16 @@
     <loc>https://philippraven.com/tags/wallet/</loc>
     <lastmod>2025-02-16T01:01:18+01:00</lastmod>
   </url><url>
+    <loc>https://philippraven.com/blog/3d/printer/ender-3-custom-hotend-fan-duct/</loc>
+    <lastmod>2025-02-03T17:09:17+01:00</lastmod>
+  </url><url>
     <loc>https://philippraven.com/tags/3d/</loc>
     <lastmod>2024-11-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://philippraven.com/tags/cad/</loc>
+    <lastmod>2024-11-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://philippraven.com/blog/3d/printing/lots-of-printing/</loc>
     <lastmod>2024-11-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://philippraven.com/tags/key-holder/</loc>
@@ -496,6 +535,9 @@
   </url><url>
     <loc>https://philippraven.com/legal-notice/</loc>
     <lastmod>2022-09-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://philippraven.com/gallery/example/</loc>
+    <lastmod>2022-06-25T18:35:46+05:30</lastmod>
   </url><url>
     <loc>https://philippraven.com/blog/arduino/fastpwm/</loc>
     <lastmod>2020-02-24T00:00:00+00:00</lastmod>
